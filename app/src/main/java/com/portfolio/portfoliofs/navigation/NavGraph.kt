@@ -11,6 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.portfolio.portfoliofs.ScreensRoutes
 import com.portfolio.portfoliofs.presentations.MainScreen
+import com.portfolio.portfoliofs.presentations.TabbedMainScreen
 import kotlinx.coroutines.launch
 
 @Composable
@@ -28,16 +29,21 @@ fun SetupNavGraph(
         homeRoute(
             darkTheme = darkTheme,
             onThemeUpdated = onThemeUpdated,
-            onDataLoaded = onDataLoaded
+            onDataLoaded = onDataLoaded,
+            navigateToTabbedScreen = {
+                navHostController.navigate(ScreensRoutes.Tabbed.route)
+            }
         )
 
+        tabbedScreenRoute()
     }
 }
 
 fun NavGraphBuilder.homeRoute(
     darkTheme: Boolean,
     onDataLoaded: () -> Unit,
-    onThemeUpdated: () -> Unit
+    onThemeUpdated: () -> Unit,
+    navigateToTabbedScreen: () -> Unit,
 ) {
     composable(route = ScreensRoutes.Home.route) {
 
@@ -58,8 +64,14 @@ fun NavGraphBuilder.homeRoute(
             },
             darkTheme = darkTheme,
             onThemeUpdated = onThemeUpdated,
+            onMoreClicked = navigateToTabbedScreen)
 
-            )
+    }
+}
+
+fun NavGraphBuilder.tabbedScreenRoute() {
+    composable(route = ScreensRoutes.Tabbed.route) {
+        TabbedMainScreen()
 
     }
 }

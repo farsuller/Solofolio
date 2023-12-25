@@ -8,46 +8,47 @@ import com.far.suller.util.Constants.LOREM_IPSUM_SHORTER
 import com.far.suller.util.Constants.UI_UX_SERVICE
 import com.far.suller.util.Constants.WEB_SERVICE
 import com.far.suller.util.Res
+import com.portfolio.portfoliofs.R
 
 
 enum class Service(
-    val icon:String,
+    val icon:Int,
     val imageDesc: String,
     val title: String,
     val description: String
 ) {
     Android(
-        icon = Res.Icon.android,
+        icon = R.drawable.android_icon,
         imageDesc = "Android Icon",
         title = "Android Development",
         description = ANDROID_SERVICE
     ),
     IOS(
-        icon = Res.Icon.ios,
+        icon = R.drawable.apple_icon,
         imageDesc = "Apple Icon",
         title = "iOS Development",
         description = IOS_SERVICE
     ),
     Web(
-        icon = Res.Icon.web,
+        icon = R.drawable.web_icon,
         imageDesc = "Desktop Icon",
         title = "Web Development",
         description = WEB_SERVICE
     ),
     Flutter(
-        icon = Res.Icon.flutter,
+        icon = R.drawable.flutter_icon,
         imageDesc = "Flutter Icon",
         title = "Flutter Development",
         description = FLUTTER_SERVICE
     ),
     Design(
-        icon = Res.Icon.design,
+        icon = R.drawable.design_icon,
         imageDesc = "Pen Icon",
         title = "UI/UX Design",
         description = UI_UX_SERVICE
     ),
     Video(
-        icon = Res.Icon.video,
+        icon = R.drawable.video_icon,
         imageDesc = "Video Icon",
         title = "Video Editing",
         description = EDITING_SERVICE

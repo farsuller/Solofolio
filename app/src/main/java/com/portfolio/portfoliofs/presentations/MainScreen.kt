@@ -53,6 +53,7 @@ internal fun MainScreen(
     drawerState: DrawerState,
     darkTheme: Boolean,
     onThemeUpdated: () -> Unit,
+    onMoreClicked: () -> Unit,
 ) {
     var padding by remember { mutableStateOf(PaddingValues()) }
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
@@ -68,7 +69,8 @@ internal fun MainScreen(
             topBar = {
                 MainTopBar(
                     onMenuClicked = onMenuClicked,
-                    scrollBehavior = scrollBehavior)
+                    scrollBehavior = scrollBehavior,
+                    onMoreClicked = onMoreClicked)
             },
             floatingActionButton = {},
             content = {

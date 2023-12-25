@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 internal fun MainTopBar(
     scrollBehavior: TopAppBarScrollBehavior,
     onMenuClicked: () -> Unit,
+    onMoreClicked: () -> Unit,
 ) {
 
     TopAppBar(
@@ -32,7 +33,7 @@ internal fun MainTopBar(
         },
         title = {},
         actions = {
-                IconButton(onClick = {}) {
+                IconButton(onClick = onMoreClicked) {
                     Icon(
                         imageVector = Icons.Default.MoreVert,
                         contentDescription = "More Icon",

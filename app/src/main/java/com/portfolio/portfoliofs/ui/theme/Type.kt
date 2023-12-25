@@ -21,6 +21,14 @@ val fontFamilyRobotoExtraBold = FontFamily(
         style = FontStyle.Normal
     )
 )
+val fontFamilyRobotoBold = FontFamily(
+    Font(
+        googleFont = roboto,
+        fontProvider = provider,
+        weight = FontWeight.Bold,
+        style = FontStyle.Normal
+    )
+)
 val fontFamilyRoboto = FontFamily(
     Font(
         googleFont = roboto,
@@ -38,9 +46,9 @@ val Typography = Typography(
         letterSpacing = 0.sp
     ),
     titleMedium = TextStyle(
-        fontFamily = fontFamilyRoboto,
-        fontWeight = FontWeight.Medium,
-        fontSize = 22.sp,
+        fontFamily = fontFamilyRobotoBold,
+        fontWeight = FontWeight.Bold,
+        fontSize = 16.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),
