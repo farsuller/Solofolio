@@ -1,10 +1,12 @@
 package com.portfolio.portfoliofs.components
 
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -21,7 +23,7 @@ import com.portfolio.portfoliofs.R
 fun SocialBar(){
     Row(
         modifier = Modifier.fillMaxWidth(),
-
+        horizontalArrangement = Arrangement.Start
         ){
         SocialBarItem (socialIcon = R.drawable.facebook_icon, socialTitle = "Facebook Icon", openUri = Constants.FACEBOOK_LINK)
         SocialBarItem (socialIcon = R.drawable.instagram_icon, socialTitle = "Instagram Icon", openUri = Constants.INSTAGRAM_LINK)
@@ -35,11 +37,11 @@ fun SocialBarItem (socialIcon : Int, socialTitle : String, openUri : String){
 
     val uriHandler = LocalUriHandler.current
 
-
-    IconButton(onClick = { uriHandler.openUri(openUri) }) {
+    IconButton(
+        modifier = Modifier.padding(top = 10.dp).size(25.dp),
+        onClick = { uriHandler.openUri(openUri) }) {
         Icon(modifier = Modifier
-            .padding(5.dp)
-            .size(25.dp),
+            .size(22.dp),
             painter = painterResource(id = socialIcon),
             contentDescription = socialTitle,
             tint = MaterialTheme.colorScheme.onSurface

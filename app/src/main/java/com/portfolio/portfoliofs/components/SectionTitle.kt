@@ -1,6 +1,7 @@
 package com.portfolio.portfoliofs.components
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -10,23 +11,22 @@ import com.portfolio.portfoliofs.model.Section
 
 
 @Composable
-fun sectionTitle(
+fun SectionTitle(
     modifier: Modifier = Modifier,
     section: Section,
     alignment: Alignment.Horizontal = Alignment.Start
 ){
-    val scope = rememberCoroutineScope()
-    var titleMargin by remember { mutableStateOf(50.dp) }
-    var subTitleMargin by remember { mutableStateOf(50.dp) }
-
 
     Column(
         modifier = modifier,
         horizontalAlignment = alignment)
     {
-        Text(section.title)
-        Text(section.subtitle)
+        Text(text = section.title,
+            fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
+            fontSize = MaterialTheme.typography.titleMedium.fontSize,)
 
-
+        Text(text = section.subtitle,
+            fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
+            fontSize = MaterialTheme.typography.titleLarge.fontSize,)
     }
 }
