@@ -59,14 +59,14 @@ fun ThemeSwitcher(
                 .offset(x = offset)
                 .padding(all = padding)
                 .clip(shape = toggleShape)
-                .background(MaterialTheme.colorScheme.primary)
+                .background(MaterialTheme.colorScheme.onSurface)
         ) {}
         Row(
             modifier = Modifier
                 .border(
                     border = BorderStroke(
                         width = borderWidth,
-                        color = MaterialTheme.colorScheme.primary
+                        color = MaterialTheme.colorScheme.onSurface
                     ),
                     shape = parentShape
                 )
@@ -80,7 +80,7 @@ fun ThemeSwitcher(
                     imageVector = Icons.Default.Nightlight,
                     contentDescription = "Theme Icon",
                     tint = if (darkTheme) MaterialTheme.colorScheme.secondaryContainer
-                    else MaterialTheme.colorScheme.primary
+                    else MaterialTheme.colorScheme.onSurface
                 )
             }
             Box(
