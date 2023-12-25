@@ -32,19 +32,18 @@ fun AboutMeSection(){
 
     Column(
         modifier = Modifier.fillMaxWidth()
-            .padding(10.dp),
+            .padding(10.dp)
+            .padding(top = 15.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
 
         SectionTitle(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             section = Section.About)
 
         Row(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {

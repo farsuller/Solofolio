@@ -37,10 +37,7 @@ fun ServiceCard(service: Service){
                 shape = RoundedCornerShape(
                     topStart = 18.dp,
                     topEnd = 18.dp,
-                    bottomStart = 18.dp))
-
-
-        )
+                    bottomStart = 18.dp)))
         {
             Icon(
                 modifier = Modifier.size(55.dp).padding(10.dp),

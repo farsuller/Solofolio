@@ -23,7 +23,8 @@ fun PortfolioSection() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp),
+            .padding(10.dp)
+            .padding(top = 15.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -33,11 +34,7 @@ fun PortfolioSection() {
             section = Section.Portfolio
         )
 
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(650.dp)
-        ) {
+        Box(modifier = Modifier.fillMaxWidth()) {
 
 
             LazyRow {
