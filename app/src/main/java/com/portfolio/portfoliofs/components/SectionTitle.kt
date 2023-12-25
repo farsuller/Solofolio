@@ -22,8 +22,8 @@ fun SectionTitle(
         horizontalAlignment = alignment)
     {
         Text(text = section.title,
-            fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
-            fontSize = MaterialTheme.typography.titleMedium.fontSize,)
+            fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+            fontSize = MaterialTheme.typography.bodyLarge.fontSize,)
 
         Text(text = section.subtitle,
             fontFamily = MaterialTheme.typography.titleLarge.fontFamily,

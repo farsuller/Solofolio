@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.presentations.sections.AboutMeSection
 
 import com.portfolio.portfoliofs.presentations.sections.MyIntroSection
+import com.portfolio.portfoliofs.presentations.sections.PortfolioSection
 import com.portfolio.portfoliofs.presentations.sections.ServiceSection
 
 
@@ -31,6 +32,8 @@ fun MainContent(paddingValues: PaddingValues,) {
             AboutMeSection()
             Box(modifier = Modifier.fillMaxWidth().size(15.dp))
             ServiceSection()
+            Box(modifier = Modifier.fillMaxWidth().size(15.dp))
+            PortfolioSection()
         }
 
 

@@ -1,14 +1,10 @@
 package com.portfolio.portfoliofs.model
 
-import com.far.suller.util.Constants.FACEBOOK_LINK
-import com.far.suller.util.Constants.GOOGLE_LINK
-import com.far.suller.util.Constants.INSTAGRAM_LINK
-import com.far.suller.util.Constants.LINKEDIN_LINK
+
 import com.far.suller.util.Constants.MCDELIVERY_LINK
 import com.far.suller.util.Constants.PORFOLIOF
 import com.far.suller.util.Constants.PUREGOLD
 import com.far.suller.util.Constants.SPARK_CLEANER_LINK
-import com.far.suller.util.Constants.TWITTER_LINK
 import com.far.suller.util.Constants.UNIONBANK
 import com.far.suller.util.Res
 
