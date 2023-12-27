@@ -41,13 +41,13 @@ fun TestimonialCard(testimonial: Testimonial){
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
-                .padding(10.dp),
+                .padding(20.dp),
             verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Box (modifier = Modifier)
             AsyncImage(
-                modifier = Modifier.size(120.dp)
+                modifier = Modifier.size(110.dp)
                     .clip(shape = RoundedCornerShape(
                         topStart = 18.dp,
                         topEnd = 18.dp,
@@ -59,19 +59,19 @@ fun TestimonialCard(testimonial: Testimonial){
 
             Column( modifier = Modifier
                 .weight(weight = 1f)
-                .padding(10.dp)) {
+                .padding(start = 10.dp)) {
 
 
                 Text(
                     text = testimonial.fullName,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface)
                 Text(
                     text = testimonial.profession,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface)
 
 
                 RatingBar(modifier = Modifier.padding(top = 5.dp))
@@ -81,7 +81,7 @@ fun TestimonialCard(testimonial: Testimonial){
                     text = testimonial.review,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface)
 
 
             }

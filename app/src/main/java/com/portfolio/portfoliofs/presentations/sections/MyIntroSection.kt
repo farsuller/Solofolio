@@ -5,10 +5,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.far.suller.util.Constants.INTRO
-import com.far.suller.util.Constants.MAIN_INTRO
-import com.far.suller.util.Constants.NAME
-import com.far.suller.util.Constants.ROLE
+import com.portfolio.portfoliofs.utils.Constants.INTRO
+import com.portfolio.portfoliofs.utils.Constants.MAIN_INTRO
+import com.portfolio.portfoliofs.utils.Constants.NAME
+import com.portfolio.portfoliofs.utils.Constants.ROLE
 import com.portfolio.portfoliofs.components.SocialBar
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme

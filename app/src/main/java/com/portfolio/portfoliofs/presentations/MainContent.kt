@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.components.TestimonialCard
 import com.portfolio.portfoliofs.presentations.sections.AboutMeSection
+import com.portfolio.portfoliofs.presentations.sections.ExperienceSection
 
 import com.portfolio.portfoliofs.presentations.sections.MyIntroSection
 import com.portfolio.portfoliofs.presentations.sections.PortfolioSection
@@ -34,7 +35,7 @@ fun MainContent(paddingValues: PaddingValues,) {
             ServiceSection()
             PortfolioSection()
             TestimonialSection()
-
+            ExperienceSection()
         }
 
 

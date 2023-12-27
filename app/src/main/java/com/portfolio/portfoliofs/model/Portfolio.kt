@@ -1,12 +1,12 @@
 package com.portfolio.portfoliofs.model
 
 
-import com.far.suller.util.Constants.MCDELIVERY_LINK
-import com.far.suller.util.Constants.PUREGOLD
-import com.far.suller.util.Constants.SOLOSCAPE
-import com.far.suller.util.Constants.SPARK_CLEANER_LINK
-import com.far.suller.util.Constants.UNIONBANK
-import com.far.suller.util.Res
+import com.portfolio.portfoliofs.utils.Constants.MCDELIVERY_LINK
+import com.portfolio.portfoliofs.utils.Constants.PUREGOLD
+import com.portfolio.portfoliofs.utils.Constants.SOLOSCAPE
+import com.portfolio.portfoliofs.utils.Constants.SPARK_CLEANER_LINK
+import com.portfolio.portfoliofs.utils.Constants.UNIONBANK
+import com.portfolio.portfoliofs.utils.Res
 
 
 enum class Portfolio(

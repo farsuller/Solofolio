@@ -65,7 +65,10 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation("androidx.compose.foundation:foundation-layout:1.5.4")
-    implementation("io.coil-kt:coil-compose:2.3.0")
+
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
+    implementation("com.github.skydoves:orbital:0.3.3")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

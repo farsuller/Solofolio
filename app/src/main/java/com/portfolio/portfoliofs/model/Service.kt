@@ -1,13 +1,11 @@
 package com.portfolio.portfoliofs.model
 
-import com.far.suller.util.Constants.ANDROID_SERVICE
-import com.far.suller.util.Constants.EDITING_SERVICE
-import com.far.suller.util.Constants.FLUTTER_SERVICE
-import com.far.suller.util.Constants.IOS_SERVICE
-import com.far.suller.util.Constants.LOREM_IPSUM_SHORTER
-import com.far.suller.util.Constants.UI_UX_SERVICE
-import com.far.suller.util.Constants.WEB_SERVICE
-import com.far.suller.util.Res
+import com.portfolio.portfoliofs.utils.Constants.ANDROID_SERVICE
+import com.portfolio.portfoliofs.utils.Constants.CROSS_PLATFORM_SERVICE
+import com.portfolio.portfoliofs.utils.Constants.EDITING_SERVICE
+import com.portfolio.portfoliofs.utils.Constants.IOS_SERVICE
+import com.portfolio.portfoliofs.utils.Constants.UI_UX_SERVICE
+import com.portfolio.portfoliofs.utils.Constants.WEB_SERVICE
 import com.portfolio.portfoliofs.R
 
 
@@ -39,7 +37,7 @@ enum class Service(
         icon = R.drawable.flutter_icon,
         imageDesc = "Flutter Icon",
         title = "Flutter Development",
-        description = FLUTTER_SERVICE
+        description = CROSS_PLATFORM_SERVICE
     ),
     Design(
         icon = R.drawable.design_icon,

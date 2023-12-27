@@ -1,8 +1,6 @@
 package com.portfolio.portfoliofs.model
 
-import com.far.suller.util.Constants.LOREM_IPSUM_LONG
-import com.far.suller.util.Constants.LOREM_IPSUM_SHORTER
-import com.far.suller.util.Res
+import com.portfolio.portfoliofs.utils.Res
 
 enum class Testimonial(
     val image: String,

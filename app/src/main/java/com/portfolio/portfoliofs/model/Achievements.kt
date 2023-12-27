@@ -1,6 +1,6 @@
 package com.portfolio.portfoliofs.model
 
-import com.far.suller.util.Res
+import com.portfolio.portfoliofs.utils.Res
 
 
 enum class Achievements (

@@ -1,4 +1,4 @@
-package com.far.suller.util
+package com.portfolio.portfoliofs.utils
 
 object Constants {
     const val FACEBOOK_LINK = "https://www.facebook.com/florencze"
@@ -13,15 +13,13 @@ object Constants {
     const val UNIONBANK = "https://play.google.com/store/apps/details?id=com.unionbankph.online"
 
 
-    const val LOREM_IPSUM_SHORTER = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    const val LOREM_IPSUM_LONG = "Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-    const val LOREM_IPSUM_LONGER = "Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-    const val ANDROID_SERVICE = "With 7 years of hands-on experience in building scalable mobile applications. Well-versed in Android development tools, such as Android Studio, Gradle, and the Android SDK. Familiar with MVVM and CLEAN Architecture using Kotlin/Java. Currently working on projects using Jetpack Compose."
-    const val IOS_SERVICE = "Although I may not have extensive experience in iOS development, I had already maintained iOS apps and published on App Store. Currently familiarizing myself with popular iOS development frameworks such as UIKit and SwiftUI."
-    const val WEB_SERVICE = "I have always been interested in coding and creating digital solutions, and excited to explore into the world of web development. I have also started to familiarize myself with popular web development frameworks such as Kobweb and this static website is made from it."
-    const val FLUTTER_SERVICE = " I specialize in developing applications using Flutter framework, which allows me to build apps that run seamlessly on both Android and iOS devices. I am a quick learner and a team player, which allows me to adapt to new technologies and work effectively with cross-functional teams."
-    const val UI_UX_SERVICE = "I started to specialize in designing user interfaces and user experiences that are both visually appealing and intuitive to use. I am familiar in using design tools such as Sketch, Figma, Adobe XD, and InVision to create high-fidelity designs and interactive prototypes."
-    const val EDITING_SERVICE = "With more than 10 years of experience with video editing skills. I also have experience in visual effects and compositing using software such as Adobe After Effects."
+    const val ANDROID_SERVICE = "Bringing seven years of hands-on experience in crafting scalable mobile applications. Proficient with Android development tools including Android Studio, Gradle, and the Android SDK. Familiar with MVVM and CLEAN Architecture using Kotlin/Java. Currently involved in personal projects for further exploration using Jetpack Compose."
+    const val IOS_SERVICE = "Although my experience in iOS development is not extensive, I have effectively maintained iOS apps and released them on the App Store. Currently, I am getting familiar with well-known iOS development frameworks like UIKit and SwiftUI."
+    const val WEB_SERVICE = "Continuously fascinated by coding and crafting digital solutions, I am eager to delve into the realm of web development. I've begun familiarizing myself with renowned web development frameworks like Kobweb, and this static website is a product of that exploration."
+    const val CROSS_PLATFORM_SERVICE = "Dedicated to cross-platform development, leveraging the Flutter framework for seamless applications on both Android and iOS devices. A quick learner and collaborative team player with approximately 1 year of Flutter exposure. Successfully contributed to casual games projects on Unity, managing assets, and coding for Play Store and App Store releases."
+    const val UI_UX_SERVICE = "Dedicated to crafting visually appealing and user-friendly interfaces and experiences. Proficient in utilizing design tools such as Sketch, Figma, Adobe XD, and InVision to create high-fidelity designs and interactive prototypes. Additionally, I possess the ability to translate UI designs seamlessly into code, ensuring a smooth transition from concept to implementation."
+    const val EDITING_SERVICE = "Bringing more than a decade of experience in video editing, including proficiency in visual effects and compositing using tools like Adobe After Effects."
+
     const val ABOUT_ME = "I have a rich background in Android development, having contributed to a range of projects from small-scale applications to larger and more complex ones. I am proficient in using key Android development tools such as Android Studio, Gradle, and the Android SDK. My experience extends to working with various APIs, including Google Maps, Firebase, and third-party APIs."
 
     const val MAIN_INTRO = "I bring to the table 7 years of hands-on experience as an accomplished Android developer. My expertise lies in crafting top-notch and scalable mobile applications. I am driven by a deep passion for developing cutting-edge Android applications that not only captivate visually but also deliver a seamless user experience."
@@ -30,43 +28,44 @@ object Constants {
     const val HIRE_ME = "Hire Me"
     const val INTRO = "Hello I'm"
 
-    const val COLLABERA = "Worked on native Android Development using languages such as Kotlin and Java.\n" +
-            "Contributed to a team tasked with developing the installment feature for credit card applications and swift payment solutions, adhering to the CLEAN architecture while specifying the adoption of MVVM for certain features within Android development process.\n" +
-            "Collaborated with UI/UX designers to implement provided designs into development tickets.\n" +
-            "Translated design concepts into tangible features by creating development tickets.\n" +
-            "Created custom UI components for reuse by other developers, promoting consistency and efficiency across projects.\n" +
-            "Utilizing Retrofit and collaborating with core endpoint, which executes thorough validation and security measures.\n" +
-            "Provide prompt feedback to users through built-in error handling for validation or security issues.\n" +
-            "Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.\n" +
-            "Proficient in using version control systems such as Git for Android development.\n" +
-            "Follow Git documentation provided by the platform lead to maintain versioning and traceability in the codebase.\n" +
-            "Collaborate effectively with team members, utilizing GitLab for code review and seeking approvals.\n" +
-            "Execute lint checks and unit tests as part of the testing methodology to maintain code quality and tool deployment using fastlane then testing environment on firebase.\n" +
-            "Following a systematic approach to identify and resolve bugs, replication issues and validating fixes through testing.\n"
+    const val COLLABERA = "* Worked on native Android Development using languages such as Kotlin and Java.\n\n" +
+            "* Contributed to a team tasked with developing the installment feature for credit card applications and swift payment solutions, adhering to the CLEAN architecture while specifying the adoption of MVVM for certain features within Android development process.\n\n" +
+            "* Collaborated with UI/UX designers to implement provided designs into development tickets.\n\n" +
+            "* Translated design concepts into tangible features by creating development tickets.\n\n" +
+            "* Created custom UI components for reuse by other developers, promoting consistency and efficiency across projects.\n\n" +
+            "* Utilizing Retrofit and collaborating with core endpoint, which executes thorough validation and security measures.\n\n" +
+            "* Provide prompt feedback to users through built-in error handling for validation or security issues.\n\n" +
+            "* Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.\n\n" +
+            "* Proficient in using version control systems such as Git for Android development.\n\n" +
+            "* Follow Git documentation provided by the platform lead to maintain versioning and traceability in the codebase.\n\n" +
+            "* Collaborate effectively with team members, utilizing GitLab for code review and seeking approvals.\n\n" +
+            "* Execute lint checks and unit tests as part of the testing methodology to maintain code quality and tool deployment using fastlane then testing environment on firebase.\n\n" +
+            "* Following a systematic approach to identify and resolve bugs, replication issues and validating fixes through testing.\n\n"
 
-    const val YONDU = "Develop and publish a mobile application with the team in accordance with the client requirements.\n" +
-            "Worked in an Agile/Scrum environment to deliver high-quality applications.\n" +
-            "Involved in DevOps Support team for monitoring, maintaining, updating and bug fixes on the apps that are already in store.\n" +
-            "Entered delivery team to develop app from scratch overwriting a  legacy app.\n" +
-            "Able to lead with co-developers in android development and mentor and delegate android development tasks, worked closely with iOS Team for development alignment, UI/UX Designer, QA Team, Business Analyst and Scrum Master to deliver tasks.\n" +
-            "Developed more than 15 features for the revamped app.\n" +
-            "Worked on third party meeting the requirements of Vulnerability Assessment and Penetration Testing.\n" +
-            "Familiar on Firebase Crashlytics to monitor crashes and bug fixes.\n" +
-            "Conducting initial technical interviews for new android developer applicants\n"
+    const val YONDU = "* Develop and publish a mobile application with the team in accordance with the client requirements.\n\n" +
+            "* Worked in an Agile/Scrum environment to deliver high-quality applications.\n\n" +
+            "* Involved in DevOps Support team for monitoring, maintaining, updating and bug fixes on the apps that are already in store.\n\n" +
+            "* Entered delivery team to develop app from scratch overwriting a  legacy app.\n\n" +
+            "* Able to lead with co-developers in android development and mentor and delegate android development tasks, worked closely with iOS Team for development alignment, UI/UX Designer, QA Team, Business Analyst and Scrum Master to deliver tasks.\n\n" +
+            "* Developed more than 15 features for the revamped app.\n\n" +
+            "* Worked on third party meeting the requirements of Vulnerability Assessment and Penetration Testing.\n\n" +
+            "* Familiar on Firebase Crashlytics to monitor crashes and bug fixes.\n\n" +
+            "* Conducting initial technical interviews for new android developer applicants\n\n"
 
-    const val EMAPTA = "Develop and publish a mobile application with the team in accordance with the client requirements.\n" +
-            "Worked on native android and ios development, testing and publication of initial video conferencing apps on PlayStore and AppStore. \n" +
-            "Worked in an Agile/Scrum environment to deliver high-quality software.\n" +
-            "Worked on providing publishing credentials for other developers to publish PlayStore and AppStore. \n" +
-            "Part of a team for initial development of a browser app.\n" +
-            "Performed UAT for the new feature added and multiple rounds of regression testing to maintain the quality of the application. \n"
-    const val ZIGZAG = "Worked with the business team to prioritize a list of enhancements and new features for our Android applications. \n" +
-            "Maintained and bug fixing existing utility android native applications on PlayStore.\n" +
-            "Worked with DevOps team in handling and uploading and releases of cross-platform applications on PlayStore and AppStore. \n" +
-            "Worked in an Agile/Scrum environment to deliver high-quality software.\n" +
-            "Worked on mobile games using Unity, updated and maintained existing mobile games on both platforms for Ads integration.  Played a key role in publishing mobile games, both platform and published in both stores.\n" +
-            "Gained immense experience in Ads integration and analytics integration for tracking.\n" +
-            "Worked closely on different departments like UI/UX to convert designs into code, QA Engineers to deliver accepted criterias on each feature.\n"
+    const val EMAPTA = "* Develop and publish a mobile application with the team in accordance with the client requirements.\n\n" +
+            "* Worked on native android and ios development, testing and publication of initial video conferencing apps on PlayStore and AppStore. \n\n" +
+            "* Worked in an Agile/Scrum environment to deliver high-quality software.\n\n" +
+            "* Worked on providing publishing credentials for other developers to publish PlayStore and AppStore. \n\n" +
+            "* Part of a team for initial development of a browser app.\n\n" +
+            "* Performed UAT for the new feature added and multiple rounds of regression testing to maintain the quality of the application. \n\n"
+    const val ZIGZAG = "* Worked with the business team to prioritize a list of enhancements and new features for our Android applications. \n\n" +
+            "* Maintained and bug fixing existing utility android native applications on PlayStore.\n\n" +
+            "* Worked with DevOps team in handling and uploading and releases of cross-platform applications on PlayStore and AppStore. \n\n" +
+            "* Worked in an Agile/Scrum environment to deliver high-quality software.\n\n" +
+            "* Worked on mobile games using Unity, updated and maintained existing mobile games on both platforms for Ads integration. \n\n" +
+            "* Played a key role in publishing mobile games, both platform and published in both stores.\n\n" +
+            "* Gained immense experience in Ads integration and analytics integration for tracking.\n\n" +
+            "* Worked closely on different departments like UI/UX to convert designs into code, QA Engineers to deliver accepted criterias on each feature.\n\n"
 
 }
 
@@ -83,6 +82,10 @@ object Res{
         const val avatar4 = "file:///android_asset/images/avatar4.png"
         const val avatar5 = "file:///android_asset/images/avatar5.png"
         const val avatar6 = "file:///android_asset/images/avatar6.png"
+        const val work1 = "file:///android_asset/images/work_zigzag_logo.jpg"
+        const val work2 = "file:///android_asset/images/work_emapta_logo.jpg"
+        const val work3 = "file:///android_asset/images/work_yondu_logo.jpg"
+        const val work4 = "file:///android_asset/images/work_collabera_digital_logo.jpg"
     }
     object Icon{
         const val checkmark = "checkmark_icon.svg"

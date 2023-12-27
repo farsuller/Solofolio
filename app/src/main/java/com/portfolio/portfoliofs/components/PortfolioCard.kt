@@ -39,20 +39,22 @@ import com.portfolio.portfoliofs.ui.theme.Elevation
 
 
 @Composable
-fun PortfolioCard(portfolio: Portfolio){
+fun PortfolioCard(portfolio: Portfolio) {
 
     val uriHandler = LocalUriHandler.current
 
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
-                defaultElevation = Elevation.level4),
+            defaultElevation = Elevation.level4
+        ),
         modifier = Modifier
             .padding(horizontal = 10.dp)
             .padding(top = 10.dp)
             .width(300.dp)
             .height(400.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)) {
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)
+    ) {
 
         PortfolioCardItem(portfolio = portfolio, onClick = {
             uriHandler.openUri(portfolio.link)
@@ -64,16 +66,16 @@ fun PortfolioCard(portfolio: Portfolio){
 }
 
 @Composable
-fun PortfolioCardItem(portfolio: Portfolio, onClick :()-> Unit){
-    Column (
+fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
+    Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(all = 20.dp)
-            .clickable{onClick()}
+            .clickable { onClick() }
     )
 
     {
-        Box (modifier = Modifier.fillMaxWidth())
+        Box(modifier = Modifier.fillMaxWidth())
         {
             AsyncImage(
                 modifier = Modifier
@@ -88,13 +90,15 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick :()-> Unit){
             text = portfolio.title,
             fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
             fontSize = MaterialTheme.typography.titleMedium.fontSize,
-            color = MaterialTheme.colorScheme.onSurface,)
+            color = MaterialTheme.colorScheme.onSurface,
+        )
 
         Text(
             modifier = Modifier.padding(top = 10.dp),
             text = portfolio.description,
             fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
             fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-            color = MaterialTheme.colorScheme.onSurface,)
+            color = MaterialTheme.colorScheme.onSurface,
+        )
     }
 }
