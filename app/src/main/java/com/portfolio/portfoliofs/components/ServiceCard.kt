@@ -1,6 +1,5 @@
 package com.portfolio.portfoliofs.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -8,7 +7,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
@@ -17,12 +15,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.model.Service
 import com.portfolio.portfoliofs.ui.theme.Elevation
-
 
 @Composable
 fun ServiceCard(service: Service){
@@ -40,9 +36,8 @@ fun ServiceCard(service: Service){
         Column (
             modifier = Modifier
                 .width(300.dp)
-                .padding(all = 20.dp)
-
-        )
+                .height(300.dp)
+                .padding(all = 20.dp))
 
         {
             Box (modifier = Modifier

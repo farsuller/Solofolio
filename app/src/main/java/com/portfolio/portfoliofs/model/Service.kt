@@ -33,10 +33,10 @@ enum class Service(
         title = "Web Development",
         description = WEB_SERVICE
     ),
-    Flutter(
-        icon = R.drawable.flutter_icon,
-        imageDesc = "Flutter Icon",
-        title = "Flutter Development",
+    CrossPlatform(
+        icon = R.drawable.cross_platform_icon,
+        imageDesc = "Cross Platform Icon",
+        title = "Cross Platform Development",
         description = CROSS_PLATFORM_SERVICE
     ),
     Design(
