@@ -14,32 +14,29 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Testimonial
 
 @Composable
-fun TestimonialCard(){
+fun TestimonialCard(testimonial: Testimonial){
 
-    val testimonial = Testimonial.First
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().padding(top = 10.dp),
         verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Box (modifier = Modifier)
         AsyncImage(
-            modifier = Modifier.size(120.dp).border(
-                width = 2.dp,
-                color = MaterialTheme.colorScheme.onSurface,
-                shape = RoundedCornerShape(
+            modifier = Modifier.size(120.dp)
+                .clip(shape = RoundedCornerShape(
                     topStart = 18.dp,
                     topEnd = 18.dp,
-                    bottomStart = 18.dp)
-            ),
+                    bottomStart = 18.dp)),
             contentScale = ContentScale.Crop,
-            model = "file:///android_asset/images/avatar1.png",
+            model = testimonial.image,
             contentDescription = "My Photo",
         )
 

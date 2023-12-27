@@ -20,7 +20,7 @@ fun RatingBar(modifier: Modifier = Modifier) {
             Icon(
                 modifier = Modifier
                     .padding(2.dp)
-                    .size(16.dp),
+                    .size(14.dp),
                 painter = painterResource(id = R.drawable.star_icon),
                 contentDescription = "Star Icon"
             )

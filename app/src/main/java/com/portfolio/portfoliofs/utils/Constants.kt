@@ -13,7 +13,7 @@ object Constants {
     const val UNIONBANK = "https://play.google.com/store/apps/details?id=com.unionbankph.online"
 
 
-    const val LOREM_IPSUM_SHORTER = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    const val LOREM_IPSUM_SHORTER = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
     const val LOREM_IPSUM_LONG = "Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     const val LOREM_IPSUM_LONGER = "Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     const val ANDROID_SERVICE = "With 7 years of hands-on experience in building scalable mobile applications. Well-versed in Android development tools, such as Android Studio, Gradle, and the Android SDK. Familiar with MVVM and CLEAN Architecture using Kotlin/Java. Currently working on projects using Jetpack Compose."

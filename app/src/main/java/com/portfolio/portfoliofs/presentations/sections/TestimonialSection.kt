@@ -1,40 +1,34 @@
 package com.portfolio.portfoliofs.presentations.sections
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import com.far.suller.util.Constants.INTRO
-import com.far.suller.util.Constants.MAIN_INTRO
-import com.far.suller.util.Constants.NAME
-import com.far.suller.util.Constants.ROLE
-import com.portfolio.portfoliofs.components.SocialBar
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.far.suller.util.Constants.ABOUT_ME
+import com.portfolio.portfoliofs.components.PagerButtons
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.components.TestimonialCard
 import com.portfolio.portfoliofs.model.Section
+import com.portfolio.portfoliofs.model.Testimonial
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TestimonialSection(){
+
+    val pagerState = rememberPagerState( initialPage = 0 ) { Testimonial.entries.size }
+    val testimonial = Testimonial.entries.toTypedArray()
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp),
+            .padding(10.dp)
+            .padding(top = 15.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
@@ -44,7 +38,11 @@ fun TestimonialSection(){
             section = Section.Testimonial)
 
 
-        TestimonialCard()
+        HorizontalPager(state = pagerState) { page ->
+            TestimonialCard(testimonial = testimonial[page])
+        }
+
+        PagerButtons(pagerState = pagerState, pageCount = testimonial.size,)
 
     }
 }
