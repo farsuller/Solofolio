@@ -3,6 +3,7 @@ package com.portfolio.portfoliofs.components
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -39,6 +41,8 @@ import com.portfolio.portfoliofs.ui.theme.Elevation
 @Composable
 fun PortfolioCard(portfolio: Portfolio){
 
+    val uriHandler = LocalUriHandler.current
+
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
                 defaultElevation = Elevation.level4),
@@ -49,38 +53,48 @@ fun PortfolioCard(portfolio: Portfolio){
             .height(400.dp),
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)) {
-        Column (
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(all = 20.dp)
-                )
 
-        {
-            Box (modifier = Modifier.fillMaxWidth())
-            {
-                AsyncImage(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 10.dp),
-                    model = portfolio.image,
-                    contentDescription = portfolio.title,
-                )
-            }
-            Text(
-                modifier = Modifier.padding(top = 10.dp),
-                text = portfolio.title,
-                fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
-                fontSize = MaterialTheme.typography.titleMedium.fontSize,
-                color = MaterialTheme.colorScheme.onSurface,)
+        PortfolioCardItem(portfolio = portfolio, onClick = {
+            uriHandler.openUri(portfolio.link)
+        })
 
-            Text(
-                modifier = Modifier.padding(top = 10.dp),
-                text = portfolio.description,
-                fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
-                fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                color = MaterialTheme.colorScheme.onSurface,)
-        }
     }
 
 
+}
+
+@Composable
+fun PortfolioCardItem(portfolio: Portfolio, onClick :()-> Unit){
+    Column (
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(all = 20.dp)
+            .clickable{onClick()}
+    )
+
+    {
+        Box (modifier = Modifier.fillMaxWidth())
+        {
+            AsyncImage(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 10.dp),
+                model = portfolio.image,
+                contentDescription = portfolio.title,
+            )
+        }
+        Text(
+            modifier = Modifier.padding(top = 10.dp),
+            text = portfolio.title,
+            fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
+            fontSize = MaterialTheme.typography.titleMedium.fontSize,
+            color = MaterialTheme.colorScheme.onSurface,)
+
+        Text(
+            modifier = Modifier.padding(top = 10.dp),
+            text = portfolio.description,
+            fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+            color = MaterialTheme.colorScheme.onSurface,)
+    }
 }
