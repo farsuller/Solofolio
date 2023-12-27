@@ -37,7 +37,7 @@ fun PortfolioSection() {
         Box(modifier = Modifier.fillMaxWidth()) {
 
 
-            LazyRow {
+            LazyRow  {
                 items(portfolio) { portfolioEntry ->
                     PortfolioCard(portfolioEntry)
                 }

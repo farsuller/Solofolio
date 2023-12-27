@@ -110,7 +110,7 @@ internal fun NavigationDrawer(
                         ) {
                             Image(
                                 modifier = Modifier.size(200.dp),
-                                painter = painterResource(id = R.drawable.logo),
+                                painter = painterResource(id = if(!darkTheme)R.drawable.solofolio else R.drawable.solofolio_dark),
                                 contentDescription = "Logo Image"
                             )
                             Text(

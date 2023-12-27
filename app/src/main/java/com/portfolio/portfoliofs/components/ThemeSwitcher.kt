@@ -29,6 +29,9 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
+enum class AppTheme {
+    Light, Dark, System
+}
 @Composable
 fun ThemeSwitcher(
     darkTheme: Boolean = false,

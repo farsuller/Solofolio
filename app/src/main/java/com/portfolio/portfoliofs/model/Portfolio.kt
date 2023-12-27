@@ -2,8 +2,8 @@ package com.portfolio.portfoliofs.model
 
 
 import com.far.suller.util.Constants.MCDELIVERY_LINK
-import com.far.suller.util.Constants.PORFOLIOF
 import com.far.suller.util.Constants.PUREGOLD
+import com.far.suller.util.Constants.SOLOSCAPE
 import com.far.suller.util.Constants.SPARK_CLEANER_LINK
 import com.far.suller.util.Constants.UNIONBANK
 import com.far.suller.util.Res
@@ -17,9 +17,10 @@ enum class Portfolio(
 ) {
     One(
         image = Res.Image.portfolio1,
-        title = "Porfoliofs",
-        description = "Feel free to install if you're interested in exploring a simple Flutter portfolio app. It's my first Flutter app that has been published on the Play Store.",
-        link = PORFOLIOF
+        title = "SoloScape",
+        description = "SoloScape - Version 1.0 \n" +
+                "Introducing the first version of my Jetpack Compose app, now live on the Play Store—a straightforward journal app.",
+        link = SOLOSCAPE
 
     ),
     Two(

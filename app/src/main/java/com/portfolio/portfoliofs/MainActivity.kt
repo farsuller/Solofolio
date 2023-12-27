@@ -3,6 +3,7 @@ package com.portfolio.portfoliofs
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -17,6 +18,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.navigation.compose.rememberNavController
+import com.portfolio.portfoliofs.components.AppTheme
+import com.portfolio.portfoliofs.components.ThemeSwitcher
 import com.portfolio.portfoliofs.navigation.SetupNavGraph
 import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
 
@@ -29,10 +32,14 @@ class MainActivity : ComponentActivity() {
         installSplashScreen().setKeepOnScreenCondition { keepSplashOpened }
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            var darkTheme by remember { mutableStateOf(false) }
+            var appTheme by remember { mutableStateOf(AppTheme.System) }
 
             MyPortfolioJCTheme(
-                darkTheme = darkTheme,
+                darkTheme = when (appTheme) {
+                    AppTheme.Dark -> true
+                    AppTheme.Light -> false
+                    AppTheme.System -> isSystemInDarkTheme()
+                },
                 dynamicColor = false
             ) {
                 val navController = rememberNavController()
@@ -42,9 +49,17 @@ class MainActivity : ComponentActivity() {
                     onDataLoaded = {
                         keepSplashOpened = false
                     },
-                    darkTheme = darkTheme,
+                    darkTheme = when (appTheme) {
+                        AppTheme.Dark -> true
+                        AppTheme.Light -> false
+                        AppTheme.System -> isSystemInDarkTheme()
+                    },
                     onThemeUpdated = {
-                        darkTheme = !darkTheme
+                        appTheme = when (appTheme) {
+                            AppTheme.Light -> AppTheme.Dark
+                            AppTheme.Dark -> AppTheme.System
+                            AppTheme.System -> AppTheme.Light
+                        }
                     }
                 )
             }
