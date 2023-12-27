@@ -43,7 +43,7 @@ fun AboutMeSection(){
                     text = ABOUT_ME,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface)
             }
 
             AsyncImage(
