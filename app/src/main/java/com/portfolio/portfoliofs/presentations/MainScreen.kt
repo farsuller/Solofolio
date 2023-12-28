@@ -113,7 +113,6 @@ internal fun MainScreen(
                         onClick = {
                             scope.launch {
                                 lazyListState.animateScrollToItem(index = 0)
-                                rotY = 180f
                             }
 
                         },
@@ -126,9 +125,12 @@ internal fun MainScreen(
                         }
                     )
 
-                    LaunchedEffect(true) {
-                        rotY = 0f
-                    }
+
+                }
+
+                LaunchedEffect(showButton) {
+                    rotY = if (showButton) 0f
+                    else 180f
                 }
 
             },
