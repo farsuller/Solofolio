@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Portfolio
@@ -34,7 +35,7 @@ fun PortfolioCard(portfolio: Portfolio) {
             .padding(horizontal = 10.dp)
             .padding(top = 10.dp)
             .width(300.dp)
-            .height(400.dp),
+            .height(430.dp),
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)
     ) {
@@ -80,6 +81,15 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
             modifier = Modifier.padding(top = 10.dp),
             text = portfolio.description,
             fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+            color = MaterialTheme.colorScheme.onSurface,
+        )
+
+        Text(
+            textAlign = TextAlign.End,
+            modifier = Modifier.padding(top = 10.dp),
+            text = "Click to view on Store",
+            fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
             fontSize = MaterialTheme.typography.bodyMedium.fontSize,
             color = MaterialTheme.colorScheme.onSurface,
         )
