@@ -1,11 +1,9 @@
 package com.portfolio.portfoliofs.presentations
 
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.soloscape.util.connectivity.ConnectivityObserver
-import com.soloscape.util.connectivity.NetworkConnectivityObserver
 
 
 class MainViewModel : ViewModel() {
