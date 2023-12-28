@@ -8,15 +8,14 @@ import com.soloscape.util.connectivity.ConnectivityObserver
 import com.soloscape.util.connectivity.NetworkConnectivityObserver
 
 
-internal class MainViewModel (
-    private val connectivity: NetworkConnectivityObserver,
-): ViewModel() {
+class MainViewModel : ViewModel() {
 
-    private var network by mutableStateOf(ConnectivityObserver.Status.Unavailable)
-
-    init {
-
-    }
+    var emailState by mutableStateOf(EmailState())
 
 
+    data class EmailState(
+        var toEmail: String = "",
+        var subject: String = "",
+        var message: String = ""
+    )
 }

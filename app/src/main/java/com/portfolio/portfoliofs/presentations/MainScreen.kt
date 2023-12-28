@@ -62,11 +62,9 @@ import kotlinx.coroutines.launch
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 internal fun MainScreen(
-    onMenuClicked: () -> Unit,
-    drawerState: DrawerState,
     darkTheme: Boolean,
     onThemeUpdated: () -> Unit,
-    onMoreClicked: () -> Unit,
+    viewModel: MainViewModel
 ) {
     val scope = rememberCoroutineScope()
     var padding by remember { mutableStateOf(PaddingValues()) }
@@ -90,136 +88,53 @@ internal fun MainScreen(
         label = "RotationY Animation"
     )
 
-    NavigationDrawer(
-        drawerState = drawerState,
-        darkTheme = darkTheme,
-        onThemeUpdated = onThemeUpdated,
-        appVersion = appVersion
-    ) {
-        Scaffold(
-            modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
-            topBar = {
-                MainTopBar(
-                    onMenuClicked = onMenuClicked,
-                    scrollBehavior = scrollBehavior,
-                    onMoreClicked = onMoreClicked
-                )
-            },
-            floatingActionButton = {
-
-                if (showButton) {
-                    FloatingActionButton(
-                        modifier = Modifier.rotate(degrees = animatedRotationY),
-                        onClick = {
-                            scope.launch {
-                                lazyListState.animateScrollToItem(index = 0)
-                            }
-
-                        },
-                        content = {
-                            Icon(
-                                imageVector = Icons.Default.ArrowUpward,
-                                contentDescription = "Scroll to Top",
-                                tint = MaterialTheme.colorScheme.onSurface
-                            )
-                        }
-                    )
-
-
-                }
-
-                LaunchedEffect(showButton) {
-                    rotY = if (showButton) 0f
-                    else 180f
-                }
-
-            },
-            content = {
-                padding = it
-                MainContent(paddingValues = it, lazyListState = lazyListState)
-            }
-        )
-    }
-}
-
-@Composable
-internal fun NavigationDrawer(
-    drawerState: DrawerState,
-    darkTheme: Boolean,
-    onThemeUpdated: () -> Unit,
-    appVersion: String,
-    content: @Composable () -> Unit,
-) {
-
-    ModalNavigationDrawer(
-        drawerState = drawerState,
-        drawerContent = {
-            ModalDrawerSheet(
-                modifier = Modifier.width(200.dp),
-                content = {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(250.dp),
-                        contentAlignment = Alignment.Center
-                    )
-                    {
-                        Column(
-                            modifier = Modifier.fillMaxSize(),
-                            verticalArrangement = Arrangement.Center,
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ) {
-                            Image(
-                                modifier = Modifier.size(200.dp),
-                                painter = painterResource(id = if (!darkTheme) R.drawable.solofolio else R.drawable.solofolio_dark),
-                                contentDescription = "Logo Image"
-                            )
-                            Text(
-                                text = appVersion,
-                                style = MaterialTheme.typography.bodySmall
-                            )
-                        }
-                    }
-                    Column(modifier = Modifier.fillMaxWidth()) {
-                        NavigationDrawerItem(
-                            label = {
-                                Row(modifier = Modifier.padding(horizontal = 12.dp)) {
-                                    Icon(
-                                        imageVector = Icons.Default.Settings,
-                                        contentDescription = "Settings Icon",
-                                        tint = MaterialTheme.colorScheme.onSurface
-                                    )
-                                    Spacer(modifier = Modifier.width(12.dp))
-                                    Text(
-                                        text = "Settings",
-                                        color = MaterialTheme.colorScheme.onSurface
-                                    )
-
-                                }
-                            },
-                            selected = false,
-                            onClick = {}
-                        )
-                        Spacer(modifier = Modifier.weight(1f))
-                        NavigationDrawerItem(
-                            label = {
-                                ThemeSwitcher(
-                                    darkTheme = darkTheme,
-                                    size = 50.dp,
-                                    padding = 5.dp,
-                                    onClick = onThemeUpdated
-                                )
-                            },
-                            selected = false,
-                            onClick = {}
-                        )
-                    }
-
-
-                }
+    Scaffold(
+        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            MainTopBar(
+                scrollBehavior = scrollBehavior,
+                appVersion = appVersion,
+                darkTheme = darkTheme,
+                onThemeUpdated = onThemeUpdated
             )
         },
-        content = content
+        floatingActionButton = {
+
+            if (showButton) {
+                FloatingActionButton(
+                    modifier = Modifier.rotate(degrees = animatedRotationY),
+                    onClick = {
+                        scope.launch {
+                            lazyListState.animateScrollToItem(index = 0)
+                        }
+
+                    },
+                    content = {
+                        Icon(
+                            imageVector = Icons.Default.ArrowUpward,
+                            contentDescription = "Scroll to Top",
+                            tint = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                )
+
+
+            }
+
+            LaunchedEffect(showButton) {
+                rotY = if (showButton) 0f
+                else 180f
+            }
+
+        },
+        content = {
+            padding = it
+            MainContent(paddingValues = it,
+                lazyListState = lazyListState,
+                viewModel = viewModel,
+                darkTheme = darkTheme,
+                appVersion = appVersion)
+        }
     )
 }
 

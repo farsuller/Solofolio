@@ -30,7 +30,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.portfolio.portfoliofs.components.MainTopBar
 import com.portfolio.portfoliofs.model.HomeTabs
 import kotlinx.coroutines.launch
 

@@ -10,6 +10,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
@@ -19,10 +20,12 @@ import com.portfolio.portfoliofs.R
 
 
 @Composable
-fun SocialBar(){
+fun SocialBar(
+    horizontalArrangement: Arrangement.Horizontal = Arrangement.Start
+){
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.Start
+        horizontalArrangement = horizontalArrangement
         ){
         SocialBarItem (socialIcon = R.drawable.facebook_icon, socialTitle = "Facebook Icon", openUri = Constants.FACEBOOK_LINK)
         SocialBarItem (socialIcon = R.drawable.instagram_icon, socialTitle = "Instagram Icon", openUri = Constants.INSTAGRAM_LINK)
