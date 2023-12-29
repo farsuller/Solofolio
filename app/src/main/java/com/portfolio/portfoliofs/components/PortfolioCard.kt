@@ -1,6 +1,7 @@
 package com.portfolio.portfoliofs.components
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,13 +14,16 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Portfolio
 import com.portfolio.portfoliofs.ui.theme.Elevation
+import com.portfolio.portfoliofs.utils.clickableWithoutRipple
 
 
 @Composable
@@ -41,7 +45,7 @@ fun PortfolioCard(portfolio: Portfolio) {
     ) {
 
         PortfolioCardItem(portfolio = portfolio, onClick = {
-            uriHandler.openUri(portfolio.link)
+            if(portfolio.link.isNotEmpty()) uriHandler.openUri(portfolio.link)
         })
 
     }
@@ -55,22 +59,25 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(all = 20.dp)
-            .clickable { onClick() }
+            .clickableWithoutRipple(
+                interactionSource = MutableInteractionSource(),
+                onClick = {onClick()}
+            )
     )
-
     {
         Box(modifier = Modifier.fillMaxWidth())
         {
             AsyncImage(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 10.dp),
+                    .height(200.dp),
                 model = portfolio.image,
+                contentScale = ContentScale.Fit,
                 contentDescription = portfolio.title,
+                alignment = Alignment.TopCenter
             )
         }
         Text(
-            modifier = Modifier.padding(top = 10.dp),
             text = portfolio.title,
             fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
             fontSize = MaterialTheme.typography.titleMedium.fontSize,
@@ -78,20 +85,22 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
         )
 
         Text(
-            modifier = Modifier.padding(top = 10.dp),
             text = portfolio.description,
             fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
             fontSize = MaterialTheme.typography.bodyMedium.fontSize,
             color = MaterialTheme.colorScheme.onSurface,
         )
 
-        Text(
-            textAlign = TextAlign.End,
-            modifier = Modifier.padding(top = 10.dp),
-            text = "Click to view on Store",
-            fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
-            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-            color = MaterialTheme.colorScheme.onSurface,
-        )
+        if(portfolio.link.isNotEmpty()){
+            Text(
+                textAlign = TextAlign.End,
+                modifier = Modifier.padding(top = 10.dp),
+                text = "Click to view on Store",
+                fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
+                fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+        }
+
     }
 }

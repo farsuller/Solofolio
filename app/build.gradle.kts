@@ -1,18 +1,34 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
+import java.io.FileNotFoundException
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
 
+val keystoreProperties: Properties by lazy {
+    val properties = Properties()
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+
+    if (keystorePropertiesFile.exists()) {
+        properties.load(keystorePropertiesFile.inputStream())
+    } else {
+        throw FileNotFoundException("Keystore properties file not found.")
+    }
+
+    properties
+}
+
 android {
     namespace = "com.portfolio.portfoliofs"
-    compileSdk = 34
-
+    compileSdk = ProjectConfig.compileSdk
     defaultConfig {
         applicationId = "com.portfolio.portfoliofs"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = ProjectConfig.minSdk
+        targetSdk = ProjectConfig.targetSdk
+        versionCode = ProjectConfig.versionCode
+        versionName = "${ProjectConfig.majorVersion}.${ProjectConfig.minorVersion}.${ProjectConfig.patchVersion}"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -20,13 +36,33 @@ android {
         }
     }
 
+    applicationVariants.all {
+        archivesName.set("${ProjectConfig.appFileName}-${buildType.name}-$versionCode-$versionName")
+    }
+
+
+    signingConfigs {
+        register("release") {
+            storeFile = file("keystore/portfoliofs.jks")
+            storePassword = keystoreProperties["storePasswordOld"].toString()
+            keyAlias = keystoreProperties["keyAliasOld"].toString()
+            keyPassword = keystoreProperties["keyPasswordOld"].toString()
+        }
+    }
+
     buildTypes {
-        release {
+        debug {
+            applicationIdSuffix = ".debug"
+            signingConfig = signingConfigs.getByName("debug")
+            isDebuggable = true
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+        }
+
+        release {
+            signingConfig = signingConfigs.getByName("release")
+            isDebuggable = false
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {

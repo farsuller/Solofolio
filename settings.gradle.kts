@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyPortfolio-JC"
 include(":app")
- 
