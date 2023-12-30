@@ -10,7 +10,7 @@ object ProjectConfig {
 
     const val extensionVersion = "1.4.6"
 
-    const val versionCode = 8
+    const val versionCode = 9
 
     const val majorVersion = 1
     const val minorVersion = 0

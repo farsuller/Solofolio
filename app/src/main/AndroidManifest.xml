@@ -13,9 +13,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/solofolio"
+        android:icon="@mipmap/solofolio_icon_v2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/solofolio"
+        android:roundIcon="@mipmap/solofolio_icon_v2_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPortfolioJC"
         tools:targetApi="31">
