@@ -3,6 +3,7 @@ package com.portfolio.portfoliofs.model
 
 import com.portfolio.portfoliofs.utils.Constants.MCDELIVERY_LINK
 import com.portfolio.portfoliofs.utils.Constants.PUREGOLD
+import com.portfolio.portfoliofs.utils.Constants.SOLOEATS
 import com.portfolio.portfoliofs.utils.Constants.SOLOSCAPE
 import com.portfolio.portfoliofs.utils.Constants.SPARK_CLEANER_LINK
 import com.portfolio.portfoliofs.utils.Constants.UNIONBANK
@@ -21,6 +22,14 @@ enum class Portfolio(
         description = "SoloScape - Version 1.0 \n" +
                 "Introducing the first version of my Jetpack Compose app, now live on the Play Store—a straightforward journal app.",
         link = SOLOSCAPE
+
+    ),
+    SoloEats(
+        image = Res.Image.soloeats,
+        title = "SoloEats",
+        description = "Note: This version is for demo purposes only and does not process real transactions.\n" +
+                "We're thrilled to introduce SoloEats, your ultimate food ordering companion designed to elevate your dining experiences.",
+        link = SOLOEATS
 
     ),
     McDeliveryPH(

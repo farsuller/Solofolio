@@ -125,9 +125,7 @@ fun ExperienceCard(index: Int) {
                             modifier = Modifier
                                 .padding(all = 10.dp)
                                 .animateBounds(
-                                    modifier = if (expanded) Modifier.fillMaxWidth() else Modifier.size(
-                                        100.dp
-                                    )
+                                    modifier = if (expanded) Modifier.size(300.dp) else Modifier.size(100.dp)
                                 ),
                             model = ImageRequest.Builder(LocalContext.current)
                                 .data(experience[index].image)

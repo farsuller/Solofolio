@@ -7,6 +7,7 @@ object Constants {
     const val LINKEDIN_LINK = "https://www.linkedin.com/in/florence-arnold-suller-954b12164/"
 
     const val SOLOSCAPE = "https://play.google.com/store/apps/details?id=com.soloscape.compose"
+    const val SOLOEATS = "https://play.google.com/store/apps/details?id=com.solo.solodemo"
     const val SPARK_CLEANER_LINK = "https://play.google.com/store/apps/details?id=com.booster.sparkcleaner"
     const val MCDELIVERY_LINK = "https://play.google.com/store/apps/details?id=ph.mobext.mcdelivery"
     const val PUREGOLD = "https://play.google.com/store/apps/details?id=com.grocery.puregold"
@@ -85,6 +86,7 @@ object Res{
         const val portfolio12 = "file:///android_asset/images/portfolio12.jpg"
         const val portfolio13 = "file:///android_asset/images/portfolio13.jpg"
         const val portfolio14 = "file:///android_asset/images/portfolio14.png"
+        const val soloeats = "file:///android_asset/images/soloeats.png"
 
         const val avatar1 = "file:///android_asset/images/avatar1.png"
         const val avatar2 = "file:///android_asset/images/avatar2.png"

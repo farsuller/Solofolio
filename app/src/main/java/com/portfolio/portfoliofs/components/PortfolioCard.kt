@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Portfolio
@@ -88,6 +89,8 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
             text = portfolio.description,
             fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
             fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+            maxLines = 5,
+            overflow = TextOverflow.Ellipsis,
             color = MaterialTheme.colorScheme.onSurface,
         )
 
