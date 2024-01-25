@@ -48,5 +48,5 @@ enum class Testimonial(
         fullName = "Jennilyn Pagaran Aclag",
         profession = "Technical Standard Engineer",
         review = "He ensured that projects adhered in to great technical standards. His commitment to excellence is truly commendable.",
-        ),
+    ),
 }

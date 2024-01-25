@@ -80,7 +80,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.navigation:navigation-compose:2.7.6")
-    implementation("androidx.compose.foundation:foundation-layout:1.5.4")
+
 
     implementation(libs.coil.kt.compose)
 

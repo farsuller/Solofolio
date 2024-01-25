@@ -49,5 +49,5 @@ enum class Service(
         imageDesc = "Video Icon",
         title = "Video Editing",
         description = EDITING_SERVICE,
-        ),
+    ),
 }
