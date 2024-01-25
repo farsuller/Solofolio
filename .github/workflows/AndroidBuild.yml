@@ -1,0 +1,25 @@
+name: SolofolioBuild
+on:
+  pull_request :
+    branches : [ master ]
+  push :
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Solofolio.apk
+          path: app/build/outputs/apk/app-debug.apk
