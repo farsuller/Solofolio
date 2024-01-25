@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.portfolio.portfoliofs.app-mergeDebugResources-53:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\c0fb84f7ffcd679980a603a519ea516f\\transformed\\core-splashscreen-1.0.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    }
+                },
+                {
+                    "source": "E:\\AndroidProjects\\MyPortfolioJC\\app\\src\\main\\res\\values-night\\splash.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "380"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "141",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "460"
+                    }
+                }
+            ]
+        }
+    ]
+}

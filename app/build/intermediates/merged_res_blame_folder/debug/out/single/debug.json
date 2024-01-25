@@ -1,0 +1,250 @@
+[
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_apple_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/apple_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/xml_data_extraction_rules.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_shield_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/shield_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-hdpi_solofolio_icon_v2.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-hdpi/solofolio_icon_v2.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_twitter_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/twitter_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xhdpi_solofolio_icon_v2.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xhdpi/solofolio_icon_v2.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-mdpi_solofolio_icon_v2_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-mdpi/solofolio_icon_v2_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxxhdpi_solofolio_icon_v2.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxxhdpi/solofolio_icon_v2.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxhdpi_solofolio.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxhdpi/solofolio.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_android_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/android_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxhdpi_solofolio_icon_v2.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxhdpi/solofolio_icon_v2.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_video_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/video_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio_dark.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio_dark.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxxhdpi_solofolio_icon_v2_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxxhdpi/solofolio_icon_v2_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_cross_platform_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/cross_platform_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio__icon_v2_foreground.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio__icon_v2_foreground.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_logo.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/logo.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-mdpi_solofolio.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-mdpi/solofolio.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxhdpi_solofolio_icon_v2_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxhdpi/solofolio_icon_v2_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio_feature_graphic.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio_feature_graphic.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_web_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/web_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_seo_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/seo_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-anydpi-v26_solofolio_icon_v2_round.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-anydpi-v26/solofolio_icon_v2_round.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_sf_splash_night.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/sf_splash_night.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio__icon_v2_background.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio__icon_v2_background.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-anydpi-v26_solofolio_icon_v2.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-anydpi-v26/solofolio_icon_v2.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_linkedin_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/linkedin_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio_icon_v2_playstore.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio_icon_v2_playstore.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_user_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/user_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-hdpi_solofolio.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-hdpi/solofolio.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-mdpi_solofolio_icon_v2.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-mdpi/solofolio_icon_v2.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_link_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/link_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxxhdpi_solofolio.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxxhdpi/solofolio.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_star_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/star_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-hdpi_solofolio_icon_v2_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-hdpi/solofolio_icon_v2_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio_icon_v2_night.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio_icon_v2_night.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_facebook_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/facebook_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_design_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/design_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xhdpi_solofolio.png.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xhdpi/solofolio.png"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_instagram_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/instagram_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/xml_backup_rules.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_business_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/business_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_sf_splash.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/sf_splash.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_solofolio_icon_v2.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/solofolio_icon_v2.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_flutter_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/flutter_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/drawable_checkmark_icon.xml.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/drawable/checkmark_icon.xml"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xhdpi_solofolio_icon_v2_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xhdpi/solofolio_icon_v2_round.webp"
+    },
+    {
+        "merged": "com.portfolio.portfoliofs.app-merged_res-55:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.portfolio.portfoliofs.app-main-57:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    }
+]
