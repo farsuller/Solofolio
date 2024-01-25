@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.MyPortfolioJC.MySplash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#001E2C</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/solofolio_icon_v2_night</item>
-        <item name="postSplashScreenTheme">@style/Theme.MyPortfolioJC</item>
-    </style>
-</resources>
