@@ -20,20 +20,20 @@ import com.portfolio.portfoliofs.presentations.sections.PortfolioSection
 import com.portfolio.portfoliofs.presentations.sections.ServiceSection
 import com.portfolio.portfoliofs.presentations.sections.TestimonialSection
 
-
 @Composable
 fun MainContent(
     paddingValues: PaddingValues,
     lazyListState: LazyListState,
     viewModel: MainViewModel,
     darkTheme: Boolean,
-    appVersion: String) {
+    appVersion: String,
+) {
     LazyColumn(
         modifier = Modifier
             .padding(top = paddingValues.calculateTopPadding()),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
-        state = lazyListState
+        state = lazyListState,
     ) {
         item {
             MyIntroSection()
@@ -44,10 +44,8 @@ fun MainContent(
             ExperienceSection()
             ContactMeSection(viewModel = viewModel)
 
-
             FooterSection(darkTheme = darkTheme, appVersion = appVersion)
             Spacer(modifier = Modifier.height(28.dp))
         }
     }
 }
-

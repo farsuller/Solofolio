@@ -15,17 +15,17 @@ import com.portfolio.portfoliofs.R
 @SuppressLint("UnnecessaryComposedModifier")
 fun Modifier.clickableWithoutRipple(
     interactionSource: MutableInteractionSource,
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ) = composed(
     factory = {
         this.then(
             Modifier.clickable(
                 interactionSource = interactionSource,
                 indication = null,
-                onClick = { onClick() }
-            )
+                onClick = { onClick() },
+            ),
         )
-    }
+    },
 )
 fun getAppVersion(context: Context): String {
     return try {
@@ -34,7 +34,7 @@ fun getAppVersion(context: Context): String {
         val versionCode: Long = PackageInfoCompat.getLongVersionCode(packageInfo)
 
         val versionName: String = packageInfo.versionName
-        "v$versionName"
+        "v$versionCode.$versionName"
     } catch (e: PackageManager.NameNotFoundException) {
         "version N/A"
     }
@@ -43,5 +43,5 @@ fun getAppVersion(context: Context): String {
 val provider = GoogleFont.Provider(
     providerAuthority = "com.google.android.gms.fonts",
     providerPackage = "com.google.android.gms",
-    certificates = R.array.com_google_android_gms_fonts_certs
+    certificates = R.array.com_google_android_gms_fonts_certs,
 )

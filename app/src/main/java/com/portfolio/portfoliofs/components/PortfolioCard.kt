@@ -1,6 +1,5 @@
 package com.portfolio.portfoliofs.components
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,15 +25,13 @@ import com.portfolio.portfoliofs.model.Portfolio
 import com.portfolio.portfoliofs.ui.theme.Elevation
 import com.portfolio.portfoliofs.utils.clickableWithoutRipple
 
-
 @Composable
 fun PortfolioCard(portfolio: Portfolio) {
-
     val uriHandler = LocalUriHandler.current
 
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
-            defaultElevation = Elevation.level4
+            defaultElevation = Elevation.level4,
         ),
         modifier = Modifier
             .padding(horizontal = 10.dp)
@@ -42,16 +39,12 @@ fun PortfolioCard(portfolio: Portfolio) {
             .width(300.dp)
             .height(430.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary),
     ) {
-
         PortfolioCardItem(portfolio = portfolio, onClick = {
-            if(portfolio.link.isNotEmpty()) uriHandler.openUri(portfolio.link)
+            if (portfolio.link.isNotEmpty()) uriHandler.openUri(portfolio.link)
         })
-
     }
-
-
 }
 
 @Composable
@@ -62,12 +55,10 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
             .padding(all = 20.dp)
             .clickableWithoutRipple(
                 interactionSource = MutableInteractionSource(),
-                onClick = {onClick()}
-            )
-    )
-    {
-        Box(modifier = Modifier.fillMaxWidth())
-        {
+                onClick = { onClick() },
+            ),
+    ) {
+        Box(modifier = Modifier.fillMaxWidth()) {
             AsyncImage(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -75,7 +66,7 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
                 model = portfolio.image,
                 contentScale = ContentScale.Fit,
                 contentDescription = portfolio.title,
-                alignment = Alignment.TopCenter
+                alignment = Alignment.TopCenter,
             )
         }
         Text(
@@ -94,7 +85,7 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
             color = MaterialTheme.colorScheme.onSurface,
         )
 
-        if(portfolio.link.isNotEmpty()){
+        if (portfolio.link.isNotEmpty()) {
             Text(
                 textAlign = TextAlign.End,
                 modifier = Modifier.padding(top = 10.dp),
@@ -104,6 +95,5 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
                 color = MaterialTheme.colorScheme.onSurface,
             )
         }
-
     }
 }

@@ -10,7 +10,6 @@ import androidx.navigation.compose.composable
 import com.portfolio.portfoliofs.ScreensRoutes
 import com.portfolio.portfoliofs.presentations.MainScreen
 import com.portfolio.portfoliofs.presentations.MainViewModel
-import com.portfolio.portfoliofs.presentations.TabbedMainScreen
 
 @Composable
 fun SetupNavGraph(
@@ -22,22 +21,23 @@ fun SetupNavGraph(
 ) {
     NavHost(
         navController = navHostController,
-        startDestination = startDestination)
-    {
+        startDestination = startDestination,
+    ) {
         homeRoute(
             darkTheme = darkTheme,
             onThemeUpdated = onThemeUpdated,
-            onDataLoaded = onDataLoaded)
+            onDataLoaded = onDataLoaded,
+        )
     }
 }
 
 fun NavGraphBuilder.homeRoute(
     darkTheme: Boolean,
     onDataLoaded: () -> Unit,
-    onThemeUpdated: () -> Unit) {
+    onThemeUpdated: () -> Unit,
+) {
     composable(route = ScreensRoutes.Home.route) {
-
-         val mainViewModel: MainViewModel = viewModel()
+        val mainViewModel: MainViewModel = viewModel()
 
         LaunchedEffect(key1 = true) {
             onDataLoaded()
@@ -46,13 +46,7 @@ fun NavGraphBuilder.homeRoute(
         MainScreen(
             darkTheme = darkTheme,
             onThemeUpdated = onThemeUpdated,
-            viewModel = mainViewModel)
-    }
-}
-
-fun NavGraphBuilder.tabbedScreenRoute() {
-    composable(route = ScreensRoutes.Tabbed.route) {
-        TabbedMainScreen()
-
+            viewModel = mainViewModel,
+        )
     }
 }

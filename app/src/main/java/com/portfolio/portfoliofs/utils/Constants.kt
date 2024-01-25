@@ -13,7 +13,6 @@ object Constants {
     const val PUREGOLD = "https://play.google.com/store/apps/details?id=com.grocery.puregold"
     const val UNIONBANK = "https://play.google.com/store/apps/details?id=com.unionbankph.online"
 
-
     const val ANDROID_SERVICE = "Bringing seven years of hands-on experience in crafting scalable mobile applications. Proficient with Android development tools including Android Studio, Gradle, and the Android SDK. Familiar with MVVM and CLEAN Architecture using Kotlin/Java."
     const val IOS_SERVICE = "Although my experience in iOS development is not extensive, I have effectively maintained iOS apps and released them on the App Store. Currently, I am getting familiar with well-known iOS development frameworks like UIKit and SwiftUI."
     const val WEB_SERVICE = "Continuously fascinated by coding and crafting digital solutions, I've begun familiarizing myself with renowned web development frameworks like Kobweb, and this static website is a product of that exploration."
@@ -30,48 +29,47 @@ object Constants {
     const val INTRO = "Hello I'm"
 
     const val COLLABERA = "* Worked on native Android Development using languages such as Kotlin and Java.\n\n" +
-            "* Contributed to a team tasked with developing the installment feature for credit card applications and swift payment solutions, adhering to the CLEAN architecture while specifying the adoption of MVVM for certain features within Android development process.\n\n" +
-            "* Collaborated with UI/UX designers to implement provided designs into development tickets.\n\n" +
-            "* Translated design concepts into tangible features by creating development tickets.\n\n" +
-            "* Created custom UI components for reuse by other developers, promoting consistency and efficiency across projects.\n\n" +
-            "* Utilizing Retrofit and collaborating with core endpoint, which executes thorough validation and security measures.\n\n" +
-            "* Provide prompt feedback to users through built-in error handling for validation or security issues.\n\n" +
-            "* Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.\n\n" +
-            "* Proficient in using version control systems such as Git for Android development.\n\n" +
-            "* Follow Git documentation provided by the platform lead to maintain versioning and traceability in the codebase.\n\n" +
-            "* Collaborate effectively with team members, utilizing GitLab for code review and seeking approvals.\n\n" +
-            "* Execute lint checks and unit tests as part of the testing methodology to maintain code quality and tool deployment using fastlane then testing environment on firebase.\n\n" +
-            "* Following a systematic approach to identify and resolve bugs, replication issues and validating fixes through testing.\n\n"
+        "* Contributed to a team tasked with developing the installment feature for credit card applications and swift payment solutions, adhering to the CLEAN architecture while specifying the adoption of MVVM for certain features within Android development process.\n\n" +
+        "* Collaborated with UI/UX designers to implement provided designs into development tickets.\n\n" +
+        "* Translated design concepts into tangible features by creating development tickets.\n\n" +
+        "* Created custom UI components for reuse by other developers, promoting consistency and efficiency across projects.\n\n" +
+        "* Utilizing Retrofit and collaborating with core endpoint, which executes thorough validation and security measures.\n\n" +
+        "* Provide prompt feedback to users through built-in error handling for validation or security issues.\n\n" +
+        "* Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.\n\n" +
+        "* Proficient in using version control systems such as Git for Android development.\n\n" +
+        "* Follow Git documentation provided by the platform lead to maintain versioning and traceability in the codebase.\n\n" +
+        "* Collaborate effectively with team members, utilizing GitLab for code review and seeking approvals.\n\n" +
+        "* Execute lint checks and unit tests as part of the testing methodology to maintain code quality and tool deployment using fastlane then testing environment on firebase.\n\n" +
+        "* Following a systematic approach to identify and resolve bugs, replication issues and validating fixes through testing.\n\n"
 
     const val YONDU = "* Develop and publish a mobile application with the team in accordance with the client requirements.\n\n" +
-            "* Worked in an Agile/Scrum environment to deliver high-quality applications.\n\n" +
-            "* Involved in DevOps Support team for monitoring, maintaining, updating and bug fixes on the apps that are already in store.\n\n" +
-            "* Entered delivery team to develop app from scratch overwriting a  legacy app.\n\n" +
-            "* Able to lead with co-developers in android development and mentor and delegate android development tasks, worked closely with iOS Team for development alignment, UI/UX Designer, QA Team, Business Analyst and Scrum Master to deliver tasks.\n\n" +
-            "* Developed more than 15 features for the revamped app.\n\n" +
-            "* Worked on third party meeting the requirements of Vulnerability Assessment and Penetration Testing.\n\n" +
-            "* Familiar on Firebase Crashlytics to monitor crashes and bug fixes.\n\n" +
-            "* Conducting initial technical interviews for new android developer applicants\n\n"
+        "* Worked in an Agile/Scrum environment to deliver high-quality applications.\n\n" +
+        "* Involved in DevOps Support team for monitoring, maintaining, updating and bug fixes on the apps that are already in store.\n\n" +
+        "* Entered delivery team to develop app from scratch overwriting a  legacy app.\n\n" +
+        "* Able to lead with co-developers in android development and mentor and delegate android development tasks, worked closely with iOS Team for development alignment, UI/UX Designer, QA Team, Business Analyst and Scrum Master to deliver tasks.\n\n" +
+        "* Developed more than 15 features for the revamped app.\n\n" +
+        "* Worked on third party meeting the requirements of Vulnerability Assessment and Penetration Testing.\n\n" +
+        "* Familiar on Firebase Crashlytics to monitor crashes and bug fixes.\n\n" +
+        "* Conducting initial technical interviews for new android developer applicants\n\n"
 
     const val EMAPTA = "* Develop and publish a mobile application with the team in accordance with the client requirements.\n\n" +
-            "* Worked on native android and ios development, testing and publication of initial video conferencing apps on PlayStore and AppStore. \n\n" +
-            "* Worked in an Agile/Scrum environment to deliver high-quality software.\n\n" +
-            "* Worked on providing publishing credentials for other developers to publish PlayStore and AppStore. \n\n" +
-            "* Part of a team for initial development of a browser app.\n\n" +
-            "* Performed UAT for the new feature added and multiple rounds of regression testing to maintain the quality of the application. \n\n"
+        "* Worked on native android and ios development, testing and publication of initial video conferencing apps on PlayStore and AppStore. \n\n" +
+        "* Worked in an Agile/Scrum environment to deliver high-quality software.\n\n" +
+        "* Worked on providing publishing credentials for other developers to publish PlayStore and AppStore. \n\n" +
+        "* Part of a team for initial development of a browser app.\n\n" +
+        "* Performed UAT for the new feature added and multiple rounds of regression testing to maintain the quality of the application. \n\n"
     const val ZIGZAG = "* Worked with the business team to prioritize a list of enhancements and new features for our Android applications. \n\n" +
-            "* Maintained and bug fixing existing utility android native applications on PlayStore.\n\n" +
-            "* Worked with DevOps team in handling and uploading and releases of cross-platform applications on PlayStore and AppStore. \n\n" +
-            "* Worked in an Agile/Scrum environment to deliver high-quality software.\n\n" +
-            "* Worked on mobile games using Unity, updated and maintained existing mobile games on both platforms for Ads integration. \n\n" +
-            "* Played a key role in publishing mobile games, both platform and published in both stores.\n\n" +
-            "* Gained immense experience in Ads integration and analytics integration for tracking.\n\n" +
-            "* Worked closely on different departments like UI/UX to convert designs into code, QA Engineers to deliver accepted criterias on each feature.\n\n"
-
+        "* Maintained and bug fixing existing utility android native applications on PlayStore.\n\n" +
+        "* Worked with DevOps team in handling and uploading and releases of cross-platform applications on PlayStore and AppStore. \n\n" +
+        "* Worked in an Agile/Scrum environment to deliver high-quality software.\n\n" +
+        "* Worked on mobile games using Unity, updated and maintained existing mobile games on both platforms for Ads integration. \n\n" +
+        "* Played a key role in publishing mobile games, both platform and published in both stores.\n\n" +
+        "* Gained immense experience in Ads integration and analytics integration for tracking.\n\n" +
+        "* Worked closely on different departments like UI/UX to convert designs into code, QA Engineers to deliver accepted criterias on each feature.\n\n"
 }
 
-object Res{
-    object Image{
+object Res {
+    object Image {
         const val portfolio1 = "file:///android_asset/images/portfolio1.png"
         const val portfolio2 = "file:///android_asset/images/portfolio2.png"
         const val portfolio3 = "file:///android_asset/images/portfolio3.png"
@@ -100,7 +98,7 @@ object Res{
         const val work3 = "file:///android_asset/images/work_yondu_logo.jpg"
         const val work4 = "file:///android_asset/images/work_collabera_digital_logo.jpg"
     }
-    object Icon{
+    object Icon {
         const val checkmark = "checkmark_icon.svg"
         const val shield = "shield_icon.svg"
         const val happy = "happy_icon.svg"

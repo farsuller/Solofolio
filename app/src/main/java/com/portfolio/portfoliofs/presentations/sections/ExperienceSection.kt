@@ -24,18 +24,16 @@ fun ExperienceSection() {
             .padding(10.dp)
             .padding(top = 15.dp),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.Start
+        horizontalAlignment = Alignment.Start,
     ) {
-
         SectionTitle(
             modifier = Modifier.fillMaxWidth(),
             section = Section.Experience,
-            alignment = Alignment.CenterHorizontally
+            alignment = Alignment.CenterHorizontally,
         )
 
         Orbital {
             ExperienceCardList(experience = experience)
-
         }
     }
 }
@@ -48,6 +46,3 @@ fun ExperienceCardList(experience: Array<Experience>) {
         }
     }
 }
-
-
-

@@ -21,39 +21,44 @@ import com.portfolio.portfoliofs.model.Service
 import com.portfolio.portfoliofs.ui.theme.Elevation
 
 @Composable
-fun ServiceCard(service: Service){
-
+fun ServiceCard(service: Service) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
-            defaultElevation = Elevation.level4),
+            defaultElevation = Elevation.level4,
+        ),
         modifier = Modifier
             .padding(horizontal = 10.dp)
             .padding(top = 10.dp)
             .width(300.dp)
             .height(600.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)){
-        Column (
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary),
+    ) {
+        Column(
             modifier = Modifier
                 .width(300.dp)
                 .height(300.dp)
-                .padding(all = 20.dp))
-
-        {
-            Box (modifier = Modifier
-                .border(
-                    width = 2.dp,
-                    color = MaterialTheme.colorScheme.onSurface,
-                    shape = RoundedCornerShape(
-                        topStart = 18.dp,
-                        topEnd = 18.dp,
-                        bottomStart = 18.dp)))
-            {
+                .padding(all = 20.dp),
+        ) {
+            Box(
+                modifier = Modifier
+                    .border(
+                        width = 2.dp,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        shape = RoundedCornerShape(
+                            topStart = 18.dp,
+                            topEnd = 18.dp,
+                            bottomStart = 18.dp,
+                        ),
+                    ),
+            ) {
                 Icon(
-                    modifier = Modifier.size(55.dp).padding(10.dp),
+                    modifier = Modifier
+                        .size(55.dp)
+                        .padding(10.dp),
                     painter = painterResource(id = service.icon),
                     contentDescription = service.imageDesc,
-                    tint = MaterialTheme.colorScheme.onSurface
+                    tint = MaterialTheme.colorScheme.onSurface,
                 )
             }
             Text(
@@ -61,15 +66,16 @@ fun ServiceCard(service: Service){
                 text = service.title,
                 fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
                 fontSize = MaterialTheme.typography.titleMedium.fontSize,
-                color = MaterialTheme.colorScheme.onSurface,)
+                color = MaterialTheme.colorScheme.onSurface,
+            )
 
             Text(
                 modifier = Modifier.padding(top = 10.dp),
                 text = service.description,
                 fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                color = MaterialTheme.colorScheme.onSurface,)
+                color = MaterialTheme.colorScheme.onSurface,
+            )
         }
     }
-
 }

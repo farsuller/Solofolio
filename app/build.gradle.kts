@@ -22,18 +22,12 @@ val keystoreProperties: Properties by lazy {
 
 android {
     namespace = "com.portfolio.portfoliofs"
-    compileSdk = ProjectConfig.compileSdk
+
     defaultConfig {
         applicationId = "com.portfolio.portfoliofs"
-        minSdk = ProjectConfig.minSdk
-        targetSdk = ProjectConfig.targetSdk
         versionCode = ProjectConfig.versionCode
         versionName = "${ProjectConfig.majorVersion}.${ProjectConfig.minorVersion}.${ProjectConfig.patchVersion}"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
 
     applicationVariants.all {
@@ -65,23 +59,9 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
     }
 }
 

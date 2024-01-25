@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 enum class AppTheme {
     Light, Dark, System
 }
+
 @Composable
 fun ThemeSwitcher(
     darkTheme: Boolean = false,
@@ -42,19 +43,21 @@ fun ThemeSwitcher(
     parentShape: Shape = CircleShape,
     toggleShape: Shape = CircleShape,
     animationSpec: AnimationSpec<Dp> = tween(durationMillis = 300),
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ) {
     val offset by animateDpAsState(
         targetValue = if (darkTheme) 0.dp else size,
-        animationSpec = animationSpec, label = "AnimateDp"
+        animationSpec = animationSpec,
+        label = "AnimateDp",
     )
 
-    Box(modifier = Modifier
-        .width(size * 2)
-        .height(size)
-        .clip(shape = parentShape)
-        .clickable { onClick() }
-        .background(MaterialTheme.colorScheme.onPrimary)
+    Box(
+        modifier = Modifier
+            .width(size * 2)
+            .height(size)
+            .clip(shape = parentShape)
+            .clickable { onClick() }
+            .background(MaterialTheme.colorScheme.onPrimary),
     ) {
         Box(
             modifier = Modifier
@@ -62,40 +65,42 @@ fun ThemeSwitcher(
                 .offset(x = offset)
                 .padding(all = padding)
                 .clip(shape = toggleShape)
-                .background(MaterialTheme.colorScheme.onSurface)
+                .background(MaterialTheme.colorScheme.onSurface),
         ) {}
         Row(
             modifier = Modifier
                 .border(
                     border = BorderStroke(
                         width = borderWidth,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.onSurface,
                     ),
-                    shape = parentShape
-                )
+                    shape = parentShape,
+                ),
         ) {
             Box(
                 modifier = Modifier.size(size),
-                contentAlignment = Alignment.Center
+                contentAlignment = Alignment.Center,
             ) {
                 Icon(
                     modifier = Modifier.size(iconSize),
                     imageVector = Icons.Default.Nightlight,
                     contentDescription = "Theme Icon",
-                    tint = if (darkTheme) MaterialTheme.colorScheme.secondaryContainer
-                    else MaterialTheme.colorScheme.onSurface
+                    tint = if (darkTheme) {
+                        MaterialTheme.colorScheme.secondaryContainer
+                    } else MaterialTheme.colorScheme.onSurface,
                 )
             }
             Box(
                 modifier = Modifier.size(size),
-                contentAlignment = Alignment.Center
+                contentAlignment = Alignment.Center,
             ) {
                 Icon(
                     modifier = Modifier.size(iconSize),
                     imageVector = Icons.Default.LightMode,
                     contentDescription = "Theme Icon",
-                    tint = if (darkTheme) MaterialTheme.colorScheme.primary
-                    else MaterialTheme.colorScheme.onPrimary
+                    tint = if (darkTheme) {
+                        MaterialTheme.colorScheme.primary
+                    } else MaterialTheme.colorScheme.onPrimary,
                 )
             }
         }

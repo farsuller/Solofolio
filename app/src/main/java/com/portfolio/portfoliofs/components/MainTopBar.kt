@@ -22,16 +22,15 @@ internal fun MainTopBar(
     scrollBehavior: TopAppBarScrollBehavior,
     onThemeUpdated: () -> Unit,
     darkTheme: Boolean,
-    appVersion : String
+    appVersion: String,
 ) {
-
     TopAppBar(
         scrollBehavior = scrollBehavior,
         navigationIcon = {
             Image(
                 modifier = Modifier.size(120.dp),
                 painter = painterResource(id = if (!darkTheme) R.drawable.solofolio else R.drawable.solofolio_dark),
-                contentDescription = "Logo Image"
+                contentDescription = "Logo Image",
             )
         },
         title = {
@@ -40,15 +39,16 @@ internal fun MainTopBar(
                 text = appVersion,
                 fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                color = MaterialTheme.colorScheme.onSurface)
+                color = MaterialTheme.colorScheme.onSurface,
+            )
         },
         actions = {
             ThemeSwitcher(
                 darkTheme = darkTheme,
                 size = 30.dp,
                 padding = 5.dp,
-                onClick = onThemeUpdated
+                onClick = onThemeUpdated,
             )
-        }
+        },
     )
 }

@@ -34,7 +34,7 @@ fun PagerButtons(pagerState: PagerState, pageCount: Int) {
             .fillMaxWidth()
             .padding(top = 10.dp),
         horizontalArrangement = Arrangement.SpaceAround,
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         IconButton(
             modifier = Modifier
@@ -47,15 +47,16 @@ fun PagerButtons(pagerState: PagerState, pageCount: Int) {
                 scope.launch {
                     pagerState.animateScrollToPage(pagerState.currentPage - 1)
                 }
-            }) {
+            },
+        ) {
             Icon(
                 imageVector = Icons.Rounded.ArrowBack,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.onPrimary)
+                tint = MaterialTheme.colorScheme.onPrimary,
+            )
         }
 
         Row(horizontalArrangement = Arrangement.Center) {
-
             repeat(pageCount) { page ->
                 val color =
                     if (pagerState.currentPage == page) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
@@ -64,10 +65,9 @@ fun PagerButtons(pagerState: PagerState, pageCount: Int) {
                         .padding(horizontal = 3.dp)
                         .clip(CircleShape)
                         .background(color)
-                        .size(10.dp)
+                        .size(10.dp),
                 )
             }
-
         }
         IconButton(
             modifier = Modifier
@@ -80,11 +80,12 @@ fun PagerButtons(pagerState: PagerState, pageCount: Int) {
                 scope.launch {
                     pagerState.animateScrollToPage(pagerState.currentPage + 1)
                 }
-            }) {
+            },
+        ) {
             Icon(
                 imageVector = Icons.Rounded.ArrowForward,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.onPrimary
+                tint = MaterialTheme.colorScheme.onPrimary,
             )
         }
     }

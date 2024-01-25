@@ -26,7 +26,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,24 +40,20 @@ import com.portfolio.portfoliofs.presentations.MainViewModel
 
 @Composable
 fun ContactMeSection(viewModel: MainViewModel) {
-
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
             .padding(top = 15.dp),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.Start
+        horizontalAlignment = Alignment.Start,
     ) {
-
         SectionTitle(
             modifier = Modifier.fillMaxWidth(),
-            section = Section.Contact
+            section = Section.Contact,
         )
 
-
         EmailCard(viewModel = viewModel)
-
     }
 }
 
@@ -68,25 +63,24 @@ fun EmailCard(viewModel: MainViewModel) {
     var subject by remember { mutableStateOf("") }
     var message by remember { mutableStateOf("") }
 
-    val scope = rememberCoroutineScope()
     val scrollState = rememberScrollState()
     val context = LocalContext.current
     val focusManager = LocalFocusManager.current
 
-    LaunchedEffect(key1 = scrollState.maxValue){
+    LaunchedEffect(key1 = scrollState.maxValue) {
         scrollState.scrollTo(scrollState.maxValue)
     }
 
     viewModel.emailState = viewModel.emailState.copy(
         toEmail = toEmail,
         subject = subject,
-        message = message
+        message = message,
     )
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(16.dp),
     ) {
         OutlinedTextField(
             value = toEmail,
@@ -97,13 +91,13 @@ fun EmailCard(viewModel: MainViewModel) {
                 .fillMaxWidth()
                 .padding(vertical = 8.dp),
             keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Next
+                imeAction = ImeAction.Next,
             ),
             keyboardActions = KeyboardActions(
                 onNext = {
                     focusManager.moveFocus(FocusDirection.Down)
-                }
-            )
+                },
+            ),
         )
 
         OutlinedTextField(
@@ -117,11 +111,9 @@ fun EmailCard(viewModel: MainViewModel) {
             keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Next),
             keyboardActions = KeyboardActions(
                 onNext = {
-
-                        focusManager.moveFocus(FocusDirection.Down)
-
-                }
-            )
+                    focusManager.moveFocus(FocusDirection.Down)
+                },
+            ),
         )
 
         OutlinedTextField(
@@ -133,28 +125,28 @@ fun EmailCard(viewModel: MainViewModel) {
                 .height(200.dp) // Specify the desired height
                 .padding(vertical = 8.dp),
             keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Done
+                imeAction = ImeAction.Done,
             ),
-            maxLines = 10
+            maxLines = 10,
         )
 
         Spacer(modifier = Modifier.height(16.dp))
 
         Box(
             modifier = Modifier.fillMaxWidth(),
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
         ) {
             ElevatedButton(
                 onClick = {
                     sendEmail(toEmail, subject, message, context)
                 },
                 modifier = Modifier
-                    .height(50.dp)
+                    .height(50.dp),
             ) {
                 Icon(
                     imageVector = Icons.Default.Send,
                     contentDescription = "Send",
-                    tint = MaterialTheme.colorScheme.onSurface
+                    tint = MaterialTheme.colorScheme.onSurface,
                 )
                 Spacer(modifier = Modifier.width(8.dp))
 
@@ -162,7 +154,7 @@ fun EmailCard(viewModel: MainViewModel) {
                     text = "Submit",
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface
+                    color = MaterialTheme.colorScheme.onSurface,
                 )
             }
         }
@@ -173,7 +165,7 @@ private fun sendEmail(
     toEmail: String,
     subject: String,
     message: String,
-    context: android.content.Context
+    context: android.content.Context,
 ) {
     val intent = Intent(Intent.ACTION_SENDTO).apply {
         data = Uri.parse("mailto:$toEmail")

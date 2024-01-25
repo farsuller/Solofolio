@@ -24,51 +24,59 @@ import com.portfolio.portfoliofs.utils.Constants.NAME
 import com.portfolio.portfoliofs.utils.Constants.ROLE
 
 @Composable
-fun MyIntroSection(){
-
+fun MyIntroSection() {
     Column(
-        modifier = Modifier.fillMaxWidth().padding(10.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.Top,
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.SpaceBetween,
         ) {
             AsyncImage(
-                modifier = Modifier.size(120.dp).clip(CircleShape),
+                modifier = Modifier
+                    .size(120.dp)
+                    .clip(CircleShape),
                 contentScale = ContentScale.Crop,
                 model = "file:///android_asset/images/main_image.png",
                 contentDescription = "My Photo",
             )
 
-            Column( modifier = Modifier
-                .weight(weight = 1f)
-                .padding(10.dp)) {
-
+            Column(
+                modifier = Modifier
+                    .weight(weight = 1f)
+                    .padding(10.dp),
+            ) {
                 Text(
                     text = INTRO,
                     fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                     fontSize = MaterialTheme.typography.titleLarge.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
                 Text(
                     text = NAME,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
                 Text(
                     text = ROLE,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface,)
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
 
                 SocialBar()
             }
         }
-        Box(modifier = Modifier
-            .fillMaxWidth()) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(),
+        ) {
             Text(
                 text = MAIN_INTRO,
                 fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
@@ -77,5 +85,4 @@ fun MyIntroSection(){
             )
         }
     }
-
 }

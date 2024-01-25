@@ -10,7 +10,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.R
 
-
 @Composable
 fun RatingBar(modifier: Modifier = Modifier) {
     Row(modifier = modifier) {
@@ -20,7 +19,7 @@ fun RatingBar(modifier: Modifier = Modifier) {
                     .padding(2.dp)
                     .size(14.dp),
                 painter = painterResource(id = R.drawable.star_icon),
-                contentDescription = "Star Icon"
+                contentDescription = "Star Icon",
             )
         }
     }

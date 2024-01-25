@@ -18,25 +18,26 @@ import com.portfolio.portfoliofs.R
 import com.portfolio.portfoliofs.components.SocialBar
 
 @Composable
-fun FooterSection(darkTheme: Boolean, appVersion : String){
+fun FooterSection(darkTheme: Boolean, appVersion: String) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Image(
+            modifier = Modifier.height(50.dp),
+            contentScale = ContentScale.Fit,
+            painter = painterResource(id = if (!darkTheme) R.drawable.solofolio else R.drawable.solofolio_dark),
+            contentDescription = "Logo Image",
+        )
+        Text(
+            text = appVersion,
+            fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+            color = MaterialTheme.colorScheme.onSurface,
+        )
 
-        Column(modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally) {
+        SocialBar(horizontalArrangement = Arrangement.Center)
 
-            Image(
-                modifier = Modifier.height(50.dp),
-                contentScale = ContentScale.Fit,
-                painter = painterResource(id = if (!darkTheme) R.drawable.solofolio else R.drawable.solofolio_dark),
-                contentDescription = "Logo Image"
-            )
-            Text(
-                text = appVersion,
-                fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
-                fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                color = MaterialTheme.colorScheme.onSurface)
-
-            SocialBar(horizontalArrangement = Arrangement.Center)
-
-            Spacer(modifier = Modifier.height(28.dp))
-        }
+        Spacer(modifier = Modifier.height(28.dp))
+    }
 }

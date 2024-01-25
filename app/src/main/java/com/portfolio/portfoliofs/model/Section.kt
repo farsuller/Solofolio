@@ -4,54 +4,54 @@ enum class Section(
     val id: String,
     val title: String,
     val subtitle: String,
-    val path: String
+    val path: String,
 ) {
     Home(
         id = "home",
         title = "Home",
         subtitle = "",
-        path= "#home"
+        path = "#home",
     ),
     About(
         id = "about",
         title = "About me",
         subtitle = "Why Hire Me?",
-        path= "#about"
+        path = "#about",
     ),
     Service(
         id = "service",
         title = "Service",
         subtitle = "I'm Good at",
-        path= "#service"
+        path = "#service",
     ),
     Portfolio(
         id = "portfolio",
         title = "Portfolio",
         subtitle = "My Work",
-        path= "#portfolio"
+        path = "#portfolio",
     ),
     Experience(
         id = "experience",
         title = "Experience",
         subtitle = "Work Experience",
-        path= "#experience"
+        path = "#experience",
     ),
     Contact(
         id = "contact",
         title = "Contact Me",
         subtitle = "Get in Touch",
-        path= "#contact"
+        path = "#contact",
     ),
     Testimonial(
         id = "testimonial",
         title = "Testimonial",
         subtitle = "Recommendations",
-        path= "#testimonial"
+        path = "#testimonial",
     ),
     Achievements(
         id = "achievements",
         title = "Achievements",
         subtitle = "Personal Achievements",
-        path= "#achievements"
+        path = "#achievements",
     ),
 }

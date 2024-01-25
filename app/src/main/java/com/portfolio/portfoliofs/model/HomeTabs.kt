@@ -9,20 +9,24 @@ import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.ui.graphics.vector.ImageVector
 
-enum class HomeTabs (
-    val selectedIcon : ImageVector,
-    val unSelectedIcon : ImageVector,
-    val text : String)
-{
-    Shop(unSelectedIcon = Icons.Outlined.ShoppingCart,
+enum class HomeTabs(
+    val selectedIcon: ImageVector,
+    val unSelectedIcon: ImageVector,
+    val text: String,
+) {
+    Shop(
+        unSelectedIcon = Icons.Outlined.ShoppingCart,
         selectedIcon = Icons.Filled.ShoppingCart,
-        text = "Shop"),
-    Favorite(unSelectedIcon = Icons.Outlined.FavoriteBorder,
+        text = "Shop",
+    ),
+    Favorite(
+        unSelectedIcon = Icons.Outlined.FavoriteBorder,
         selectedIcon = Icons.Filled.Favorite,
-        text = "Favorite"),
-    Profile(unSelectedIcon = Icons.Outlined.Person,
+        text = "Favorite",
+    ),
+    Profile(
+        unSelectedIcon = Icons.Outlined.Person,
         selectedIcon = Icons.Filled.Person,
-        text = "Profile"),
-
-
+        text = "Profile",
+    ),
 }

@@ -8,8 +8,6 @@ object ProjectConfig {
     const val minSdk = 24
     const val targetSdk = 34
 
-    const val extensionVersion = "1.4.6"
-
     const val versionCode = 10
 
     const val majorVersion = 1

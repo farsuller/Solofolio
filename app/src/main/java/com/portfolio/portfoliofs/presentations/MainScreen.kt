@@ -39,14 +39,13 @@ import com.portfolio.portfoliofs.components.MainTopBar
 import com.portfolio.portfoliofs.utils.getAppVersion
 import kotlinx.coroutines.launch
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 internal fun MainScreen(
     darkTheme: Boolean,
     onThemeUpdated: () -> Unit,
-    viewModel: MainViewModel
+    viewModel: MainViewModel,
 ) {
     val scope = rememberCoroutineScope()
     var padding by remember { mutableStateOf(PaddingValues()) }
@@ -65,9 +64,9 @@ internal fun MainScreen(
         targetValue = rotY,
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioLowBouncy,
-            stiffness = Spring.StiffnessVeryLow
+            stiffness = Spring.StiffnessVeryLow,
         ),
-        label = "RotationY Animation"
+        label = "RotationY Animation",
     )
 
     Scaffold(
@@ -77,11 +76,10 @@ internal fun MainScreen(
                 scrollBehavior = scrollBehavior,
                 appVersion = appVersion,
                 darkTheme = darkTheme,
-                onThemeUpdated = onThemeUpdated
+                onThemeUpdated = onThemeUpdated,
             )
         },
         floatingActionButton = {
-
             if (showButton) {
                 FloatingActionButton(
                     modifier = Modifier.rotate(degrees = animatedRotationY),
@@ -89,34 +87,35 @@ internal fun MainScreen(
                         scope.launch {
                             lazyListState.animateScrollToItem(index = 0)
                         }
-
                     },
                     content = {
                         Icon(
                             imageVector = Icons.Default.ArrowUpward,
                             contentDescription = "Scroll to Top",
-                            tint = MaterialTheme.colorScheme.onSurface
+                            tint = MaterialTheme.colorScheme.onSurface,
                         )
-                    }
+                    },
                 )
-
-
             }
 
             LaunchedEffect(showButton) {
-                rotY = if (showButton) 0f
-                else 180f
+                rotY = if (showButton) {
+                    0f
+                } else {
+                    180f
+                }
             }
-
         },
         content = {
             padding = it
-            MainContent(paddingValues = it,
+            MainContent(
+                paddingValues = it,
                 lazyListState = lazyListState,
                 viewModel = viewModel,
                 darkTheme = darkTheme,
-                appVersion = appVersion)
-        }
+                appVersion = appVersion,
+            )
+        },
     )
 }
 
@@ -128,11 +127,11 @@ fun AppVersion() {
             .fillMaxSize()
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
             text = appVersion,
-            style = MaterialTheme.typography.bodySmall
+            style = MaterialTheme.typography.bodySmall,
         )
     }
 }

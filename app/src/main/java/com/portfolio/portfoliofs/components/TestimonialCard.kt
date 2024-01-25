@@ -24,52 +24,58 @@ import com.portfolio.portfoliofs.model.Testimonial
 import com.portfolio.portfoliofs.ui.theme.Elevation
 
 @Composable
-fun TestimonialCard(testimonial: Testimonial){
+fun TestimonialCard(testimonial: Testimonial) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
-            defaultElevation = Elevation.level4),
+            defaultElevation = Elevation.level4,
+        ),
         modifier = Modifier
             .padding(horizontal = 10.dp)
             .padding(top = 10.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary)){
-
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onPrimary),
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp)
                 .padding(20.dp),
             verticalAlignment = Alignment.Top,
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.SpaceBetween,
         ) {
-            Box (modifier = Modifier)
+            Box(modifier = Modifier)
             AsyncImage(
-                modifier = Modifier.size(110.dp)
-                    .clip(shape = RoundedCornerShape(
-                        topStart = 18.dp,
-                        topEnd = 18.dp,
-                        bottomStart = 18.dp)),
+                modifier = Modifier
+                    .size(110.dp)
+                    .clip(
+                        shape = RoundedCornerShape(
+                            topStart = 18.dp,
+                            topEnd = 18.dp,
+                            bottomStart = 18.dp,
+                        ),
+                    ),
                 contentScale = ContentScale.Crop,
                 model = testimonial.image,
                 contentDescription = "My Photo",
             )
 
-            Column( modifier = Modifier
-                .weight(weight = 1f)
-                .padding(start = 10.dp)) {
-
-
+            Column(
+                modifier = Modifier
+                    .weight(weight = 1f)
+                    .padding(start = 10.dp),
+            ) {
                 Text(
                     text = testimonial.fullName,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyLarge.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface)
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
                 Text(
                     text = testimonial.profession,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface)
-
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
 
                 RatingBar(modifier = Modifier.padding(top = 5.dp))
 
@@ -78,11 +84,9 @@ fun TestimonialCard(testimonial: Testimonial){
                     text = testimonial.review,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                    color = MaterialTheme.colorScheme.onSurface)
-
-
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
             }
         }
     }
-
 }

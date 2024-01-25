@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MyPortfolio-JC"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
