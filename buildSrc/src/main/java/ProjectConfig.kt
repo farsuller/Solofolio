@@ -8,10 +8,10 @@ object ProjectConfig {
     const val minSdk = 24
     const val targetSdk = 34
 
-    const val versionCode = 10
+    const val versionCode = 11
 
     const val majorVersion = 1
     const val minorVersion = 0
-    const val patchVersion = 1
+    const val patchVersion = 2
 
 }

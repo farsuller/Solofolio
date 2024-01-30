@@ -54,4 +54,10 @@ enum class Section(
         subtitle = "Personal Achievements",
         path = "#achievements",
     ),
+    Skills(
+        id = "skills",
+        title = "Skills",
+        subtitle = "Crafting Journey",
+        path= "#skills"
+    ),
 }

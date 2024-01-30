@@ -18,6 +18,7 @@ import com.portfolio.portfoliofs.presentations.sections.FooterSection
 import com.portfolio.portfoliofs.presentations.sections.MyIntroSection
 import com.portfolio.portfoliofs.presentations.sections.PortfolioSection
 import com.portfolio.portfoliofs.presentations.sections.ServiceSection
+import com.portfolio.portfoliofs.presentations.sections.SkillsSection
 import com.portfolio.portfoliofs.presentations.sections.TestimonialSection
 
 @Composable
@@ -38,6 +39,7 @@ fun MainContent(
         item {
             MyIntroSection()
             AboutMeSection()
+            SkillsSection()
             ServiceSection()
             PortfolioSection()
             TestimonialSection()

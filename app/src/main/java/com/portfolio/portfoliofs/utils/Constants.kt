@@ -20,7 +20,7 @@ object Constants {
     const val UI_UX_SERVICE = "Proficient in utilizing design tools such as Sketch, Figma, Adobe XD. Additionally, I possess the ability to translate UI designs seamlessly into code, ensuring a smooth transition from concept to implementation."
     const val EDITING_SERVICE = "Bringing more than a decade of experience in video editing, including proficiency in visual effects and compositing using tools like Adobe After Effects."
 
-    const val ABOUT_ME = "I have a rich background in Android development, having contributed to a range of projects from small-scale applications to larger and more complex ones. I am proficient in using key Android development tools such as Android Studio, Gradle, and the Android SDK. My experience extends to working with various APIs, including Google Maps, Firebase, and third-party APIs."
+    const val ABOUT_ME = "I have worked on various Android projects, ranging from small-scale applications to large and complex ones. Well-versed in Android development tools, such as Android Studio, Gradle, and the Android SDK. Also have extensive experience in working with different APIs, including Google Maps, Firebase, and third-party APIs."
 
     const val MAIN_INTRO = "I bring to the table 7 years of hands-on experience as an accomplished Android developer. My expertise lies in crafting top-notch and scalable mobile applications. I am driven by a deep passion for developing cutting-edge Android applications that not only captivate visually but also deliver a seamless user experience."
     const val NAME = "Florence Arnold R. Suller"
