@@ -58,6 +58,6 @@ enum class Section(
         id = "skills",
         title = "Skills",
         subtitle = "Crafting Journey",
-        path= "#skills"
+        path = "#skills",
     ),
 }

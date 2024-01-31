@@ -17,14 +17,12 @@ import com.portfolio.portfoliofs.model.Skills
 
 @Composable
 fun SkillsCard(skills: Skills) {
-
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .padding(bottom = 5.dp)
             .background(MaterialTheme.colorScheme.onPrimary),
     ) {
-
         SuggestionChip(
             border = SuggestionChipDefaults.suggestionChipBorder(borderColor = MaterialTheme.colorScheme.primary),
             onClick = { },
@@ -35,9 +33,9 @@ fun SkillsCard(skills: Skills) {
                     fontFamily = MaterialTheme.typography.titleSmall.fontFamily,
                     fontSize = MaterialTheme.typography.titleSmall.fontSize,
                     color = MaterialTheme.colorScheme.onSurface,
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
                 )
-            }
+            },
         )
 
         Text(
@@ -47,7 +45,6 @@ fun SkillsCard(skills: Skills) {
             color = MaterialTheme.colorScheme.onSurface,
         )
     }
-
 }
 
 @Preview
