@@ -2,6 +2,7 @@ package com.portfolio.portfoliofs.model
 
 import com.portfolio.portfoliofs.utils.Constants.MCDELIVERY_LINK
 import com.portfolio.portfoliofs.utils.Constants.PUREGOLD
+import com.portfolio.portfoliofs.utils.Constants.SOLODAILY
 import com.portfolio.portfoliofs.utils.Constants.SOLOEATS
 import com.portfolio.portfoliofs.utils.Constants.SOLOSCAPE
 import com.portfolio.portfoliofs.utils.Constants.SPARK_CLEANER_LINK
@@ -29,6 +30,13 @@ enum class Portfolio(
             "We're thrilled to introduce SoloEats, your ultimate food ordering companion designed to elevate your dining experiences.",
         link = SOLOEATS,
 
+    ),
+    SoloDaily(
+        image = Res.Image.solodaily,
+        title = "SoloDaily",
+        description = "SoloDaily - Version 1.0 \n" +
+            "Browse Latest News: Stay up-to-date with breaking news and trending stories from around the world. Search Functionality: Easily find articles on topics that interest you with our intuitive search feature. Bookmark Articles: Save articles for later reading with our convenient bookmarking feature.",
+        link = SOLODAILY,
     ),
     McDeliveryPH(
         image = Res.Image.portfolio3,

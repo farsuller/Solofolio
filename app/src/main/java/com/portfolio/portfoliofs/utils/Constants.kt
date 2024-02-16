@@ -8,6 +8,7 @@ object Constants {
 
     const val SOLOSCAPE = "https://play.google.com/store/apps/details?id=com.soloscape.compose"
     const val SOLOEATS = "https://play.google.com/store/apps/details?id=com.solo.solodemo"
+    const val SOLODAILY = "https://play.google.com/store/apps/details?id=com.solo.solodaily"
     const val SPARK_CLEANER_LINK = "https://play.google.com/store/apps/details?id=com.booster.sparkcleaner"
     const val MCDELIVERY_LINK = "https://play.google.com/store/apps/details?id=ph.mobext.mcdelivery"
     const val PUREGOLD = "https://play.google.com/store/apps/details?id=com.grocery.puregold"
@@ -85,6 +86,7 @@ object Res {
         const val portfolio13 = "file:///android_asset/images/portfolio13.jpg"
         const val portfolio14 = "file:///android_asset/images/portfolio14.png"
         const val soloeats = "file:///android_asset/images/soloeats.png"
+        const val solodaily = "file:///android_asset/images/solodaily.png"
 
         const val avatar1 = "file:///android_asset/images/avatar1.png"
         const val avatar2 = "file:///android_asset/images/avatar2.png"
