@@ -32,17 +32,18 @@ fun ExperienceSection() {
             alignment = Alignment.CenterHorizontally,
         )
 
-        Orbital {
+
             ExperienceCardList(experience = experience)
-        }
+
     }
 }
 
 @Composable
 fun ExperienceCardList(experience: Array<Experience>) {
     Column {
-        repeat(experience.size) { expDetails ->
-            ExperienceCard(index = expDetails)
+
+        experience.reversed().forEach { expDetails ->
+            ExperienceCard(experience = expDetails)
         }
     }
 }

@@ -2,6 +2,7 @@ package com.portfolio.portfoliofs.model
 
 import com.portfolio.portfoliofs.utils.Constants.COLLABERA
 import com.portfolio.portfoliofs.utils.Constants.EMAPTA
+import com.portfolio.portfoliofs.utils.Constants.FPT
 import com.portfolio.portfoliofs.utils.Constants.YONDU
 import com.portfolio.portfoliofs.utils.Constants.ZIGZAG
 import com.portfolio.portfoliofs.utils.Res
@@ -9,7 +10,7 @@ import com.portfolio.portfoliofs.utils.Res
 enum class Experience(
     val number: String,
     val jobPosition: String,
-    val description: String,
+    val description:List<String>,
     val company: String,
     val image: String,
     val from: String,
@@ -21,8 +22,8 @@ enum class Experience(
         description = ZIGZAG,
         company = "Zigzag OffShoring",
         image = Res.Image.work1,
-        from = "March 2017",
-        to = "December 2020",
+        from = "Mar. 2017",
+        to = "Dec. 2020",
     ),
     Second(
         number = "02",
@@ -30,8 +31,8 @@ enum class Experience(
         description = EMAPTA,
         company = "EMAPTA",
         image = Res.Image.work2,
-        from = "January 2020",
-        to = "September 2020",
+        from = "Jan. 2020",
+        to = "Sept. 2020",
     ),
     Third(
         number = "03",
@@ -39,8 +40,8 @@ enum class Experience(
         description = YONDU,
         company = "Yondu Inc.",
         image = Res.Image.work3,
-        from = "September 2020",
-        to = "February 2022",
+        from = "Sept. 2020",
+        to = "Feb. 2022",
     ),
     Fourth(
         number = "04",
@@ -48,7 +49,16 @@ enum class Experience(
         description = COLLABERA,
         company = "Collabera Digital",
         image = Res.Image.work4,
-        from = "February 2022",
-        to = "Present",
+        from = "Feb. 2022",
+        to = "Jan. 2024",
+    ),
+    Fifth(
+        number = "05",
+        jobPosition = "Software Developer Engineer",
+        description = FPT,
+        company = "FPT Software Philippines Corp.",
+        image = Res.Image.work5,
+        from = "Feb. 2024",
+        to = "Present"
     ),
 }

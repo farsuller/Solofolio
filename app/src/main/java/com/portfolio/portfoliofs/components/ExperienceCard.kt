@@ -37,7 +37,7 @@ import com.skydoves.orbital.animateBounds
 import com.skydoves.orbital.rememberMovableContentOf
 
 @Composable
-fun ExperienceCard(index: Int) {
+fun ExperienceCard(experience: Experience) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = Elevation.level4,
@@ -53,7 +53,7 @@ fun ExperienceCard(index: Int) {
                 .fillMaxSize()
                 .padding(all = 10.dp),
         ) {
-            val experience = Experience.entries.toTypedArray()
+
             var expanded by rememberSaveable { mutableStateOf(false) }
             AnimatedVisibility(
                 remember { MutableTransitionState(false) }.apply {
@@ -81,33 +81,38 @@ fun ExperienceCard(index: Int) {
                                 ),
                         ) {
                             Text(
-                                text = experience[index].jobPosition,
+                                text = experience.jobPosition,
                                 fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
                                 fontSize = MaterialTheme.typography.titleMedium.fontSize,
                                 color = MaterialTheme.colorScheme.onSurface,
                             )
                             Text(
-                                text = "${experience[index].from} - ${experience[index].to}",
-                                fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+                                text = "${experience.from} - ${experience.to}",
+                                fontFamily = if(experience.to =="Present") MaterialTheme.typography.titleMedium.fontFamily
+                                else MaterialTheme.typography.bodyMedium.fontFamily,
                                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                 color = MaterialTheme.colorScheme.onSurface,
                             )
 
                             Text(
-                                text = experience[index].company,
+                                text = experience.company,
                                 fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                 color = MaterialTheme.colorScheme.onSurface,
                             )
 
                             if (expanded) {
-                                Text(
-                                    modifier = Modifier.padding(top = 15.dp),
-                                    text = experience[index].description,
-                                    fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
-                                    fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-                                    color = MaterialTheme.colorScheme.onSurface,
-                                )
+
+                                experience.description.forEach { desc->
+                                    Text(
+                                        modifier = Modifier.padding(top = 15.dp),
+                                        text = desc,
+                                        fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+                                        fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                    )
+                                }
+
                             } else {
                                 Text(
                                     modifier = Modifier.padding(top = 10.dp),
@@ -132,7 +137,7 @@ fun ExperienceCard(index: Int) {
                                     ),
                                 ),
                             model = ImageRequest.Builder(LocalContext.current)
-                                .data(experience[index].image)
+                                .data(experience.image)
                                 .crossfade(true).build(),
                             contentDescription = "Work Logo",
                         )

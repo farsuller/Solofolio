@@ -39,11 +39,11 @@ fun MainContent(
         item {
             MyIntroSection()
             AboutMeSection()
-            SkillsSection()
-            ServiceSection()
-            PortfolioSection()
-            TestimonialSection()
             ExperienceSection()
+            SkillsSection()
+            PortfolioSection()
+            ServiceSection()
+            TestimonialSection()
             ContactMeSection(viewModel = viewModel)
 
             FooterSection(darkTheme = darkTheme, appVersion = appVersion)
