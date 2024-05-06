@@ -21,10 +21,13 @@ fun SkillsCard(skills: Skills) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .padding(bottom = 5.dp)
-            .background(MaterialTheme.colorScheme.onPrimary),
+            .background(MaterialTheme.colorScheme.surface),
     ) {
         SuggestionChip(
-            border = SuggestionChipDefaults.suggestionChipBorder(borderColor = MaterialTheme.colorScheme.primary),
+            border = SuggestionChipDefaults.suggestionChipBorder(
+                enabled = true,
+                borderColor = MaterialTheme.colorScheme.onSurface
+            ),
             onClick = { },
             label = {
                 Text(

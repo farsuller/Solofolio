@@ -21,10 +21,6 @@ enum class Skills(
         title = "Android Development",
         year = 7,
     ),
-    XML(
-        title = "XML",
-        year = 7,
-    ),
     MobileDesign(
         title = "Mobile Design",
         year = 7,
@@ -34,7 +30,7 @@ enum class Skills(
         year = 7,
     ),
     MVVM(
-        title = "MVVM Architecture",
+        title = "MVVM",
         year = 7,
     ),
     DI(
@@ -45,21 +41,17 @@ enum class Skills(
         title = "Rest API",
         year = 4,
     ),
-    Retrofit(
-        title = "Retrofit",
-        year = 4,
-    ),
     MVC(
-        title = "MVC Architecture",
+        title = "MVC",
         year = 2,
     ),
     CLEAN(
-        title = "CLEAN Architecture",
+        title = "CLEAN",
         year = 2,
     ),
 
     Modularization(
-        title = "Modularization",
+        title = "Modular",
         year = 3,
     ),
     RxKotlin(

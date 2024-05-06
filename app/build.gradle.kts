@@ -21,17 +21,17 @@ val keystoreProperties: Properties by lazy {
 }
 
 android {
-    namespace = "com.portfolio.portfoliofs"
+    namespace = ProjectConfig.NAMESPACE
 
     defaultConfig {
-        applicationId = "com.portfolio.portfoliofs"
-        versionCode = ProjectConfig.versionCode
-        versionName = "${ProjectConfig.majorVersion}.${ProjectConfig.minorVersion}.${ProjectConfig.patchVersion}"
+        applicationId = ProjectConfig.APPLICATION_ID
+        versionCode = ProjectConfig.VERSION_CODE
+        versionName = "${ProjectConfig.MAJOR_VERSION}.${ProjectConfig.MINOR_VERSION}.${ProjectConfig.PATCH_VERSION}"
 
     }
 
     applicationVariants.all {
-        archivesName.set("${ProjectConfig.appFileName}-${buildType.name}-$versionCode-$versionName")
+        archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
     }
 
 
@@ -66,21 +66,20 @@ android {
 }
 
 dependencies {
-    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
+    implementation(platform(libs.compose.bom))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose.v182)
     implementation(libs.androidx.core.splashscreen)
 
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.ui:ui-text-google-fonts")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material:material-icons-extended")
-    implementation("androidx.navigation:navigation-compose:2.7.6")
-
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.coil.kt.compose)
 
@@ -89,9 +88,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 }
