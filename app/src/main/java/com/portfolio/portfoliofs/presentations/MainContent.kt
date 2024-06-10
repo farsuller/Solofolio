@@ -11,15 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.portfolio.portfoliofs.presentations.sections.AboutMeSection
 import com.portfolio.portfoliofs.presentations.sections.ContactMeSection
-import com.portfolio.portfoliofs.presentations.sections.ExperienceSection
 import com.portfolio.portfoliofs.presentations.sections.FooterSection
 import com.portfolio.portfoliofs.presentations.sections.MyIntroSection
 import com.portfolio.portfoliofs.presentations.sections.PortfolioSection
 import com.portfolio.portfoliofs.presentations.sections.ServiceSection
 import com.portfolio.portfoliofs.presentations.sections.SkillsSection
 import com.portfolio.portfoliofs.presentations.sections.TestimonialSection
+
 
 @Composable
 fun MainContent(
@@ -38,9 +37,9 @@ fun MainContent(
     ) {
         item {
             MyIntroSection()
-            AboutMeSection()
-            ExperienceSection()
+//            AboutMeSection()
             SkillsSection()
+            //  ExperienceSection()
             PortfolioSection()
             ServiceSection()
             TestimonialSection()

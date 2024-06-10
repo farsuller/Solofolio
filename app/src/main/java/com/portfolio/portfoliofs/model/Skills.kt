@@ -5,77 +5,128 @@ enum class Skills(
     val year: Int,
 ) {
 
+    Android(
+        title = "Android Development",
+        year = 7
+    ),
+
+    AndroidSDK(
+        title = "Android SDK",
+        year = 7
+    ),
+
     Kotlin(
         title = "Kotlin",
-        year = 7,
+        year = 7
     ),
     Java(
         title = "Java",
-        year = 7,
+        year = 7
     ),
-    AndroidSDK(
-        title = "Android SDK",
-        year = 7,
+
+    JC(
+        title = "Jetpack Compose",
+        year = 1
     ),
-    Android(
-        title = "Android Development",
-        year = 7,
+
+    XML(
+        title = "XML",
+        year = 7
     ),
-    MobileDesign(
-        title = "Mobile Design",
-        year = 7,
-    ),
-    VersionControl(
-        title = "Git",
-        year = 7,
-    ),
+
     MVVM(
         title = "MVVM",
-        year = 7,
+        year = 7
     ),
-    DI(
-        title = "Dependency Injection",
-        year = 4,
+
+    MVC(
+        title = "MVC",
+        year = 2
+    ),
+
+    MVI(
+        title = "MVI",
+        year = 1
+    ),
+
+    CLEAN(
+        title = "CLEAN",
+        year = 2
+    ),
+
+    VersionControl(
+        title = "Git",
+        year = 7
     ),
     RESTAPI(
         title = "Rest API",
-        year = 4,
+        year = 4
     ),
-    MVC(
-        title = "MVC",
-        year = 2,
+
+    CICD(
+        title = "CI CD",
+        year = 2
     ),
-    CLEAN(
-        title = "CLEAN",
-        year = 2,
+
+    UnitTesting(
+        title = "Unit Testing",
+        year = 2
+    ),
+
+    DI(
+        title = "Dependency Injection",
+        year = 4
+    ),
+
+    Room(
+        title = "Room",
+        year = 2
     ),
 
     Modularization(
         title = "Modular",
-        year = 3,
+        year = 3
     ),
+
+    ThirdParty(
+        title = "Third Party Api",
+        year = 2
+    ),
+
     RxKotlin(
         title = "RxKotlin",
-        year = 2,
+        year = 2
     ),
-    CICD(
-        title = "CI CD",
-        year = 2,
+    RxJava(
+        title = "RxJava",
+        year = 2
     ),
-    UnitTesting(
-        title = "Unit Testing",
-        year = 2,
+
+    AdIntegration(
+        title = "Ads Integration",
+        year = 2
     ),
+
+    Linux(
+        title = "Linux",
+        year = 3
+    ),
+
     Flutter(
         title = "Flutter",
-        year = 1,
+        year = 1
     ),
     Dart(
         title = "Dart",
-        year = 1,
+        year = 1
     ),
-    JC(
-        title = "Jetpack Compose",
-        year = 1,
+    Unity(
+        title = "Unity",
+        year = 1
     ),
+    CSharp(
+        title = "C#",
+        year = 1
+    ),
+
 }

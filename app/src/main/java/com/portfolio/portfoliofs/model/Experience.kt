@@ -8,7 +8,7 @@ import com.portfolio.portfoliofs.utils.Constants.ZIGZAG
 import com.portfolio.portfoliofs.utils.Res
 
 enum class Experience(
-    val number: String,
+    val id: Int,
     val jobPosition: String,
     val description:List<String>,
     val company: String,
@@ -17,7 +17,7 @@ enum class Experience(
     val to: String,
 ) {
     First(
-        number = "01",
+        id = 1,
         jobPosition = "Jr. Mobile Application Developer",
         description = ZIGZAG,
         company = "Zigzag OffShoring",
@@ -26,7 +26,7 @@ enum class Experience(
         to = "Dec. 2020",
     ),
     Second(
-        number = "02",
+        id = 2,
         jobPosition = "Jr. Mobile Application Developer",
         description = EMAPTA,
         company = "EMAPTA",
@@ -35,7 +35,7 @@ enum class Experience(
         to = "Sept. 2020",
     ),
     Third(
-        number = "03",
+        id = 3,
         jobPosition = "(Software Engineer) Android Mobile Developer",
         description = YONDU,
         company = "Yondu Inc.",
@@ -44,7 +44,7 @@ enum class Experience(
         to = "Feb. 2022",
     ),
     Fourth(
-        number = "04",
+        id = 3,
         jobPosition = "Android Developer",
         description = COLLABERA,
         company = "Collabera Digital",
@@ -53,7 +53,7 @@ enum class Experience(
         to = "Jan. 2024",
     ),
     Fifth(
-        number = "05",
+        id = 4,
         jobPosition = "Software Developer Engineer",
         description = FPT,
         company = "FPT Software Philippines Corp.",

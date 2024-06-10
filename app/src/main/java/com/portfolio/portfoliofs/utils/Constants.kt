@@ -84,6 +84,8 @@ object Constants {
         "* Engaged in outdoor activities organized by the company to foster team building, morale, and employee well-being.",
         "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
     )
+
+    const val DEFAULT_MAX_LINES = 5
 }
 
 object Res {

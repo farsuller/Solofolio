@@ -1,10 +1,12 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
+
 import java.io.FileNotFoundException
 import java.util.Properties
 
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 val keystoreProperties: Properties by lazy {
@@ -30,9 +32,9 @@ android {
 
     }
 
-    applicationVariants.all {
-        archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
-    }
+//    applicationVariants.all {
+//        archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
+//    }
 
 
     signingConfigs {
@@ -84,6 +86,10 @@ dependencies {
     implementation(libs.coil.kt.compose)
 
     implementation(libs.orbital)
+    implementation(libs.androidx.animation)
+    implementation(libs.androidx.foundation.layout)
+
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

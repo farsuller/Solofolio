@@ -1,39 +1,38 @@
 [versions]
-
-#plugins
-androidApplication = "8.2.2"
-composeBomVersion = "2024.05.00"
-kotlinAndroid = "1.9.20"
+kotlin = "2.0.0"
 ktlint = "11.6.0"
 kotlinJvm = "1.9.22"
-androidLibrary = "8.2.2"
-kotlinSerialization = "1.9.0"
 
+activityCompose = "1.9.0"
 
-activityCompose = "1.8.2"
-androidDesugarJdkLibs = "2.0.4"
-# AGP and tools should be updated together
-androidGradlePlugin = "8.2.2"
-androidTools = "31.2.0"
-androidxCore = "1.12.0"
+androidGradlePlugin = "8.4.1"
+
+androidxCore = "1.13.1"
 androidxCoreSplashscreen = "1.0.1"
 androidxEspresso = "3.5.1"
-androidxMacroBenchmark = "1.2.2"
+
+composeBomVersion = "2024.05.00"
 
 coil = "2.5.0"
 junit = "4.13.2"
 junit4 = "4.13.2"
 junitVersion = "1.1.5"
-lifecycleRuntimeKtx = "2.7.0"
-navigationCompose = "2.7.7"
-orbital = "0.3.3"
+lifecycleRuntimeKtx = "2.8.1"
+navigationCompose = "2.8.0-beta02"
+orbital = "0.3.4"
 spotless = "6.19.0"
-kotlinCompilerExtensionVersion = "1.5.8"
+
+animation = "1.7.0-beta02"
+foundationLayout = "1.7.0-beta02"
+kotlinxSerializationJson = "1.6.3"
 
 [libraries]
 androidx-activity-compose-v182 = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxCoreSplashscreen" }
+androidx-foundation-layout = { module = "androidx.compose.foundation:foundation-layout", version.ref = "foundationLayout" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
@@ -60,8 +59,9 @@ spotless = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", v
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinJvm" }
-
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

@@ -41,12 +41,12 @@ fun SkillsCard(skills: Skills) {
             },
         )
 
-        Text(
-            text = if (skills.year == 1) "${skills.year} year" else "${skills.year} years",
-            fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
-            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
-            color = MaterialTheme.colorScheme.onSurface,
-        )
+//        Text(
+//            text = if (skills.year == 1) "${skills.year} year" else "${skills.year} years",
+//            fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+//            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+//            color = MaterialTheme.colorScheme.onSurface,
+//        )
     }
 }
 
