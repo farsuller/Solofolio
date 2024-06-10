@@ -1,5 +1,6 @@
 package com.portfolio.portfoliofs.components
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.tween
@@ -36,6 +37,7 @@ import com.skydoves.orbital.Orbital
 import com.skydoves.orbital.animateBounds
 import com.skydoves.orbital.rememberMovableContentOf
 
+@SuppressLint("UnrememberedMutableInteractionSource")
 @Composable
 fun ExperienceCard(experience: Experience) {
     ElevatedCard(
@@ -66,7 +68,6 @@ fun ExperienceCard(experience: Experience) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickableWithoutRipple(
-                            interactionSource = MutableInteractionSource(),
                             onClick = { expanded = !expanded },
                         ),
                 ) {

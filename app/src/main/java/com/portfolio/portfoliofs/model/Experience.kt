@@ -44,7 +44,7 @@ enum class Experience(
         to = "Feb. 2022",
     ),
     Fourth(
-        id = 3,
+        id = 4,
         jobPosition = "Android Developer",
         description = COLLABERA,
         company = "Collabera Digital",
@@ -53,7 +53,7 @@ enum class Experience(
         to = "Jan. 2024",
     ),
     Fifth(
-        id = 4,
+        id = 5,
         jobPosition = "Software Developer Engineer",
         description = FPT,
         company = "FPT Software Philippines Corp.",

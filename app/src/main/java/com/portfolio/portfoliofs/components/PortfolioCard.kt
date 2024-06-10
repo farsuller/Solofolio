@@ -54,7 +54,6 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
             .fillMaxWidth()
             .padding(all = 20.dp)
             .clickableWithoutRipple(
-                interactionSource = MutableInteractionSource(),
                 onClick = { onClick() },
             ),
     ) {
