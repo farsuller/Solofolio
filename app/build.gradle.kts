@@ -1,4 +1,3 @@
-
 import java.io.FileNotFoundException
 import java.util.Properties
 
@@ -32,9 +31,9 @@ android {
 
     }
 
-//    applicationVariants.all {
-//        archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
-//    }
+    applicationVariants.all {
+        base.archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
+    }
 
 
     signingConfigs {
@@ -58,6 +57,7 @@ android {
             signingConfig = signingConfigs.getByName("release")
             isDebuggable = false
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
