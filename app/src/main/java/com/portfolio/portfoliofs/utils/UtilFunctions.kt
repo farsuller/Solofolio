@@ -12,7 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.core.content.pm.PackageInfoCompat
+import androidx.lifecycle.Lifecycle
+import androidx.navigation.NavHostController
 import com.portfolio.portfoliofs.R
+
+val NavHostController.canBackStack: Boolean
+    get() = this.currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED
 
 @Composable
 fun Modifier.clickableWithoutRipple(

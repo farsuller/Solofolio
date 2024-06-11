@@ -15,6 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.portfolio.portfoliofs.utils.canBackStack
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
@@ -67,18 +68,22 @@ fun SharedTransitionScreen(onItemClicked: (Boolean) -> Unit) {
                     from = args.from,
                     to = args.to,
                     onBackPressed = {
-                        isAnimating = false
-                        navController.popBackStack()
-                        onItemClicked(false)
+                        if (navController.canBackStack) {
+                            isAnimating = false
+                            navController.popBackStack()
+                            onItemClicked(false)
+                        }
                     },
                     animatedVisibilityScope = this
                 )
 
                 // Handle back press events
                 HandleBackPress {
-                    // Detail screen is popped from back stack, do something here
                     isAnimating = false // Reset the isAnimating flag
-                    navController.popBackStack() // Navigate back to the list screen
+
+                    if (navController.canBackStack) {
+                        navController.popBackStack()
+                    }
                 }
             }
         }
