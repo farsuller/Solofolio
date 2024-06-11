@@ -6,8 +6,6 @@ import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -54,11 +52,13 @@ fun SharedTransitionScope.SharedElementListScreen(
 
         itemsIndexed(experiences) { index, exp ->
 
-            Row(modifier = Modifier
-                .fillMaxWidth()
-                .clickableWithoutRipple(
-                    onClick = { onItemClick(exp) },
-                ))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickableWithoutRipple(
+                        onClick = { onItemClick(exp) },
+                    )
+            )
             {
 
                 // Define the shared element transition for the image
@@ -143,7 +143,6 @@ fun SharedTransitionScope.SharedElementListScreen(
                         color = MaterialTheme.colorScheme.onSurface,
                     )
                 }
-
             }
         }
     }

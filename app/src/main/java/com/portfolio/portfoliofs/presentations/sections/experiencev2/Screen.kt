@@ -7,10 +7,11 @@ data object ListScreen
 
 @Serializable
 data class DetailScreen(
-    val id : Int,
+    val id: Int,
     val companyName: String,
     val companyImage: String,
     val jobPosition: String,
-    val description:List<String>,
-    val from:String,
-    val to:String)
+    val description: List<String>,
+    val from: String,
+    val to: String
+)
