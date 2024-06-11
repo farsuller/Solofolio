@@ -22,7 +22,7 @@ object Constants {
     const val EDITING_SERVICE = "Bringing more than a decade of experience in video editing, including proficiency in visual effects and compositing using tools like Adobe After Effects."
 
     const val ABOUT_ME = "I believe that my ongoing journey in this field will create a significant impact as I stay abreast of new trends and technologies, benefiting clients or companies.\n" +
-            "\n" + "Moving from traditional native development, I'm currently immersed in building apps using Jetpack Compose and transitioning towards Kotlin or Compose Multiplatform."
+        "\n" + "Moving from traditional native development, I'm currently immersed in building apps using Jetpack Compose and transitioning towards Kotlin or Compose Multiplatform."
 
     const val MAIN_INTRO = "I offer 7 years of practical experience in Android development. My passion is rooted in the ever-evolving realm of mobile app development, where I've acquired extensive hands-on expertise in Android mobile development."
 
@@ -37,7 +37,7 @@ object Constants {
         "* Participate in server-side development and bug tasks and accessing servers through Linux operating systems.",
         "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
         "* Set up the server environment by installing the necessary Linux distribution on the designated hardware or virtual machine.",
-        "* Identify the specific bug tickets assigned for pre-merge investigation."
+        "* Identify the specific bug tickets assigned for pre-merge investigation.",
     )
 
     val COLLABERA = listOf(
@@ -47,7 +47,7 @@ object Constants {
         "* Proficient in utilizing dependency injection and modularizing features, adept at seamlessly integrating new API endpoints for enhanced application functionality.",
         "* Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.",
         "* Successfully executed tasks in version control, automated unit testing, CI/CD processes, and product build delivery by adhering to provided documentation, contributing to an efficient and organized development workflow.",
-        "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders."
+        "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
     )
 
     val YONDU = listOf(
@@ -70,7 +70,7 @@ object Constants {
         "* Monitored the status of app submissions, addressing feedback or concerns raised by the Play Store and App Store review teams.",
         "* Collaborated with team members to identify and address issues or bugs found during testing.",
         "* Participated in regression testing to ensure existing features remain unaffected by new changes.",
-        "* Utilized appropriate tools and platforms to maintain and distribute documentation effectively within the team and to relevant stakeholders."
+        "* Utilized appropriate tools and platforms to maintain and distribute documentation effectively within the team and to relevant stakeholders.",
     )
     val ZIGZAG = listOf(
         "* The utilized technologies include Android SDK, Java, Kotlin, XML, 3rd Party Api Integrations, Analytics, Xcode, Objective-C, Unity,  C#, Flutter, Bitbucket, MVVM, Version Control.",

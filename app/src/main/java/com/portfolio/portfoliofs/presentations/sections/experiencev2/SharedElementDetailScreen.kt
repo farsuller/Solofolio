@@ -1,5 +1,4 @@
-package com.portfolio.portfoliofs.presentations.sections.experience_section_v2
-
+package com.portfolio.portfoliofs.presentations.sections.experiencev2
 
 import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -47,15 +46,14 @@ fun SharedTransitionScope.SharedElementDetailScreen(
             .clickableWithoutRipple {
                 onBackPressed()
             },
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-
         Row {
             Icon(
                 modifier = Modifier
                     .clickable { onBackPressed() },
                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = "Arrow Back"
+                contentDescription = "Arrow Back",
             )
 
             // Define the shared element transition for the image
@@ -70,12 +68,12 @@ fun SharedTransitionScope.SharedElementDetailScreen(
                         boundsTransform = { _, _ ->
                             // Use tween to specify the animation behavior
                             tween(durationMillis = 500)
-                        }
+                        },
                     ),
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(companyImage)
                     .crossfade(true).build(),
-                contentDescription = null
+                contentDescription = null,
             )
         }
 
@@ -93,8 +91,8 @@ fun SharedTransitionScope.SharedElementDetailScreen(
                         boundsTransform = { _, _ ->
                             // Use tween to specify the animation behavior
                             tween(durationMillis = 500)
-                        }
-                    )
+                        },
+                    ),
             )
 
             Text(
@@ -107,7 +105,7 @@ fun SharedTransitionScope.SharedElementDetailScreen(
                         boundsTransform = { _, _ ->
                             // Use tween to specify the animation behavior
                             tween(durationMillis = 500)
-                        }
+                        },
                     ),
                 text = jobPosition,
                 fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
@@ -124,11 +122,12 @@ fun SharedTransitionScope.SharedElementDetailScreen(
                         boundsTransform = { _, _ ->
                             // Use tween to specify the animation behavior
                             tween(durationMillis = 500)
-                        }
+                        },
                     ),
                 text = "$from - $to",
-                fontFamily = if (to == "Present") MaterialTheme.typography.titleMedium.fontFamily
-                else MaterialTheme.typography.bodyMedium.fontFamily,
+                fontFamily = if (to == "Present") {
+                    MaterialTheme.typography.titleMedium.fontFamily
+                } else MaterialTheme.typography.bodyMedium.fontFamily,
                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                 color = MaterialTheme.colorScheme.onSurface,
             )
@@ -142,8 +141,6 @@ fun SharedTransitionScope.SharedElementDetailScreen(
                     color = MaterialTheme.colorScheme.onSurface,
                 )
             }
-
         }
-
     }
 }

@@ -1,6 +1,5 @@
 package com.portfolio.portfoliofs.utils
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
@@ -9,7 +8,6 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.composed
 import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.core.content.pm.PackageInfoCompat
 import androidx.lifecycle.Lifecycle
@@ -21,15 +19,15 @@ val NavHostController.canBackStack: Boolean
 
 @Composable
 fun Modifier.clickableWithoutRipple(
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ): Modifier {
     val interactionSource = remember { MutableInteractionSource() }
     return this.then(
         Modifier.clickable(
             interactionSource = interactionSource,
             indication = null,
-            onClick = onClick
-        )
+            onClick = onClick,
+        ),
     )
 }
 fun getAppVersion(context: Context): String {

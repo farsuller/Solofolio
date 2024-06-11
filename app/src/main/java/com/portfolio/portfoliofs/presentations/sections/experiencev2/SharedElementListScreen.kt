@@ -1,5 +1,4 @@
-package com.portfolio.portfoliofs.presentations.sections.experience_section_v2
-
+package com.portfolio.portfoliofs.presentations.sections.experiencev2
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedVisibilityScope
@@ -33,15 +32,14 @@ import com.portfolio.portfoliofs.utils.clickableWithoutRipple
 @Composable
 fun SharedTransitionScope.SharedElementListScreen(
     onItemClick: (Experience) -> Unit,
-    animatedVisibilityScope: AnimatedVisibilityScope
+    animatedVisibilityScope: AnimatedVisibilityScope,
 ) {
-
     val experiences = Experience.entries.toList().reversed()
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(10.dp),
-        contentPadding = PaddingValues(10.dp)
+        contentPadding = PaddingValues(10.dp),
     ) {
         item {
             SectionTitle(
@@ -57,10 +55,8 @@ fun SharedTransitionScope.SharedElementListScreen(
                     .fillMaxWidth()
                     .clickableWithoutRipple(
                         onClick = { onItemClick(exp) },
-                    )
-            )
-            {
-
+                    ),
+            ) {
                 // Define the shared element transition for the image
                 AsyncImage(
                     modifier = Modifier
@@ -74,19 +70,19 @@ fun SharedTransitionScope.SharedElementListScreen(
                             boundsTransform = { _, _ ->
                                 // Use tween to specify the animation behavior
                                 tween(durationMillis = 500)
-                            }
+                            },
                         ),
                     model = ImageRequest.Builder(LocalContext.current)
                         .data(experiences[index].image)
                         .crossfade(true).build(),
-                    contentDescription = null
+                    contentDescription = null,
                 )
 
                 // Define the shared element transition for the text
 
                 Column(
                     modifier = Modifier
-                        .weight(1F)
+                        .weight(1F),
                 ) {
                     Text(
                         text = exp.company,
@@ -99,8 +95,8 @@ fun SharedTransitionScope.SharedElementListScreen(
                                 boundsTransform = { _, _ ->
                                     // Use tween to specify the animation behavior
                                     tween(durationMillis = 500)
-                                }
-                            )
+                                },
+                            ),
                     )
 
                     Text(
@@ -113,7 +109,7 @@ fun SharedTransitionScope.SharedElementListScreen(
                                 boundsTransform = { _, _ ->
                                     // Use tween to specify the animation behavior
                                     tween(durationMillis = 500)
-                                }
+                                },
                             ),
                         text = experiences[index].jobPosition,
                         fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
@@ -134,11 +130,12 @@ fun SharedTransitionScope.SharedElementListScreen(
                                 boundsTransform = { _, _ ->
                                     // Use tween to specify the animation behavior
                                     tween(durationMillis = 500)
-                                }
+                                },
                             ),
                         text = "$from - $to",
-                        fontFamily = if (to == "Present") MaterialTheme.typography.titleMedium.fontFamily
-                        else MaterialTheme.typography.bodyMedium.fontFamily,
+                        fontFamily = if (to == "Present") {
+                            MaterialTheme.typography.titleMedium.fontFamily
+                        } else MaterialTheme.typography.bodyMedium.fontFamily,
                         fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                         color = MaterialTheme.colorScheme.onSurface,
                     )
@@ -147,4 +144,3 @@ fun SharedTransitionScope.SharedElementListScreen(
         }
     }
 }
-

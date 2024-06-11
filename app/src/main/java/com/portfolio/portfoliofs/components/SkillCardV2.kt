@@ -46,7 +46,7 @@ fun SkillCardV2(
                     colors = ButtonDefaults.textButtonColors(
                         contentColor = MaterialTheme.colorScheme.surfaceVariant,
                         containerColor = MaterialTheme.colorScheme.onSurface,
-                    )
+                    ),
                 ) {
                     Text(text = "${this@expandOrCollapseIndicator.totalItemCount - this@expandOrCollapseIndicator.shownItemCount}+ more")
                 }
@@ -57,19 +57,20 @@ fun SkillCardV2(
                     colors = ButtonDefaults.textButtonColors(
                         contentColor = MaterialTheme.colorScheme.onSurface,
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    )
+                    ),
                 ) {
                     Icon(imageVector = Icons.Default.Close, contentDescription = "Close Icon")
                     Text(text = "Hide")
                 }
-            }
+            },
         ),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)) { index ->
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) { index ->
 
         SuggestionChip(
             border = SuggestionChipDefaults.suggestionChipBorder(
                 enabled = true,
-                borderColor = MaterialTheme.colorScheme.onSurface
+                borderColor = MaterialTheme.colorScheme.onSurface,
             ),
             onClick = { },
             label = {

@@ -26,7 +26,7 @@ fun SkillsCard(skills: Skills) {
         SuggestionChip(
             border = SuggestionChipDefaults.suggestionChipBorder(
                 enabled = true,
-                borderColor = MaterialTheme.colorScheme.onSurface
+                borderColor = MaterialTheme.colorScheme.onSurface,
             ),
             onClick = { },
             label = {

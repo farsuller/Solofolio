@@ -10,7 +10,7 @@ import com.portfolio.portfoliofs.utils.Res
 enum class Experience(
     val id: Int,
     val jobPosition: String,
-    val description:List<String>,
+    val description: List<String>,
     val company: String,
     val image: String,
     val from: String,
@@ -59,6 +59,6 @@ enum class Experience(
         company = "FPT Software Philippines Corp.",
         image = Res.Image.work5,
         from = "Feb. 2024",
-        to = "Present"
+        to = "Present",
     ),
 }

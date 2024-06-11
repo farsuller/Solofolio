@@ -1,4 +1,4 @@
-package com.portfolio.portfoliofs.presentations.sections.experience_section_v2
+package com.portfolio.portfoliofs.presentations.sections.experiencev2
 
 import kotlinx.serialization.Serializable
 
@@ -13,5 +13,5 @@ data class DetailScreen(
     val jobPosition: String,
     val description: List<String>,
     val from: String,
-    val to: String
+    val to: String,
 )

@@ -21,8 +21,7 @@ import com.portfolio.portfoliofs.presentations.sections.PortfolioSection
 import com.portfolio.portfoliofs.presentations.sections.ServiceSection
 import com.portfolio.portfoliofs.presentations.sections.SkillsSection
 import com.portfolio.portfoliofs.presentations.sections.TestimonialSection
-import com.portfolio.portfoliofs.presentations.sections.experience_section_v2.SharedTransitionScreen
-
+import com.portfolio.portfoliofs.presentations.sections.experiencev2.SharedTransitionScreen
 
 @Composable
 fun MainContent(
@@ -49,11 +48,12 @@ fun MainContent(
             //  ExperienceSection()
 
             Box(
-                modifier = Modifier.height(if(experienceSectionClicked.value) 900.dp else 600.dp)){
+                modifier = Modifier.height(if (experienceSectionClicked.value) 900.dp else 500.dp),
+            ) {
                 SharedTransitionScreen(
                     onItemClicked = {
                         experienceSectionClicked.value = it
-                    }
+                    },
                 )
             }
             PortfolioSection()

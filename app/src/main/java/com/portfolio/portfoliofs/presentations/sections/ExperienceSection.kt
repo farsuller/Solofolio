@@ -12,7 +12,6 @@ import com.portfolio.portfoliofs.components.ExperienceCard
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.model.Experience
 import com.portfolio.portfoliofs.model.Section
-import com.skydoves.orbital.Orbital
 
 @Composable
 fun ExperienceSection() {
@@ -32,16 +31,13 @@ fun ExperienceSection() {
             alignment = Alignment.CenterHorizontally,
         )
 
-
-            ExperienceCardList(experience = experience)
-
+        ExperienceCardList(experience = experience)
     }
 }
 
 @Composable
 fun ExperienceCardList(experience: Array<Experience>) {
     Column {
-
         experience.reversed().forEach { expDetails ->
             ExperienceCard(experience = expDetails)
         }

@@ -6,7 +6,6 @@ import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -55,7 +54,6 @@ fun ExperienceCard(experience: Experience) {
                 .fillMaxSize()
                 .padding(all = 10.dp),
         ) {
-
             var expanded by rememberSaveable { mutableStateOf(false) }
             AnimatedVisibility(
                 remember { MutableTransitionState(false) }.apply {
@@ -89,8 +87,9 @@ fun ExperienceCard(experience: Experience) {
                             )
                             Text(
                                 text = "${experience.from} - ${experience.to}",
-                                fontFamily = if(experience.to =="Present") MaterialTheme.typography.titleMedium.fontFamily
-                                else MaterialTheme.typography.bodyMedium.fontFamily,
+                                fontFamily = if (experience.to == "Present") {
+                                    MaterialTheme.typography.titleMedium.fontFamily
+                                } else MaterialTheme.typography.bodyMedium.fontFamily,
                                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                 color = MaterialTheme.colorScheme.onSurface,
                             )
@@ -103,8 +102,7 @@ fun ExperienceCard(experience: Experience) {
                             )
 
                             if (expanded) {
-
-                                experience.description.forEach { desc->
+                                experience.description.forEach { desc ->
                                     Text(
                                         modifier = Modifier.padding(top = 15.dp),
                                         text = desc,
@@ -113,7 +111,6 @@ fun ExperienceCard(experience: Experience) {
                                         color = MaterialTheme.colorScheme.onSurface,
                                     )
                                 }
-
                             } else {
                                 Text(
                                     modifier = Modifier.padding(top = 10.dp),

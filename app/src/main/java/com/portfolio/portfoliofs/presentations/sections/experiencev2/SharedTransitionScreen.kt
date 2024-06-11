@@ -1,5 +1,4 @@
-package com.portfolio.portfoliofs.presentations.sections.experience_section_v2
-
+package com.portfolio.portfoliofs.presentations.sections.experiencev2
 
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
@@ -44,13 +43,13 @@ fun SharedTransitionScreen(onItemClicked: (Boolean) -> Unit) {
                                     jobPosition = experience.jobPosition,
                                     description = experience.description,
                                     from = experience.from,
-                                    to = experience.to
-                                )
+                                    to = experience.to,
+                                ),
                             )
                         }
                         onItemClicked(true)
                     },
-                    animatedVisibilityScope = this
+                    animatedVisibilityScope = this,
                 )
             }
 
@@ -74,7 +73,7 @@ fun SharedTransitionScreen(onItemClicked: (Boolean) -> Unit) {
                             onItemClicked(false)
                         }
                     },
-                    animatedVisibilityScope = this
+                    animatedVisibilityScope = this,
                 )
 
                 // Handle back press events
@@ -92,7 +91,7 @@ fun SharedTransitionScreen(onItemClicked: (Boolean) -> Unit) {
 
 @Composable
 fun HandleBackPress(
-    onBackPressed: () -> Unit
+    onBackPressed: () -> Unit,
 ) {
     val onBackPressedDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
     val backCallback = remember {
