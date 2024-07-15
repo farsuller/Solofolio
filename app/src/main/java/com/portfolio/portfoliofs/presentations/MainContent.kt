@@ -1,5 +1,7 @@
 package com.portfolio.portfoliofs.presentations
 
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -48,7 +50,7 @@ fun MainContent(
             //  ExperienceSection()
 
             Box(
-                modifier = Modifier.height(if (experienceSectionClicked.value) 900.dp else 500.dp),
+                modifier = Modifier.height(if (experienceSectionClicked.value) 900.dp else 550.dp),
             ) {
                 SharedTransitionScreen(
                     onItemClicked = {

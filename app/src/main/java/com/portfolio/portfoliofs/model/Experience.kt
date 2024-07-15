@@ -23,7 +23,7 @@ enum class Experience(
         company = "Zigzag OffShoring",
         image = Res.Image.work1,
         from = "Mar. 2017",
-        to = "Dec. 2020",
+        to = "Dec. 2019",
     ),
     Second(
         id = 2,
