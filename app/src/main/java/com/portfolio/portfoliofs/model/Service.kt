@@ -20,6 +20,12 @@ enum class Service(
         title = "Android Development",
         description = ANDROID_SERVICE,
     ),
+    CrossPlatform(
+        icon = R.drawable.cross_platform_icon,
+        imageDesc = "Cross Platform Icon",
+        title = "Cross Platform Development",
+        description = CROSS_PLATFORM_SERVICE,
+    ),
     IOS(
         icon = R.drawable.apple_icon,
         imageDesc = "Apple Icon",
@@ -31,12 +37,6 @@ enum class Service(
         imageDesc = "Desktop Icon",
         title = "Web Development",
         description = WEB_SERVICE,
-    ),
-    CrossPlatform(
-        icon = R.drawable.cross_platform_icon,
-        imageDesc = "Cross Platform Icon",
-        title = "Cross Platform Development",
-        description = CROSS_PLATFORM_SERVICE,
     ),
     Design(
         icon = R.drawable.design_icon,

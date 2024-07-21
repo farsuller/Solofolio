@@ -1,8 +1,11 @@
 package com.portfolio.portfoliofs
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -10,14 +13,30 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
-import androidx.navigation.compose.rememberNavController
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.appupdate.AppUpdateOptions
+import com.google.android.play.core.install.model.AppUpdateType
+import com.google.android.play.core.install.model.UpdateAvailability
 import com.portfolio.portfoliofs.components.AppTheme
 import com.portfolio.portfoliofs.navigation.SetupNavGraph
 import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import kotlinx.serialization.Serializable
 
 class MainActivity : ComponentActivity() {
 
-    var keepSplashOpened = true
+    private var keepSplashOpened = true
+    private var isUpdateAvailable = false
+
+    private val activityResultLauncher =
+        registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result: ActivityResult ->
+            if (result.resultCode != RESULT_OK) {
+                Toast.makeText(
+                    this,
+                    "Update Failed! Result Code:${result.resultCode}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,12 +53,30 @@ class MainActivity : ComponentActivity() {
                 },
                 dynamicColor = false,
             ) {
-                val navController = rememberNavController()
+
+                val appUpdateManager = AppUpdateManagerFactory.create(applicationContext)
+                val appUpdateInfoTask = appUpdateManager.appUpdateInfo
+
+
+                appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
+
+                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                        && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
+                    ) {
+                        appUpdateManager.startUpdateFlowForResult(
+                            appUpdateInfo,
+                            activityResultLauncher,
+                            AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
+                        )
+                        isUpdateAvailable = true
+                    } else {
+                        isUpdateAvailable = false
+                    }
+                }
+
                 SetupNavGraph(
-                    startDestination = getStartDestination(),
-                    navHostController = navController,
-                    onDataLoaded = {
-                        keepSplashOpened = false
+                    onDataLoaded = { splash ->
+                        keepSplashOpened = !splash
                     },
                     darkTheme = when (appTheme) {
                         AppTheme.Dark -> true
@@ -53,12 +90,12 @@ class MainActivity : ComponentActivity() {
                             AppTheme.System -> AppTheme.Light
                         }
                     },
+                    isUpdateAvailable = isUpdateAvailable
                 )
             }
         }
     }
 }
 
-private fun getStartDestination(): String {
-    return ScreensRoutes.Home.route
-}
+@Serializable
+data object Home

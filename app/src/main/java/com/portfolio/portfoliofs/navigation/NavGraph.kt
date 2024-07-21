@@ -3,50 +3,39 @@ package com.portfolio.portfoliofs.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavGraphBuilder
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.portfolio.portfoliofs.ScreensRoutes
+import androidx.navigation.compose.rememberNavController
+import com.portfolio.portfoliofs.Home
 import com.portfolio.portfoliofs.presentations.MainScreen
 import com.portfolio.portfoliofs.presentations.MainViewModel
 
 @Composable
 fun SetupNavGraph(
-    startDestination: String,
-    navHostController: NavHostController,
     darkTheme: Boolean,
     onThemeUpdated: () -> Unit,
-    onDataLoaded: () -> Unit,
+    onDataLoaded: (Boolean) -> Unit,
+    isUpdateAvailable: Boolean
 ) {
+    val navController = rememberNavController()
+
     NavHost(
-        navController = navHostController,
-        startDestination = startDestination,
+        navController = navController,
+        startDestination = Home,
     ) {
-        homeRoute(
-            darkTheme = darkTheme,
-            onThemeUpdated = onThemeUpdated,
-            onDataLoaded = onDataLoaded,
-        )
-    }
-}
+        composable<Home> {
+            val mainViewModel: MainViewModel = viewModel()
 
-fun NavGraphBuilder.homeRoute(
-    darkTheme: Boolean,
-    onDataLoaded: () -> Unit,
-    onThemeUpdated: () -> Unit,
-) {
-    composable(route = ScreensRoutes.Home.route) {
-        val mainViewModel: MainViewModel = viewModel()
+            LaunchedEffect(key1 = Unit) {
+                if (isUpdateAvailable) onDataLoaded(false)
+                else onDataLoaded(true)
+            }
 
-        LaunchedEffect(key1 = true) {
-            onDataLoaded()
+            MainScreen(
+                darkTheme = darkTheme,
+                onThemeUpdated = onThemeUpdated,
+                viewModel = mainViewModel,
+            )
         }
-
-        MainScreen(
-            darkTheme = darkTheme,
-            onThemeUpdated = onThemeUpdated,
-            viewModel = mainViewModel,
-        )
     }
 }

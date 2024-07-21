@@ -32,7 +32,6 @@ fun ServiceSection() {
         SectionTitle(
             modifier = Modifier.fillMaxWidth(),
             section = Section.Service,
-            alignment = Alignment.CenterHorizontally,
         )
 
         Box(

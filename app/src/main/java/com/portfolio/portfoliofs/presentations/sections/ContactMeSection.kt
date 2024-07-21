@@ -51,6 +51,7 @@ fun ContactMeSection(viewModel: MainViewModel) {
         SectionTitle(
             modifier = Modifier.fillMaxWidth(),
             section = Section.Contact,
+            alignment = Alignment.CenterHorizontally,
         )
 
         EmailCard(viewModel = viewModel)

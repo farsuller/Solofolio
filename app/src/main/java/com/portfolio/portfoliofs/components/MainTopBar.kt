@@ -38,7 +38,7 @@ internal fun MainTopBar(
                 modifier = Modifier.padding(end = 10.dp),
                 text = appVersion,
                 fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
-                fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+                fontSize = MaterialTheme.typography.bodySmall.fontSize,
                 color = MaterialTheme.colorScheme.onSurface,
             )
         },

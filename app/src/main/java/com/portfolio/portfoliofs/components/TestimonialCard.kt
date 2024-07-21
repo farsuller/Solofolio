@@ -18,7 +18,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Testimonial
 import com.portfolio.portfoliofs.ui.theme.Elevation
@@ -77,14 +79,15 @@ fun TestimonialCard(testimonial: Testimonial) {
                     color = MaterialTheme.colorScheme.onSurface,
                 )
 
-                RatingBar(modifier = Modifier.padding(top = 5.dp))
+                RatingBar()
 
                 Text(
-                    modifier = Modifier.padding(top = 5.dp),
                     text = testimonial.review,
                     fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
+                    fontStyle = FontStyle.Italic,
                     color = MaterialTheme.colorScheme.onSurface,
+                    lineHeight = 15.sp
                 )
             }
         }

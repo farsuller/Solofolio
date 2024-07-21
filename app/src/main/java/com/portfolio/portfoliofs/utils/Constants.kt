@@ -17,17 +17,20 @@ object Constants {
     const val ANDROID_SERVICE = "Bringing seven years of hands-on experience in crafting scalable mobile applications. Proficient with Android development tools including Android Studio, Gradle, and the Android SDK. Familiar with MVVM and CLEAN Architecture using Kotlin/Java."
     const val IOS_SERVICE = "Although my experience in iOS development is not extensive, I have effectively maintained iOS apps and released them on the App Store. Currently, I am getting familiar with well-known iOS development frameworks like UIKit and SwiftUI."
     const val WEB_SERVICE = "Continuously fascinated by coding and crafting digital solutions, I've begun familiarizing myself with renowned web development frameworks like Kobweb, and this static website is a product of that exploration."
-    const val CROSS_PLATFORM_SERVICE = "Dedicated to cross-platform development, leveraging the Flutter framework on both Android and iOS devices. Successfully contributed to casual games projects on Unity, managing assets, and coding for Play Store and App Store releases."
+    const val CROSS_PLATFORM_SERVICE = "I am learning Kotlin Multiplatform to develop seamless applications for iOS, Android, desktop and web platforms. By using a single codebase, I aim to ensure consistent functionality and performance, reducing development time and costs. My goal is to provide high-quality, native user experiences across all devices."
     const val UI_UX_SERVICE = "Proficient in utilizing design tools such as Sketch, Figma, Adobe XD. Additionally, I possess the ability to translate UI designs seamlessly into code, ensuring a smooth transition from concept to implementation."
     const val EDITING_SERVICE = "Bringing more than a decade of experience in video editing, including proficiency in visual effects and compositing using tools like Adobe After Effects."
 
     const val ABOUT_ME = "I believe that my ongoing journey in this field will create a significant impact as I stay abreast of new trends and technologies, benefiting clients or companies.\n" +
         "\n" + "Moving from traditional native development, I'm currently immersed in building apps using Jetpack Compose and transitioning towards Kotlin or Compose Multiplatform."
 
-    const val MAIN_INTRO = "I offer 7 years of practical experience in Android development. My passion is rooted in the ever-evolving realm of mobile app development, where I've acquired extensive hands-on expertise in Android mobile development."
+    const val MAIN_INTRO = "I offer more than 7 years of practical experience in Android development. " +
+            "My goal is to contribute or create apps based on company or client requirements, " +
+            "making an impact while continuously learning new trends and technologies that benefit clients or the company.\n" +
+            "I am currently focused on building apps with Jetpack Compose and exploring Kotlin Multiplatform."
 
     const val NAME = "Florence Arnold R. Suller"
-    const val ROLE = "Current: Software Developer Engineer"
+    const val ROLE = "Software Developer Engineer"
     const val HIRE_ME = "Hire Me"
     const val INTRO = "Hello I'm"
 
@@ -90,41 +93,41 @@ object Constants {
 
 object Res {
     object Image {
-        const val portfolio1 = "file:///android_asset/images/portfolio1.png"
-        const val portfolio2 = "file:///android_asset/images/portfolio2.png"
-        const val portfolio3 = "file:///android_asset/images/portfolio3.png"
-        const val portfolio4 = "file:///android_asset/images/portfolio4.png"
-        const val portfolio5 = "file:///android_asset/images/portfolio5.png"
-        const val portfolio6 = "file:///android_asset/images/portfolio6.png"
-        const val portfolio7 = "file:///android_asset/images/portfolio7.png"
-        const val portfolio8 = "file:///android_asset/images/portfolio8.png"
-        const val portfolio9 = "file:///android_asset/images/portfolio9.jpg"
-        const val portfolio10 = "file:///android_asset/images/portfolio10.jpg"
-        const val portfolio11 = "file:///android_asset/images/portfolio11.jpg"
-        const val portfolio12 = "file:///android_asset/images/portfolio12.jpg"
-        const val portfolio13 = "file:///android_asset/images/portfolio13.jpg"
-        const val portfolio14 = "file:///android_asset/images/portfolio14.png"
-        const val soloeats = "file:///android_asset/images/soloeats.png"
-        const val solodaily = "file:///android_asset/images/solodaily.png"
+        const val PORTFOLIO_1 = "file:///android_asset/images/portfolio1.png"
+        const val PORTFOLIO_2 = "file:///android_asset/images/portfolio2.png"
+        const val PORTFOLIO_3 = "file:///android_asset/images/portfolio3.png"
+        const val PORTFOLIO_4 = "file:///android_asset/images/portfolio4.png"
+        const val PORTFOLIO_5 = "file:///android_asset/images/portfolio5.png"
+        const val PORTFOLIO_6 = "file:///android_asset/images/portfolio6.png"
+        const val PORTFOLIO_7 = "file:///android_asset/images/portfolio7.png"
+        const val PORTFOLIO_8 = "file:///android_asset/images/portfolio8.png"
+        const val PORTFOLIO_9 = "file:///android_asset/images/portfolio9.jpg"
+        const val PORTFOLIO_10 = "file:///android_asset/images/portfolio10.jpg"
+        const val PORTFOLIO_11 = "file:///android_asset/images/portfolio11.jpg"
+        const val PORTFOLIO_12 = "file:///android_asset/images/portfolio12.jpg"
+        const val PORTFOLIO_13 = "file:///android_asset/images/portfolio13.jpg"
+        const val PORTFOLIO_14 = "file:///android_asset/images/portfolio14.png"
+        const val SOLOEATS = "file:///android_asset/images/soloeats.png"
+        const val SOLODAILY = "file:///android_asset/images/solodaily.png"
 
-        const val avatar1 = "file:///android_asset/images/avatar1.png"
-        const val avatar2 = "file:///android_asset/images/avatar2.png"
-        const val avatar3 = "file:///android_asset/images/avatar3.png"
-        const val avatar4 = "file:///android_asset/images/avatar4.png"
-        const val avatar5 = "file:///android_asset/images/avatar5.png"
-        const val avatar6 = "file:///android_asset/images/avatar6.png"
+        const val AVATAR_1 = "file:///android_asset/images/avatar1.png"
+        const val AVATAR_2 = "file:///android_asset/images/avatar2.png"
+        const val AVATAR_3 = "file:///android_asset/images/avatar3.png"
+        const val AVATAR_4 = "file:///android_asset/images/avatar4.png"
+        const val AVATAR_5 = "file:///android_asset/images/avatar5.png"
+        const val AVATAR_6 = "file:///android_asset/images/avatar6.png"
 
-        const val work1 = "file:///android_asset/images/work_zigzag_logo.jpg"
-        const val work2 = "file:///android_asset/images/work_emapta_logo.jpg"
-        const val work3 = "file:///android_asset/images/work_yondu_logo.jpg"
-        const val work4 = "file:///android_asset/images/work_collabera_digital_logo.jpg"
-        const val work5 = "file:///android_asset/images/work_fpt_software_logo.jpg"
+        const val WORK_1 = "file:///android_asset/images/work_zigzag_logo.jpg"
+        const val WORK_2 = "file:///android_asset/images/work_emapta_logo.jpg"
+        const val WORK_3 = "file:///android_asset/images/work_yondu_logo.jpg"
+        const val WORK_4 = "file:///android_asset/images/work_collabera_digital_logo.jpg"
+        const val WORK_5 = "file:///android_asset/images/work_fpt_software_logo.jpg"
     }
     object Icon {
-        const val checkmark = "checkmark_icon.svg"
-        const val shield = "shield_icon.svg"
-        const val happy = "happy_icon.svg"
-        const val team = "user_icon.svg"
-        const val star = "star_icon.svg"
+        const val CHECKMARK = "checkmark_icon.svg"
+        const val SHIELD = "shield_icon.svg"
+        const val HAPPY = "happy_icon.svg"
+        const val TEAM = "user_icon.svg"
+        const val STAR = "star_icon.svg"
     }
 }

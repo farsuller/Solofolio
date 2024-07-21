@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.components.SocialBar
 import com.portfolio.portfoliofs.utils.Constants.INTRO
@@ -65,9 +66,10 @@ fun MyIntroSection() {
                 )
                 Text(
                     text = ROLE,
-                    fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+                    fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     color = MaterialTheme.colorScheme.onSurface,
+                    lineHeight = 20.sp
                 )
 
                 SocialBar()
