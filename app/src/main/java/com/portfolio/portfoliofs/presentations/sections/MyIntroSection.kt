@@ -69,7 +69,7 @@ fun MyIntroSection() {
                     fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     color = MaterialTheme.colorScheme.onSurface,
-                    lineHeight = 20.sp
+                    lineHeight = 20.sp,
                 )
 
                 SocialBar()

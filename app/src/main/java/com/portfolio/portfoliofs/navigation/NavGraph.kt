@@ -15,7 +15,7 @@ fun SetupNavGraph(
     darkTheme: Boolean,
     onThemeUpdated: () -> Unit,
     onDataLoaded: (Boolean) -> Unit,
-    isUpdateAvailable: Boolean
+    isUpdateAvailable: Boolean,
 ) {
     val navController = rememberNavController()
 
@@ -27,8 +27,11 @@ fun SetupNavGraph(
             val mainViewModel: MainViewModel = viewModel()
 
             LaunchedEffect(key1 = Unit) {
-                if (isUpdateAvailable) onDataLoaded(false)
-                else onDataLoaded(true)
+                if (isUpdateAvailable) {
+                    onDataLoaded(false)
+                } else {
+                    onDataLoaded(true)
+                }
             }
 
             MainScreen(

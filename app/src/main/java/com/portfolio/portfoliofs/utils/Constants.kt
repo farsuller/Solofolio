@@ -25,9 +25,9 @@ object Constants {
         "\n" + "Moving from traditional native development, I'm currently immersed in building apps using Jetpack Compose and transitioning towards Kotlin or Compose Multiplatform."
 
     const val MAIN_INTRO = "I offer more than 7 years of practical experience in Android development. " +
-            "My goal is to contribute or create apps based on company or client requirements, " +
-            "making an impact while continuously learning new trends and technologies that benefit clients or the company.\n" +
-            "I am currently focused on building apps with Jetpack Compose and exploring Kotlin Multiplatform."
+        "My goal is to contribute or create apps based on company or client requirements, " +
+        "making an impact while continuously learning new trends and technologies that benefit clients or the company.\n" +
+        "I am currently focused on building apps with Jetpack Compose and exploring Kotlin Multiplatform."
 
     const val NAME = "Florence Arnold R. Suller"
     const val ROLE = "Software Developer Engineer"

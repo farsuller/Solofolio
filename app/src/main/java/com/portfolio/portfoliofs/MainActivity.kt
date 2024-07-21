@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                 Toast.makeText(
                     this,
                     "Update Failed! Result Code:${result.resultCode}",
-                    Toast.LENGTH_SHORT
+                    Toast.LENGTH_SHORT,
                 ).show()
             }
         }
@@ -53,20 +53,18 @@ class MainActivity : ComponentActivity() {
                 },
                 dynamicColor = false,
             ) {
-
                 val appUpdateManager = AppUpdateManagerFactory.create(applicationContext)
                 val appUpdateInfoTask = appUpdateManager.appUpdateInfo
 
-
                 appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
 
-                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
-                        && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
+                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE &&
+                        appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
                     ) {
                         appUpdateManager.startUpdateFlowForResult(
                             appUpdateInfo,
                             activityResultLauncher,
-                            AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build()
+                            AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build(),
                         )
                         isUpdateAvailable = true
                     } else {
@@ -90,7 +88,7 @@ class MainActivity : ComponentActivity() {
                             AppTheme.System -> AppTheme.Light
                         }
                     },
-                    isUpdateAvailable = isUpdateAvailable
+                    isUpdateAvailable = isUpdateAvailable,
                 )
             }
         }

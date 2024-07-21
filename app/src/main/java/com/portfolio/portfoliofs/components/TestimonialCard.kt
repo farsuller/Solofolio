@@ -87,7 +87,7 @@ fun TestimonialCard(testimonial: Testimonial) {
                     fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                     fontStyle = FontStyle.Italic,
                     color = MaterialTheme.colorScheme.onSurface,
-                    lineHeight = 15.sp
+                    lineHeight = 15.sp,
                 )
             }
         }

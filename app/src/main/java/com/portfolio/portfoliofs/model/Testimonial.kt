@@ -49,6 +49,4 @@ enum class Testimonial(
         profession = "CEO - Technation",
         review = "His coding prowess and attention to detail ensured our mobile app exceeded expectations.",
     ),
-
-
 }

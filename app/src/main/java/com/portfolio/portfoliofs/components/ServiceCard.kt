@@ -1,7 +1,6 @@
 package com.portfolio.portfoliofs.components
 
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -43,8 +42,7 @@ fun ServiceCard(service: Service) {
                 .height(300.dp)
                 .padding(all = 20.dp),
         ) {
-
-            Row(modifier = Modifier.fillMaxWidth(),) {
+            Row(modifier = Modifier.fillMaxWidth()) {
                 Box(
                     modifier = Modifier
                         .border(
@@ -74,7 +72,6 @@ fun ServiceCard(service: Service) {
                     color = MaterialTheme.colorScheme.onSurface,
                 )
             }
-
 
             Text(
                 modifier = Modifier.padding(top = 10.dp),
