@@ -34,12 +34,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.model.Section
+import com.portfolio.portfoliofs.presentations.EmailState
 import com.portfolio.portfoliofs.presentations.MainViewModel
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
-fun ContactMeSection(viewModel: MainViewModel) {
+fun ContactMeSection() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -54,12 +58,12 @@ fun ContactMeSection(viewModel: MainViewModel) {
             alignment = Alignment.CenterHorizontally,
         )
 
-        EmailCard(viewModel = viewModel)
+        EmailCard()
     }
 }
 
 @Composable
-fun EmailCard(viewModel: MainViewModel) {
+fun EmailCard() {
     var toEmail by remember { mutableStateOf("florence.suller@gmail.com") }
     var subject by remember { mutableStateOf("") }
     var message by remember { mutableStateOf("") }
@@ -72,11 +76,6 @@ fun EmailCard(viewModel: MainViewModel) {
         scrollState.scrollTo(scrollState.maxValue)
     }
 
-    viewModel.emailState = viewModel.emailState.copy(
-        toEmail = toEmail,
-        subject = subject,
-        message = message,
-    )
 
     Column(
         modifier = Modifier
@@ -183,3 +182,14 @@ private fun sendEmail(
         println("No email app installed on the device.")
     }
 }
+
+
+@SolofolioPreviews
+@Composable
+fun ContactMeSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        ContactMeSection()
+    }
+}
+

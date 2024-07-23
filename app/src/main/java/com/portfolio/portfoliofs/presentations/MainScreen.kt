@@ -45,7 +45,6 @@ import kotlinx.coroutines.launch
 internal fun MainScreen(
     darkTheme: Boolean,
     onThemeUpdated: () -> Unit,
-    viewModel: MainViewModel,
 ) {
     val scope = rememberCoroutineScope()
     var padding by remember { mutableStateOf(PaddingValues()) }
@@ -111,7 +110,6 @@ internal fun MainScreen(
             MainContent(
                 paddingValues = it,
                 lazyListState = lazyListState,
-                viewModel = viewModel,
                 darkTheme = darkTheme,
                 appVersion = appVersion,
             )

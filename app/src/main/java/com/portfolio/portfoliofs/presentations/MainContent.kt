@@ -27,7 +27,6 @@ import com.portfolio.portfoliofs.presentations.sections.experiencev2.SharedTrans
 fun MainContent(
     paddingValues: PaddingValues,
     lazyListState: LazyListState,
-    viewModel: MainViewModel,
     darkTheme: Boolean,
     appVersion: String,
 ) {
@@ -59,7 +58,7 @@ fun MainContent(
             PortfolioSection()
             ServiceSection()
             TestimonialSection()
-            ContactMeSection(viewModel = viewModel)
+            ContactMeSection()
 
             FooterSection(darkTheme = darkTheme, appVersion = appVersion)
             Spacer(modifier = Modifier.height(28.dp))

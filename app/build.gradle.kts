@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.screenshot)
 }
 
 val keystoreProperties: Properties by lazy {
@@ -65,6 +66,7 @@ android {
     buildFeatures {
         compose = true
     }
+    experimentalProperties ["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {
@@ -101,4 +103,6 @@ dependencies {
 
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    screenshotTestImplementation(libs.androidx.ui.tooling)
 }

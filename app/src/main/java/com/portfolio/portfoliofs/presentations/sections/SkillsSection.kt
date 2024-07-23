@@ -13,6 +13,8 @@ import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.components.SkillCardV2
 import com.portfolio.portfoliofs.model.Section
 import com.portfolio.portfoliofs.model.Skills
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
 fun SkillsSection() {
@@ -35,8 +37,11 @@ fun SkillsSection() {
     }
 }
 
-@Preview
+@SolofolioPreviews
 @Composable
-internal fun SkillsCardPreview() {
-    SkillsSection()
+private fun SkillsSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        SkillsSection()
+    }
 }

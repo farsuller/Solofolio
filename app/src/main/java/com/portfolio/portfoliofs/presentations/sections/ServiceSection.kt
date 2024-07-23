@@ -17,6 +17,8 @@ import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.components.ServiceCard
 import com.portfolio.portfoliofs.model.Section
 import com.portfolio.portfoliofs.model.Service
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
 fun ServiceSection() {
@@ -48,5 +50,14 @@ fun ServiceSection() {
                 }
             }
         }
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun ServiceSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        ServiceSection()
     }
 }

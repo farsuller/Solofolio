@@ -16,6 +16,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.R
 import com.portfolio.portfoliofs.components.SocialBar
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
 fun FooterSection(darkTheme: Boolean, appVersion: String) {
@@ -39,5 +41,14 @@ fun FooterSection(darkTheme: Boolean, appVersion: String) {
         SocialBar(horizontalArrangement = Arrangement.Center)
 
         Spacer(modifier = Modifier.height(28.dp))
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun FooterSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        FooterSection(darkTheme = true, appVersion = "1.0.0")
     }
 }

@@ -15,6 +15,8 @@ import com.portfolio.portfoliofs.components.PortfolioCard
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.model.Portfolio
 import com.portfolio.portfoliofs.model.Section
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
 fun PortfolioSection() {
@@ -39,5 +41,14 @@ fun PortfolioSection() {
                 }
             }
         }
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun PortfolioSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        PortfolioSection()
     }
 }

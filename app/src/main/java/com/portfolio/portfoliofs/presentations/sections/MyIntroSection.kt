@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.components.SocialBar
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 import com.portfolio.portfoliofs.utils.Constants.INTRO
 import com.portfolio.portfoliofs.utils.Constants.MAIN_INTRO
 import com.portfolio.portfoliofs.utils.Constants.NAME
@@ -86,5 +88,14 @@ fun MyIntroSection() {
                 color = MaterialTheme.colorScheme.onSurface,
             )
         }
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun MyIntroSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        MyIntroSection()
     }
 }

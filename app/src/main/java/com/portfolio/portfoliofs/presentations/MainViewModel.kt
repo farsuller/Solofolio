@@ -8,9 +8,12 @@ import androidx.lifecycle.ViewModel
 class MainViewModel : ViewModel() {
 
     var emailState by mutableStateOf(EmailState())
-    data class EmailState(
-        var toEmail: String = "",
-        var subject: String = "",
-        var message: String = "",
-    )
+        private set
+
 }
+
+data class EmailState(
+    var toEmail: String = "",
+    var subject: String = "",
+    var message: String = "",
+)

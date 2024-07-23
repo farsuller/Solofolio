@@ -1,6 +1,5 @@
 package com.portfolio.portfoliofs.presentations.sections
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,8 +15,9 @@ import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.components.TestimonialCard
 import com.portfolio.portfoliofs.model.Section
 import com.portfolio.portfoliofs.model.Testimonial
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TestimonialSection() {
     val pagerState = rememberPagerState(initialPage = 0) { Testimonial.entries.size }
@@ -41,5 +41,14 @@ fun TestimonialSection() {
         }
 
         PagerButtons(pagerState = pagerState, pageCount = testimonial.size)
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun TestimonialSectionPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,){
+        TestimonialSection()
     }
 }

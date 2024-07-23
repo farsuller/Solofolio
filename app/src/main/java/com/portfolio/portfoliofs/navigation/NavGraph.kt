@@ -24,8 +24,6 @@ fun SetupNavGraph(
         startDestination = Home,
     ) {
         composable<Home> {
-            val mainViewModel: MainViewModel = viewModel()
-
             LaunchedEffect(key1 = Unit) {
                 if (isUpdateAvailable) {
                     onDataLoaded(false)
@@ -37,7 +35,6 @@ fun SetupNavGraph(
             MainScreen(
                 darkTheme = darkTheme,
                 onThemeUpdated = onThemeUpdated,
-                viewModel = mainViewModel,
             )
         }
     }
