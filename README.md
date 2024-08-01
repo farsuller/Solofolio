@@ -1,4 +1,4 @@
-![Screenshot 2024-08-01 110554](https://github.com/user-attachments/assets/d4026b1e-e1b6-48c8-a482-6c12f82b3fcb)﻿# Solofolio v20.2.2.5
+﻿# Solofolio v20.2.2.5
 Solofolio is a comprehensive app where I share all aspects of my Android development journey. 
 Here, you can find detailed information about my skills, portfolio, the services I offer, 
 and testimonials from clients and peers. The app is crafted using Jetpack Compose,
