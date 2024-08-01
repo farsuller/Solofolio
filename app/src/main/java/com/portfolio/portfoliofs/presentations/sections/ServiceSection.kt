@@ -57,7 +57,8 @@ fun ServiceSection() {
 @Composable
 private fun ServiceSectionPreview() {
     MyPortfolioJCTheme(
-        dynamicColor = false,){
+        dynamicColor = false,
+    ) {
         ServiceSection()
     }
 }

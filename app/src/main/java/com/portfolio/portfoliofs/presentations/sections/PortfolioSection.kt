@@ -48,7 +48,8 @@ fun PortfolioSection() {
 @Composable
 private fun PortfolioSectionPreview() {
     MyPortfolioJCTheme(
-        dynamicColor = false,){
+        dynamicColor = false,
+    ) {
         PortfolioSection()
     }
 }

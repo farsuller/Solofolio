@@ -48,7 +48,8 @@ fun TestimonialSection() {
 @Composable
 private fun TestimonialSectionPreview() {
     MyPortfolioJCTheme(
-        dynamicColor = false,){
+        dynamicColor = false,
+    ) {
         TestimonialSection()
     }
 }

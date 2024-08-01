@@ -48,7 +48,8 @@ fun FooterSection(darkTheme: Boolean, appVersion: String) {
 @Composable
 private fun FooterSectionPreview() {
     MyPortfolioJCTheme(
-        dynamicColor = false,){
+        dynamicColor = false,
+    ) {
         FooterSection(darkTheme = true, appVersion = "1.0.0")
     }
 }

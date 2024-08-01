@@ -95,7 +95,8 @@ fun MyIntroSection() {
 @Composable
 private fun MyIntroSectionPreview() {
     MyPortfolioJCTheme(
-        dynamicColor = false,){
+        dynamicColor = false,
+    ) {
         MyIntroSection()
     }
 }

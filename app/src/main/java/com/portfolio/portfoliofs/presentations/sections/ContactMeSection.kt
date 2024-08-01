@@ -34,11 +34,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.model.Section
-import com.portfolio.portfoliofs.presentations.EmailState
-import com.portfolio.portfoliofs.presentations.MainViewModel
 import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
 import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
@@ -75,7 +72,6 @@ fun EmailCard() {
     LaunchedEffect(key1 = scrollState.maxValue) {
         scrollState.scrollTo(scrollState.maxValue)
     }
-
 
     Column(
         modifier = Modifier
@@ -183,13 +179,12 @@ private fun sendEmail(
     }
 }
 
-
 @SolofolioPreviews
 @Composable
 fun ContactMeSectionPreview() {
     MyPortfolioJCTheme(
-        dynamicColor = false,){
+        dynamicColor = false,
+    ) {
         ContactMeSection()
     }
 }
-

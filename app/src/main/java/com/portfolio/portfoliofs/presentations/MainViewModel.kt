@@ -9,7 +9,6 @@ class MainViewModel : ViewModel() {
 
     var emailState by mutableStateOf(EmailState())
         private set
-
 }
 
 data class EmailState(
