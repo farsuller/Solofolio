@@ -13,6 +13,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.SuggestionChipDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -24,6 +25,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.model.Skills
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 import com.portfolio.portfoliofs.utils.Constants.DEFAULT_MAX_LINES
 
 @Composable
@@ -84,5 +87,17 @@ fun SkillCardV2(
                 )
             },
         )
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun SkillCardV2Preview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,
+    ) {
+        Surface {
+            SkillCardV2(Skills.entries.toTypedArray())
+        }
     }
 }

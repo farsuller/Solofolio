@@ -2,8 +2,8 @@ package com.portfolio.portfoliofs.utils
 
 object Constants {
     const val FACEBOOK_LINK = "https://www.facebook.com/florencze"
-    const val TWITTER_LINK = "https://twitter.com/ArnoldSuller"
-    const val INSTAGRAM_LINK = "https://www.instagram.com/florenzearnold/"
+    const val GITHUB_LINK = "https://github.com/farsuller"
+    const val GOOGLE_DEVELOPER_LINK = "https://play.google.com/store/apps/dev?id=8531625098803100156"
     const val LINKEDIN_LINK = "https://www.linkedin.com/in/florence-arnold-suller-954b12164/"
 
     const val CURRENZY = "https://play.google.com/store/apps/details?id=com.solodev.currenzy"

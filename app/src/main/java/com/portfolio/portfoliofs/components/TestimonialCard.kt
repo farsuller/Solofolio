@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,8 +23,11 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.portfolio.portfoliofs.model.Skills
 import com.portfolio.portfoliofs.model.Testimonial
 import com.portfolio.portfoliofs.ui.theme.Elevation
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
 fun TestimonialCard(testimonial: Testimonial) {
@@ -90,6 +94,18 @@ fun TestimonialCard(testimonial: Testimonial) {
                     lineHeight = 15.sp,
                 )
             }
+        }
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun TestimonialCardPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,
+    ) {
+        Surface {
+            TestimonialCard(Testimonial.entries.toTypedArray()[0])
         }
     }
 }

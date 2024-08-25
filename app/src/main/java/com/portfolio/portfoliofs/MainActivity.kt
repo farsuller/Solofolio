@@ -7,6 +7,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -20,7 +22,6 @@ import com.google.android.play.core.install.model.UpdateAvailability
 import com.portfolio.portfoliofs.components.AppTheme
 import com.portfolio.portfoliofs.navigation.SetupNavGraph
 import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
-import kotlinx.serialization.Serializable
 
 class MainActivity : ComponentActivity() {
 
@@ -53,47 +54,51 @@ class MainActivity : ComponentActivity() {
                 },
                 dynamicColor = false,
             ) {
-                val appUpdateManager = AppUpdateManagerFactory.create(applicationContext)
-                val appUpdateInfoTask = appUpdateManager.appUpdateInfo
+                Surface {
+                    AppUpdateManager()
 
-                appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
-
-                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE &&
-                        appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
-                    ) {
-                        appUpdateManager.startUpdateFlowForResult(
-                            appUpdateInfo,
-                            activityResultLauncher,
-                            AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build(),
-                        )
-                        isUpdateAvailable = true
-                    } else {
-                        isUpdateAvailable = false
-                    }
+                    SetupNavGraph(
+                        onDataLoaded = { splash ->
+                            keepSplashOpened = !splash
+                        },
+                        darkTheme = when (appTheme) {
+                            AppTheme.Dark -> true
+                            AppTheme.Light -> false
+                            AppTheme.System -> isSystemInDarkTheme()
+                        },
+                        onThemeUpdated = {
+                            appTheme = when (appTheme) {
+                                AppTheme.Light -> AppTheme.Dark
+                                AppTheme.Dark -> AppTheme.System
+                                AppTheme.System -> AppTheme.Light
+                            }
+                        },
+                        isUpdateAvailable = isUpdateAvailable,
+                    )
                 }
+            }
+        }
+    }
 
-                SetupNavGraph(
-                    onDataLoaded = { splash ->
-                        keepSplashOpened = !splash
-                    },
-                    darkTheme = when (appTheme) {
-                        AppTheme.Dark -> true
-                        AppTheme.Light -> false
-                        AppTheme.System -> isSystemInDarkTheme()
-                    },
-                    onThemeUpdated = {
-                        appTheme = when (appTheme) {
-                            AppTheme.Light -> AppTheme.Dark
-                            AppTheme.Dark -> AppTheme.System
-                            AppTheme.System -> AppTheme.Light
-                        }
-                    },
-                    isUpdateAvailable = isUpdateAvailable,
+    @Composable
+    private fun AppUpdateManager() {
+        val appUpdateManager = AppUpdateManagerFactory.create(applicationContext)
+        val appUpdateInfoTask = appUpdateManager.appUpdateInfo
+
+        appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
+
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE &&
+                appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
+            ) {
+                appUpdateManager.startUpdateFlowForResult(
+                    appUpdateInfo,
+                    activityResultLauncher,
+                    AppUpdateOptions.newBuilder(AppUpdateType.IMMEDIATE).build(),
                 )
+                isUpdateAvailable = true
+            } else {
+                isUpdateAvailable = false
             }
         }
     }
 }
-
-@Serializable
-data object Home

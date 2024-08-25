@@ -35,7 +35,9 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.portfolio.portfoliofs.components.AppTheme
 import com.portfolio.portfoliofs.components.MainTopBar
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
 import com.portfolio.portfoliofs.utils.getAppVersion
 import kotlinx.coroutines.launch
 
@@ -136,6 +138,17 @@ fun AppVersion() {
 
 @Preview(showBackground = true)
 @Composable
-fun AppVersionPreview() {
-    AppVersion()
+fun MainScreenPreview() {
+    var appTheme by remember { mutableStateOf(AppTheme.System) }
+    MyPortfolioJCTheme {
+        MainScreen(
+            darkTheme = false,
+            onThemeUpdated = {
+            appTheme = when (appTheme) {
+                AppTheme.Light -> AppTheme.Dark
+                AppTheme.Dark -> AppTheme.System
+                AppTheme.System -> AppTheme.Light
+            }
+        })
+    }
 }

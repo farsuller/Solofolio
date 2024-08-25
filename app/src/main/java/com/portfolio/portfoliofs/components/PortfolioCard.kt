@@ -10,6 +10,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,7 +22,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Portfolio
+import com.portfolio.portfoliofs.model.Service
 import com.portfolio.portfoliofs.ui.theme.Elevation
+import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
+import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 import com.portfolio.portfoliofs.utils.clickableWithoutRipple
 
 @Composable
@@ -92,6 +96,18 @@ fun PortfolioCardItem(portfolio: Portfolio, onClick: () -> Unit) {
                 fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                 color = MaterialTheme.colorScheme.onSurface,
             )
+        }
+    }
+}
+
+@SolofolioPreviews
+@Composable
+private fun PortfolioCardPreview() {
+    MyPortfolioJCTheme(
+        dynamicColor = false,
+    ) {
+        Surface {
+            PortfolioCard(Portfolio.entries.toTypedArray()[0])
         }
     }
 }
