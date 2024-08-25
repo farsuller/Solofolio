@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import java.io.FileNotFoundException
 import java.util.Properties
 
@@ -28,7 +30,8 @@ android {
     defaultConfig {
         applicationId = ProjectConfig.APPLICATION_ID
         versionCode = ProjectConfig.VERSION_CODE
-        versionName = "${ProjectConfig.MAJOR_VERSION}.${ProjectConfig.MINOR_VERSION}.${ProjectConfig.PATCH_VERSION}"
+        versionName =
+            "${ProjectConfig.MAJOR_VERSION}.${ProjectConfig.MINOR_VERSION}.${ProjectConfig.PATCH_VERSION}"
 
     }
 
@@ -59,7 +62,10 @@ android {
             isDebuggable = false
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 

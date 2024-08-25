@@ -1,5 +1,6 @@
 package com.portfolio.portfoliofs.model
 
+import com.portfolio.portfoliofs.utils.Constants.CURRENZY
 import com.portfolio.portfoliofs.utils.Constants.MCDELIVERY_LINK
 import com.portfolio.portfoliofs.utils.Constants.PUREGOLD
 import com.portfolio.portfoliofs.utils.Constants.SOLODAILY
@@ -15,6 +16,14 @@ enum class Portfolio(
     val description: String,
     val link: String,
 ) {
+    Currenzy(
+        image = Res.Image.CURRENZY,
+        title = "Currenzy",
+        description = "\"Currenzy\" is a straightforward currency converter app that allows users to check live exchange rates " +
+                "and easily convert between different currencies with a simple, user-friendly interface.",
+        link = CURRENZY,
+
+        ),
     SoloScape(
         image = Res.Image.PORTFOLIO_1,
         title = "SoloScape",
