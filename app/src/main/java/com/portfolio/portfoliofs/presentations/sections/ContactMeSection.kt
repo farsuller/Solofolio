@@ -32,6 +32,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.components.SectionTitle
@@ -45,7 +46,8 @@ fun ContactMeSection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .padding(top = 15.dp),
+            .padding(top = 15.dp)
+            .testTag("contactMeSection"),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
     ) {
@@ -76,7 +78,8 @@ fun EmailCard() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(16.dp)
+            .testTag("emailCard"),
     ) {
         OutlinedTextField(
             value = toEmail,

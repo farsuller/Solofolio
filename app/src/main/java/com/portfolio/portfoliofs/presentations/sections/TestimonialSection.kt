@@ -9,6 +9,7 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.components.PagerButtons
 import com.portfolio.portfoliofs.components.SectionTitle
@@ -27,7 +28,8 @@ fun TestimonialSection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .padding(top = 15.dp),
+            .padding(top = 15.dp)
+            .testTag("testimonialSection"),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
     ) {

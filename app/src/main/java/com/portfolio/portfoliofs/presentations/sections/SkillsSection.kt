@@ -8,6 +8,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.components.SkillCardV2
@@ -23,7 +24,8 @@ fun SkillsSection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .padding(top = 15.dp),
+            .padding(top = 15.dp)
+            .testTag("skillsSection"),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {

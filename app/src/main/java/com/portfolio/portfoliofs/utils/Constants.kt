@@ -98,6 +98,7 @@ object Constants {
 
 object Res {
     object Image {
+        const val MAIN_IMAGE_INTRO = "file:///android_asset/images/main_image.png"
         const val PORTFOLIO_1 = "file:///android_asset/images/portfolio1.png"
         const val PORTFOLIO_2 = "file:///android_asset/images/portfolio2.png"
         const val PORTFOLIO_3 = "file:///android_asset/images/portfolio3.png"

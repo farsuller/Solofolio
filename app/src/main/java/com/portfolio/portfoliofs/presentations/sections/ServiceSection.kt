@@ -12,6 +12,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.components.SectionTitle
 import com.portfolio.portfoliofs.components.ServiceCard
@@ -27,7 +28,8 @@ fun ServiceSection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .padding(top = 15.dp),
+            .padding(top = 15.dp)
+            .testTag("serviceSection"),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {

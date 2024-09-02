@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -25,13 +26,15 @@ import com.portfolio.portfoliofs.utils.Constants.INTRO
 import com.portfolio.portfoliofs.utils.Constants.MAIN_INTRO
 import com.portfolio.portfoliofs.utils.Constants.NAME
 import com.portfolio.portfoliofs.utils.Constants.ROLE
+import com.portfolio.portfoliofs.utils.Res
 
 @Composable
 fun MyIntroSection() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp),
+            .padding(10.dp)
+            .testTag("introSection"),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -45,14 +48,15 @@ fun MyIntroSection() {
                     .size(120.dp)
                     .clip(CircleShape),
                 contentScale = ContentScale.Crop,
-                model = "file:///android_asset/images/main_image.png",
+                model = Res.Image.MAIN_IMAGE_INTRO,
                 contentDescription = "My Photo",
             )
 
             Column(
                 modifier = Modifier
                     .weight(weight = 1f)
-                    .padding(10.dp),
+                    .padding(10.dp)
+                    .testTag("introText"),
             ) {
                 Text(
                     text = INTRO,

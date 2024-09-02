@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.components.PortfolioCard
 import com.portfolio.portfoliofs.components.SectionTitle
@@ -25,7 +26,8 @@ fun PortfolioSection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
-            .padding(top = 15.dp),
+            .padding(top = 15.dp)
+            .testTag("portfolioSection"),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
