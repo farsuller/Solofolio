@@ -25,3 +25,6 @@ highlighting the latest in modern Android UI development.
     <img src="https://github.com/user-attachments/assets/a36ab4fd-1560-47ee-9d77-ccf5a4e6664a" alt="Screenshot 1" width="200"/>
     <img src="https://github.com/user-attachments/assets/f0a8f996-00c2-42c1-ab0d-82e05478a660" alt="Screenshot 2" width="200"/>
 </div>
+
+for windows command 
+certutil -encode ${keystore path} ${file name key}.txt
