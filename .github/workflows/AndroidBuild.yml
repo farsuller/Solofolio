@@ -23,6 +23,7 @@ jobs:
 
   test:
     name: Unit Test
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
