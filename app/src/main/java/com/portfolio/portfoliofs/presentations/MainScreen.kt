@@ -144,11 +144,12 @@ fun MainScreenPreview() {
         MainScreen(
             darkTheme = false,
             onThemeUpdated = {
-            appTheme = when (appTheme) {
-                AppTheme.Light -> AppTheme.Dark
-                AppTheme.Dark -> AppTheme.System
-                AppTheme.System -> AppTheme.Light
-            }
-        })
+                appTheme = when (appTheme) {
+                    AppTheme.Light -> AppTheme.Dark
+                    AppTheme.Dark -> AppTheme.System
+                    AppTheme.System -> AppTheme.Light
+                }
+            },
+        )
     }
 }

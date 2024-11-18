@@ -22,19 +22,20 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(
     navController: NavController,
-    isDarkTheme: Boolean = false
+    isDarkTheme: Boolean = false,
 ) {
-    Surface(modifier = Modifier.fillMaxSize(),) {
+    Surface(modifier = Modifier.fillMaxSize()) {
         Image(
             modifier = Modifier
                 .padding(horizontal = 32.dp)
                 .height(262.dp)
                 .fillMaxWidth(),
             painter = painterResource(
-                id = if (isDarkTheme) R.drawable.solofolio_icon_v2_night
-                else R.drawable.solofolio__icon_v2_foreground
+                id = if (isDarkTheme) {
+                    R.drawable.solofolio_icon_v2_night
+                } else R.drawable.solofolio__icon_v2_foreground,
             ),
-            contentDescription = ""
+            contentDescription = "",
         )
     }
 
@@ -49,11 +50,11 @@ fun SplashScreen(
 @Composable
 fun SplashScreenPreview() {
     MyPortfolioJCTheme(
-        darkTheme = true
+        darkTheme = true,
     ) {
         SplashScreen(
             navController = rememberNavController(),
-            isDarkTheme = true
+            isDarkTheme = true,
         )
     }
 }

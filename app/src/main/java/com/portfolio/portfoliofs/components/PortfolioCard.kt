@@ -23,7 +23,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.portfolio.portfoliofs.model.Portfolio
-import com.portfolio.portfoliofs.model.Service
 import com.portfolio.portfoliofs.ui.theme.Elevation
 import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
 import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews

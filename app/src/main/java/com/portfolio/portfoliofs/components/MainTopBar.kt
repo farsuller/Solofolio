@@ -25,6 +25,7 @@ internal fun MainTopBar(
     appVersion: String,
 ) {
     TopAppBar(
+        modifier = Modifier.padding(start = 10.dp, end = 10.dp),
         scrollBehavior = scrollBehavior,
         navigationIcon = {
             Image(

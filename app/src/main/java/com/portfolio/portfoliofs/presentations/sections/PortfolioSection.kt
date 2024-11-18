@@ -21,7 +21,7 @@ import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews
 
 @Composable
 fun PortfolioSection() {
-    val portfolio = Portfolio.entries.toTypedArray()
+    val portfolio = Portfolio.entries.toTypedArray().take(11)
     Column(
         modifier = Modifier
             .fillMaxWidth()

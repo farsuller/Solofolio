@@ -1,5 +1,6 @@
 package com.portfolio.portfoliofs.model
 
+import com.portfolio.portfoliofs.utils.Constants.BCS
 import com.portfolio.portfoliofs.utils.Constants.COLLABERA
 import com.portfolio.portfoliofs.utils.Constants.EMAPTA
 import com.portfolio.portfoliofs.utils.Constants.FPT
@@ -59,6 +60,15 @@ enum class Experience(
         company = "FPT Software Philippines Corp.",
         image = Res.Image.WORK_5,
         from = "Feb. 2024",
+        to = "Oct. 2024",
+    ),
+    Sixth(
+        id = 6,
+        jobPosition = "Android Developer",
+        description = BCS,
+        company = "BCS Technology International Pty Ltd",
+        image = Res.Image.WORK_6,
+        from = "Oct. 2024",
         to = "Present",
     ),
 }

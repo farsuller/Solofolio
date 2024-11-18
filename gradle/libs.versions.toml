@@ -3,30 +3,30 @@ kotlin = "2.0.0"
 ktlint = "11.6.0"
 kotlinJvm = "1.9.22"
 
-activityCompose = "1.9.1"
+activityCompose = "1.9.3"
 
-androidGradlePlugin = "8.5.2"
+androidGradlePlugin = "8.7.2"
 
-androidxCore = "1.13.1"
+androidxCore = "1.15.0"
 androidxCoreSplashscreen = "1.0.1"
 androidxEspresso = "3.6.1"
 
-composeBomVersion = "2024.08.00"
+composeBomVersion = "2024.11.00"
 
 coil = "2.5.0"
 junit = "4.13.2"
 junit4 = "4.13.2"
 junitVersion = "1.2.1"
-lifecycleRuntimeKtx = "2.8.4"
-navigationCompose = "2.8.0-rc01"
+lifecycleRuntimeKtx = "2.8.7"
+navigationCompose = "2.8.4"
 orbital = "0.3.4"
 spotless = "6.19.0"
 appUpdate = "2.1.0"
 
-animation = "1.7.0-rc01"
-foundationLayout = "1.7.0-rc01"
+animation = "1.7.5"
+foundationLayout = "1.7.5"
 kotlinxSerializationJson = "1.6.3"
-screenshot = "0.0.1-alpha04"
+screenshot = "0.0.1-alpha07"
 
 [libraries]
 androidx-activity-compose-v182 = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }

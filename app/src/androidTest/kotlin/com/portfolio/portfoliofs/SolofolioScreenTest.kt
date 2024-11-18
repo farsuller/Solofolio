@@ -41,15 +41,14 @@ class SolofolioScreenTest {
         composeTestRule.onNodeWithTag("introText").assertExists()
     }
 
-
     @Test
     fun skillSectionTest() {
         composeTestRule.setContent {
             SkillsSection()
         }
         composeTestRule.onNodeWithTag("skillsSection").assertExists()
-
     }
+
     @Test
     fun skillCardTest() {
         composeTestRule.setContent {
@@ -91,14 +90,15 @@ class SolofolioScreenTest {
     }
 
     @Test
-    fun testimonialSectionTest(){
+    fun testimonialSectionTest() {
         composeTestRule.setContent {
             TestimonialSection()
         }
         composeTestRule.onNodeWithTag("testimonialSection").assertExists()
     }
+
     @Test
-    fun testimonialCardTest(){
+    fun testimonialCardTest() {
         composeTestRule.setContent {
             TestimonialCard(testimonial[0])
         }
@@ -106,7 +106,7 @@ class SolofolioScreenTest {
     }
 
     @Test
-    fun contactMeSectionTest(){
+    fun contactMeSectionTest() {
         composeTestRule.setContent {
             ContactMeSection()
         }
@@ -114,7 +114,7 @@ class SolofolioScreenTest {
     }
 
     @Test
-    fun emailCardTest(){
+    fun emailCardTest() {
         composeTestRule.setContent {
             EmailCard()
         }
@@ -122,11 +122,10 @@ class SolofolioScreenTest {
     }
 
     @Test
-    fun footerSectionTest(){
+    fun footerSectionTest() {
         composeTestRule.setContent {
             FooterSection(false, "1.0.0")
         }
         composeTestRule.onNodeWithTag("footerSection").assertExists()
-
     }
 }

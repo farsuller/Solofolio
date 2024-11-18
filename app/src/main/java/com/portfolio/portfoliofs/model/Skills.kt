@@ -145,17 +145,17 @@ enum class Skills(
 
     Leadership(
         title = "Leadership",
-        year = 3,
+        year = 4,
     ),
 
     Linux(
         title = "Linux",
-        year = 3,
+        year = 1,
     ),
 
     SQL(
         title = "SQL",
-        year = 3,
+        year = 4,
     ),
 
     Flutter(

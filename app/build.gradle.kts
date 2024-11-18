@@ -29,14 +29,21 @@ android {
 
     defaultConfig {
         applicationId = ProjectConfig.APPLICATION_ID
-        versionCode = ProjectConfig.VERSION_CODE
-        versionName =
-            "${ProjectConfig.MAJOR_VERSION}.${ProjectConfig.MINOR_VERSION}.${ProjectConfig.PATCH_VERSION}"
+        if (ProjectConfig.GENERATE_LOCAL_ARCHIVE) {
+            versionCode = ProjectConfig.VERSION_CODE
+            versionName =
+                "${ProjectConfig.MAJOR_VERSION}.${ProjectConfig.MINOR_VERSION}.${ProjectConfig.PATCH_VERSION}"
+        } else {
+            versionCode = 22
+            versionName = "2.4.0"
+        }
 
     }
 
-    applicationVariants.all {
-        base.archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
+    if (ProjectConfig.GENERATE_LOCAL_ARCHIVE) {
+        applicationVariants.all {
+            base.archivesName.set("${ProjectConfig.APP_FILENAME}-${buildType.name}-$versionCode-$versionName")
+        }
     }
 
 
@@ -72,7 +79,7 @@ android {
     buildFeatures {
         compose = true
     }
-    experimentalProperties ["android.experimental.enableScreenshotTest"] = true
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {

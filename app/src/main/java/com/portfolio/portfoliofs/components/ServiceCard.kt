@@ -22,7 +22,6 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.model.Service
-import com.portfolio.portfoliofs.model.Testimonial
 import com.portfolio.portfoliofs.ui.theme.Elevation
 import com.portfolio.portfoliofs.ui.theme.MyPortfolioJCTheme
 import com.portfolio.portfoliofs.ui.theme.SolofolioPreviews

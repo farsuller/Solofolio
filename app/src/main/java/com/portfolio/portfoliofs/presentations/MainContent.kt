@@ -47,7 +47,7 @@ fun MainContent(
             //  ExperienceSection()
 
             Box(
-                modifier = Modifier.height(if (experienceSectionClicked.value) 900.dp else 550.dp),
+                modifier = Modifier.height(if (experienceSectionClicked.value) 900.dp else 650.dp),
             ) {
                 SharedTransitionScreen(
                     onItemClicked = {
