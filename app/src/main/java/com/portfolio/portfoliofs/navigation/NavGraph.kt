@@ -1,7 +1,6 @@
 package com.portfolio.portfoliofs.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -22,17 +21,13 @@ fun SetupNavGraph(
         startDestination = SplashRoute,
     ) {
         composable<SplashRoute> {
-            SplashScreen(navController = navController)
+            SplashScreen(
+                navController = navController,
+                onDataLoaded = onDataLoaded,
+                isUpdateAvailable = isUpdateAvailable
+            )
         }
         composable<HomeRoute> {
-            LaunchedEffect(key1 = Unit) {
-                if (isUpdateAvailable) {
-                    onDataLoaded(false)
-                } else {
-                    onDataLoaded(true)
-                }
-            }
-
             MainScreen(
                 darkTheme = darkTheme,
                 onThemeUpdated = onThemeUpdated,

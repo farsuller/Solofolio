@@ -29,8 +29,8 @@ android {
 
     defaultConfig {
         applicationId = ProjectConfig.APPLICATION_ID
-        versionCode = 22
-        versionName = "2.4.0"
+        versionCode = 23
+        versionName = "2.4.1"
 
 
         if (ProjectConfig.GENERATE_LOCAL_ARCHIVE) {

@@ -3,6 +3,7 @@ package com.portfolio.portfoliofs
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -36,6 +37,7 @@ class MainActivity : ComponentActivity() {
                     "Update Failed! Result Code:${result.resultCode}",
                     Toast.LENGTH_SHORT,
                 ).show()
+                isUpdateAvailable = true
             }
         }
 
@@ -78,6 +80,15 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        onBackPressedDispatcher.addCallback(
+            this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            },
+        )
     }
 
     @Composable

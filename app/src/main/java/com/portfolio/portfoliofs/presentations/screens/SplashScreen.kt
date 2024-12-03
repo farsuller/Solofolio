@@ -23,6 +23,8 @@ import kotlinx.coroutines.delay
 fun SplashScreen(
     navController: NavController,
     isDarkTheme: Boolean = false,
+    onDataLoaded: (Boolean) -> Unit,
+    isUpdateAvailable: Boolean,
 ) {
     Surface(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -40,9 +42,14 @@ fun SplashScreen(
     }
 
     LaunchedEffect(Unit) {
-        delay(300L)
-        navController.popBackStack()
-        navController.navigate(route = HomeRoute)
+        delay(2000L)
+        if (isUpdateAvailable) {
+            onDataLoaded(false)
+        } else {
+            onDataLoaded(true)
+            navController.popBackStack()
+            navController.navigate(route = HomeRoute)
+        }
     }
 }
 
@@ -55,6 +62,8 @@ fun SplashScreenPreview() {
         SplashScreen(
             navController = rememberNavController(),
             isDarkTheme = true,
+            onDataLoaded = {},
+            isUpdateAvailable = false,
         )
     }
 }
