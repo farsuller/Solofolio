@@ -17,8 +17,8 @@ highlighting the latest in modern Android UI development.
 Get started with **Solofolio** today!  
 👉 [Download Now from Google Play Store](https://play.google.com/store/apps/details?id=com.portfolio.portfoliofs)
 
-for windows command
-certutil -encode ${keystore path} ${file name key}.txt
+[//]: # (for windows command)
+[//]: # (certutil -encode ${keystore path} ${file name key}.txt)
 
 # ScreenshotTest
 
