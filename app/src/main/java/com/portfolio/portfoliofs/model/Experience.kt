@@ -68,7 +68,7 @@ enum class Experience(
         description = BCS,
         company = "BCS Technology International Pty Ltd",
         image = Res.Image.WORK_6,
-        from = "Oct. 2024",
+        from = "Nov. 2024",
         to = "Present",
     ),
 }

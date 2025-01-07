@@ -1,7 +1,30 @@
 package com.portfolio.portfoliofs.model
 
+import androidx.compose.ui.graphics.Color
+import com.portfolio.portfoliofs.ui.theme.AnimeLoomColor
+import com.portfolio.portfoliofs.ui.theme.AnimeLoomDarkColor
+import com.portfolio.portfoliofs.ui.theme.CurrenzyColor
+import com.portfolio.portfoliofs.ui.theme.CurrenzyDarkColor
+import com.portfolio.portfoliofs.ui.theme.McDeliveryColor
+import com.portfolio.portfoliofs.ui.theme.McDeliveryDarkColor
+import com.portfolio.portfoliofs.ui.theme.NeutralColor
+import com.portfolio.portfoliofs.ui.theme.OtherAppsColor
+import com.portfolio.portfoliofs.ui.theme.OtherAppsDarkColor
+import com.portfolio.portfoliofs.ui.theme.SoloDailyColor
+import com.portfolio.portfoliofs.ui.theme.SoloDailyDarkColor
+import com.portfolio.portfoliofs.ui.theme.SoloEatsColor
+import com.portfolio.portfoliofs.ui.theme.SoloEatsDarkColor
+import com.portfolio.portfoliofs.ui.theme.SoloScapeColor
+import com.portfolio.portfoliofs.ui.theme.SoloScapeDarkColor
+import com.portfolio.portfoliofs.ui.theme.UnionBankColor
+import com.portfolio.portfoliofs.ui.theme.UnionBankDarkColor
 import com.portfolio.portfoliofs.utils.Constants.ANIMELOOM
 import com.portfolio.portfoliofs.utils.Constants.CURRENZY
+import com.portfolio.portfoliofs.utils.Constants.GITHUB_LINK_ANIMELOOM
+import com.portfolio.portfoliofs.utils.Constants.GITHUB_LINK_CURRENZY
+import com.portfolio.portfoliofs.utils.Constants.GITHUB_LINK_SOLODAILY
+import com.portfolio.portfoliofs.utils.Constants.GITHUB_LINK_SOLOEATS
+import com.portfolio.portfoliofs.utils.Constants.GITHUB_LINK_SOLOSCAPE
 import com.portfolio.portfoliofs.utils.Constants.MCDELIVERY_LINK
 import com.portfolio.portfoliofs.utils.Constants.PUREGOLD
 import com.portfolio.portfoliofs.utils.Constants.SOLODAILY
@@ -16,60 +39,89 @@ enum class Portfolio(
     val title: String,
     val description: String,
     val link: String,
+    val lightColor: Color = NeutralColor,
+    val darkColor: Color = NeutralColor,
+    val githubLink: String = "",
 ) {
     AnimeLoom(
         image = Res.Image.ANIMELOOM,
         title = "AnimeLoom",
-        description = "AnimeLoom delivers a seamless experience for anime and manga lovers, offering comprehensive details, summaries, and insights on your favorite series. Explore, bookmark, and stay updated with ease",
+        description = "A seamless experience for anime and manga lovers, offering comprehensive details, summaries, and insights on your favorite series. Explore, bookmark, and stay updated with ease",
         link = ANIMELOOM,
+        lightColor = AnimeLoomColor,
+        darkColor = AnimeLoomDarkColor,
+        githubLink = GITHUB_LINK_ANIMELOOM,
     ),
     Currenzy(
         image = Res.Image.CURRENZY,
         title = "Currenzy",
-        description = "\"Currenzy\" is a straightforward currency converter app that allows users to check live exchange rates " +
-            "and easily convert between different currencies with a simple, user-friendly interface.",
+        description = "A straightforward currency converter app that allows users to check live exchange rates ",
         link = CURRENZY,
+        lightColor = CurrenzyColor,
+        darkColor = CurrenzyDarkColor,
+        githubLink = GITHUB_LINK_CURRENZY,
     ),
     SoloScape(
-        image = Res.Image.PORTFOLIO_1,
+        image = Res.Image.SOLOSCAPE,
         title = "SoloScape",
-        description = "SoloScape - Version 1.0 \n" +
-            "Introducing the first version of my Jetpack Compose app, now live on the Play Store—a straightforward journal app.",
+        description = "A refined and intuitive experience, designed to help users focus on capturing ideas and journaling effortlessly.",
         link = SOLOSCAPE,
+        lightColor = SoloScapeColor,
+        darkColor = SoloScapeDarkColor,
+        githubLink = GITHUB_LINK_SOLOSCAPE,
     ),
     SoloEats(
         image = Res.Image.SOLOEATS,
         title = "SoloEats",
-        description = "Note: This version is for demo purposes only and does not process real transactions.\n" +
-            "We're thrilled to introduce SoloEats, your ultimate food ordering companion designed to elevate your dining experiences.",
+        description = "A personal food ordering app designed to showcase modern Android development practices.",
         link = SOLOEATS,
-
+        lightColor = SoloEatsColor,
+        darkColor = SoloEatsDarkColor,
+        githubLink = GITHUB_LINK_SOLOEATS,
     ),
     SoloDaily(
         image = Res.Image.SOLODAILY,
         title = "SoloDaily",
-        description = "SoloDaily - Version 1.0 \n" +
-            "Browse Latest News: Stay up-to-date with breaking news and trending stories from around the world. Search Functionality: Easily find articles on topics that interest you with our intuitive search feature. Bookmark Articles: Save articles for later reading with our convenient bookmarking feature.",
+        description = "Browse Latest News: Stay up-to-date with breaking news and trending stories from around the world.",
         link = SOLODAILY,
+        lightColor = SoloDailyColor,
+        darkColor = SoloDailyDarkColor,
+        githubLink = GITHUB_LINK_SOLODAILY,
+    ),
+
+    UnionBankApp(
+        image = Res.Image.UNIONBANK,
+        title = "UnionBank Online",
+        description = "During my tenure at the previous company and subsequently maintained other features within different teams.",
+        link = UNIONBANK,
+        lightColor = UnionBankColor,
+        darkColor = UnionBankDarkColor,
     ),
     McDeliveryPH(
-        image = Res.Image.PORTFOLIO_3,
+        image = Res.Image.MCDELIVERY,
         title = "McDelivery PH",
         description = "During my tenure at the previous company, our team revamped and released the McDelivery PH app to the market.",
         link = MCDELIVERY_LINK,
+        lightColor = McDeliveryColor,
+        darkColor = McDeliveryDarkColor,
     ),
+
+    OtherApps(
+        image = Res.Image.OTHERAPPS,
+        title = "Other Apps",
+        description = "Worked on other apps during my tenure at the previous company.",
+        link = "",
+        lightColor = OtherAppsColor,
+        darkColor = OtherAppsDarkColor,
+    ),
+
     PuregoldMobile(
         image = Res.Image.PORTFOLIO_4,
         title = "Puregold Mobile",
         description = "I oversaw and upheld the management of this application while fulfilling my responsibilities in the DevOps position.",
         link = PUREGOLD,
     ),
-    UnionBankApp(
-        image = Res.Image.PORTFOLIO_5,
-        title = "UnionBank Online",
-        description = "I was part of a specific team that developed a feature related to installments, deployed it on the app for users, and subsequently maintained other features within different teams.",
-        link = UNIONBANK,
-    ),
+
     SparkCleaner(
         image = Res.Image.PORTFOLIO_2,
         title = "Spark Cleaner",

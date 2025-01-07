@@ -64,3 +64,25 @@ val md_theme_dark_surfaceTint = Color(0xFFA0C9FF)
 val md_theme_dark_outlineVariant = Color(0xFF43474E)
 val md_theme_dark_scrim = Color(0xFF000000)
 val seed = Color(0xFF46A3FF)
+
+val NeutralColor = Color(0xFF78909C)
+
+// light theme
+val AnimeLoomColor = Color(0xFFFFF2E5) // Soft Cream
+val CurrenzyColor = Color(0xFFFFFBE0) // Pale Yellow
+val SoloScapeColor = Color(0xFFE6F5FF) // Light Sky Blue
+val SoloEatsColor = Color(0xFFFFE9E8) // Light Peach
+val SoloDailyColor = Color(0xFFE8F6E8) // Soft Mint Green
+val UnionBankColor = Color(0xFFFFF0E2) // Pale Orange
+val McDeliveryColor = Color(0xFFE8F7E2) // Light Green
+val OtherAppsColor = Color(0xFFF4F4F8) // Light Grey
+
+// dark theme
+val AnimeLoomDarkColor = Color(0xFF184E69) // Muted Teal Blue
+val CurrenzyDarkColor = Color(0xFF155B72) // Deep Cyan Blue
+val SoloScapeDarkColor = Color(0xFF1A3D5A) // Navy Blue
+val SoloEatsDarkColor = Color(0xFF29475D) // Steel Blue
+val SoloDailyDarkColor = Color(0xFF1F4A66) // Ocean Blue
+val UnionBankDarkColor = Color(0xFF1D3B51) // Slate Blue
+val McDeliveryDarkColor = Color(0xFF1F5568) // Sea Blue
+val OtherAppsDarkColor = Color(0xFF264A5A) // Dark Cyan

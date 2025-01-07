@@ -13,18 +13,26 @@ highlighting the latest in modern Android UI development.
 - **Services**: Information about the services I offer, including app development, consulting, and more.
 - **Testimonials**: Read feedback and testimonials from my clients and colleagues.
 
-# ScreenshotTest
- All future test base on this generated test
-./gradlew updateDebugScreenshotTest  
+## **How to Download**
+Get started with **Solofolio** today!  
+👉 [Download Now from Google Play Store](https://play.google.com/store/apps/details?id=com.portfolio.portfoliofs)
 
- Validate upcoming test
-./gradlew validateDebugScreenshotTest
-
-
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-    <img src="https://github.com/user-attachments/assets/a36ab4fd-1560-47ee-9d77-ccf5a4e6664a" alt="Screenshot 1" width="200"/>
-    <img src="https://github.com/user-attachments/assets/f0a8f996-00c2-42c1-ab0d-82e05478a660" alt="Screenshot 2" width="200"/>
-</div>
-
-for windows command 
+for windows command
 certutil -encode ${keystore path} ${file name key}.txt
+
+# ScreenshotTest
+
+1. **Run Linting First:**
+   Execute the following command to lint and organize unused imports and spacing
+   ```bash
+   ./gradlew spotlessApply
+   
+2. **Run Update Screenshot First:**
+   All future test base on this generated test
+   ```bash
+   ./gradlew updateDebugScreenshotTest  
+
+3. **Run Validate Screenshot** 
+   Validate upcoming test
+   ```bash
+   ./gradlew validateDebugScreenshotTest

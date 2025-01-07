@@ -24,7 +24,7 @@ fun SetupNavGraph(
             SplashScreen(
                 navController = navController,
                 onDataLoaded = onDataLoaded,
-                isUpdateAvailable = isUpdateAvailable
+                isUpdateAvailable = isUpdateAvailable,
             )
         }
         composable<HomeRoute> {

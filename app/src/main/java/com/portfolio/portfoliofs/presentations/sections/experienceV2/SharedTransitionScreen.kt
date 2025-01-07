@@ -1,4 +1,4 @@
-package com.portfolio.portfoliofs.presentations.sections.experiencev2
+package com.portfolio.portfoliofs.presentations.sections.experienceV2
 
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner

@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MyPortfolio-JC"
+rootProject.name = "Solofolio"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")

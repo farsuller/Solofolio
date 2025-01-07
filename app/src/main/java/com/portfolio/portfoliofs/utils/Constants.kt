@@ -6,6 +6,12 @@ object Constants {
     const val GOOGLE_DEVELOPER_LINK = "https://play.google.com/store/apps/dev?id=8531625098803100156"
     const val LINKEDIN_LINK = "https://www.linkedin.com/in/florence-arnold-suller-954b12164/"
 
+    const val GITHUB_LINK_ANIMELOOM = "https://github.com/farsuller/AnimeLoom"
+    const val GITHUB_LINK_CURRENZY = "https://github.com/farsuller/Currenzy"
+    const val GITHUB_LINK_SOLOSCAPE = "https://github.com/farsuller/SoloScape"
+    const val GITHUB_LINK_SOLOEATS = "https://github.com/farsuller/SoloEats"
+    const val GITHUB_LINK_SOLODAILY = "https://github.com/farsuller/SoloDaily"
+
     const val ANIMELOOM = "https://play.google.com/store/apps/details?id=com.solodev.animeloom"
     const val CURRENZY = "https://play.google.com/store/apps/details?id=com.solodev.currenzy"
     const val SOLOSCAPE = "https://play.google.com/store/apps/details?id=com.soloscape.compose"
@@ -99,9 +105,7 @@ object Constants {
 object Res {
     object Image {
         const val MAIN_IMAGE_INTRO = "file:///android_asset/images/main_image.png"
-        const val PORTFOLIO_1 = "file:///android_asset/images/portfolio1.png"
         const val PORTFOLIO_2 = "file:///android_asset/images/portfolio2.png"
-        const val PORTFOLIO_3 = "file:///android_asset/images/portfolio3.png"
         const val PORTFOLIO_4 = "file:///android_asset/images/portfolio4.png"
         const val PORTFOLIO_5 = "file:///android_asset/images/portfolio5.png"
         const val PORTFOLIO_6 = "file:///android_asset/images/portfolio6.png"
@@ -117,6 +121,10 @@ object Res {
         const val SOLODAILY = "file:///android_asset/images/solodaily.png"
         const val CURRENZY = "file:///android_asset/images/currenzy.png"
         const val ANIMELOOM = "file:///android_asset/images/animeloom.png"
+        const val SOLOSCAPE = "file:///android_asset/images/soloscape.png"
+        const val MCDELIVERY = "file:///android_asset/images/mcdelivery.png"
+        const val UNIONBANK = "file:///android_asset/images/unionbank.png"
+        const val OTHERAPPS = "file:///android_asset/images/otherapps.png"
 
         const val AVATAR_1 = "file:///android_asset/images/avatar1.png"
         const val AVATAR_2 = "file:///android_asset/images/avatar2.png"
