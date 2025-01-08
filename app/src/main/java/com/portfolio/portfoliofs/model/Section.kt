@@ -20,7 +20,7 @@ enum class Section(
     ),
     Service(
         id = "service",
-        title = "Service",
+        title = "Exposure",
         subtitle = "I'm Good at",
         path = "#service",
     ),

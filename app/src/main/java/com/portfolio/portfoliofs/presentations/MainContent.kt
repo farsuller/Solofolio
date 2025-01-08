@@ -17,11 +17,11 @@ import androidx.compose.ui.unit.dp
 import com.portfolio.portfoliofs.presentations.sections.ContactMeSection
 import com.portfolio.portfoliofs.presentations.sections.FooterSection
 import com.portfolio.portfoliofs.presentations.sections.MyIntroSection
-import com.portfolio.portfoliofs.presentations.sections.ServiceSection
 import com.portfolio.portfoliofs.presentations.sections.SkillsSection
 import com.portfolio.portfoliofs.presentations.sections.TestimonialSection
 import com.portfolio.portfoliofs.presentations.sections.experienceV2.SharedTransitionScreen
 import com.portfolio.portfoliofs.presentations.sections.portfolioV2.PortfolioSectionV2
+import com.portfolio.portfoliofs.presentations.sections.serviceV2.ServiceSectionV2
 
 @Composable
 fun MainContent(
@@ -56,7 +56,7 @@ fun MainContent(
                 )
             }
             PortfolioSectionV2(darkTheme = darkTheme)
-            ServiceSection()
+            ServiceSectionV2()
             TestimonialSection()
             ContactMeSection()
 

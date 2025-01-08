@@ -20,34 +20,43 @@ enum class Service(
         title = "Android Development",
         description = ANDROID_SERVICE,
     ),
-    CrossPlatform(
-        icon = R.drawable.cross_platform_icon,
-        imageDesc = "Cross Platform Icon",
-        title = "Cross Platform Development",
-        description = CROSS_PLATFORM_SERVICE,
-    ),
-    IOS(
-        icon = R.drawable.apple_icon,
-        imageDesc = "Apple Icon",
-        title = "iOS Development",
-        description = IOS_SERVICE,
-    ),
-    Web(
-        icon = R.drawable.web_icon,
-        imageDesc = "Desktop Icon",
-        title = "Web Development",
-        description = WEB_SERVICE,
-    ),
+//    CrossPlatform(
+//        icon = R.drawable.cross_platform_icon,
+//        imageDesc = "Cross Platform Icon",
+//        title = "Cross Platform Development",
+//        description = CROSS_PLATFORM_SERVICE,
+//    ),
+
     Design(
         icon = R.drawable.design_icon,
         imageDesc = "Pen Icon",
         title = "UI/UX Design",
         description = UI_UX_SERVICE,
     ),
-    Video(
-        icon = R.drawable.video_icon,
-        imageDesc = "Video Icon",
-        title = "Video Editing",
-        description = EDITING_SERVICE,
+
+    Web(
+        icon = R.drawable.web_icon,
+        imageDesc = "Desktop Icon",
+        title = "Web Development",
+        description = WEB_SERVICE,
     ),
+
+    Leadership(
+        icon = R.drawable.leadership_icon,
+        imageDesc = "Leadership Icon",
+        title = "Leadership",
+        description = "",
+    ),
+//    IOS(
+//        icon = R.drawable.apple_icon,
+//        imageDesc = "Apple Icon",
+//        title = "iOS Development",
+//        description = IOS_SERVICE,
+//    ),
+//    Video(
+//        icon = R.drawable.video_icon,
+//        imageDesc = "Video Icon",
+//        title = "Video Editing",
+//        description = EDITING_SERVICE,
+//    ),
 }
